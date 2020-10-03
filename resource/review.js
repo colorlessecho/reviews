@@ -5,4 +5,4 @@ CeL.run([ /*'.data',*/ 'application.storage.file', 'interact.DOM', 'application.
 
 function initialization() {
 	console.trace('initialization done');
-},
+}
