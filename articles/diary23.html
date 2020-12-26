@@ -1,0 +1,304 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://kanasimi.github.io/CeJS/ce.js">//{"run":"../resources/reviews.js"}</script>
+<title>日記#23</title>
+</head>
+<body>
+
+<a id="diary23"></a><div id="c_diary23" class="c2" title="日記#23">
+<h3>美味いもの</h3>
+彼はあなたの手作りよりミルクがいいよね。悔しくないの？<br />
+どこが。これでいいの。ミルクは彼にとって水みたいな当たり前のもの。もしそんなものより依存させやすいものを作って、手放せなくなってしまうのなら、そんなのまるでドラッグじゃないの。
+<p>
+他寧願喝牛奶也不吃你的菜，你不覺得很不甘心嗎？<br />
+哪裡。（雖然我到頭也沒能力讓他吃回頭草，但）這樣就好了。牛奶對他來說已經是像水一樣的必需品。我若要做出比生理必需品更讓他放不開的東西，那豈不成毒品啦？
+</p>
+明けましておめでとうございます。
+<div class="timeStamp">2010/1/1</div>
+結果從早到晚都在改程式。說實際一點，大概是昨天到今天早上把 address 的部分完成。下午加了點 log 時的美工，以及為理論上 '.'.split(/\./).length 應該是 2，但 <span title="Internet Explorer">IE</span> 5 至 8 中卻為 0 這 bug(?) 搞了半天。晚上至今又為了解決 Firefox 呼叫上層目錄檔案會被擋的問題，摸索至今。疲れた。可以的話還想完成 generate_code 的部分（這樣才能脫 library 化）並把 map 攬進來，但實在沒那氣力了。
+<div class="timeStamp">2010/1/2</div>
+早上睡到近十點半才起來。
+<div class="timeStamp">2010/1/2</div>
+想了想，上一個分段已經接近 400 KiB，因為現在我檔案都以這數字做為臨界點，乾脆就把它分了。（最早是 200 KiB。或許隔段時間還會變成兩倍？）這次純粹只是因為時間已經過很久，文章長度又長，考慮未來還會再加資料（我常常會翻修、或是加添東西到舊的文章中。），所以才做出分割；不像以前，通常是找重大事件。好吧，換句話說跨年對我已經可以算是個事件了。ま、能夠這麼做，可說代表近來沒發生大事。從某些角度說來也是幸福了。
+<div class="timeStamp">2010/1/2</div>
+
+前兩天用 <a rel="nofollow" href="http://code.google.com/p/namebench/" accessdate="2010/1/5" title="namebench - Project Hosting on Google Code">namebench</a> 測了一下，這東西會搜尋瀏覽器的紀錄，並且依之測試各大 DNS 的速度。以我的情況，似乎以 <span title="8.8.4.4">Google Public DNS-2</span> 是最快的。但我突然想到，既然我們常用就是這些，為何沒有人想到要開發單機版的 DNS 呢？例如平時 cache 好常用 domain name，背景更新不就好了？
+<div class="timeStamp">2010/1/5</div>
+
+突然想到，現在買買大陸網路產業龍頭的股票，放著等二十年後說不定會漲個十倍？
+<div class="timeStamp">2010/1/6</div>
+
+<h3 title="軟體源碼親和力">原始碼親和力</h3>
+<a rel="nofollow" href="http://jedi.org/blog/" accessdate="2010/1/10">Jedi's BLOG</a> 提到<a rel="nofollow" href="http://jedi.org/blog/archives/005962.html" accessdate="2010/1/10" title="自由軟體的自由 | Jedi's BLOG">想把 open source 帶入不熟悉 source 的社群中會有障礙</a>，並引申出<a rel="nofollow" href="http://jedi.org/blog/archives/005963.html" accessdate="2010/1/10" title="從 Firefox 擴充套件之戰談起 | Jedi's BLOG">開放源碼不見得安全，source 必須要夠多人關注</a>。事實上<a rel="nofollow" href="http://linux.solidot.org/article.pl?sid=10/02/16/0623214" accessdate="2010/2/24" title="Solidot | 所有 bug 都无处可逃？对 Linus 定律的质疑">也有其他的人懷疑</a> <a rel="nofollow" href="http://en.wikipedia.org/wiki/Linus%27_Law" accessdate="2010/2/24">Linus' Law</a>。我卻想到，法律不也有類似的情形嗎？雖然法律是公開的，現在臺灣也有<a rel="nofollow" href="http://law.moj.gov.tw/" accessdate="2010/1/10" title="全國法規資料庫入口網站">資料庫</a>可查（所以「取得知識」的權力對大部分人來說不但具備且近於免費）；但不曉得法律以及法界約定俗成（所謂<a>潜规则</a>）的就是不知道該怎麼處理比較好，因此才有「懂法律」的說法。而制定法律的也不見得都能做到公平公正、不偏頗。相同的，因為大部分人生活中不會太常用到法律，而深究法律又得花費大量時間，因此才有法律諮詢或代理的服務，讓不懂的人也能有扇窗。雖然程式通常只有撰寫專案的 team 或個人比較熟悉，但法律還是有類似的情形：通常某些特殊法只有相關的專家才知道每條法則的言外之音。打個比方，Linux 的 source 是民法或刑法，但其他程式，就像對著作權只有研究過著作權的才能「鑽法律漏洞」。不同的可能在比例上吧。當然我們也可以對每條法律作注疏，讓普通人都知道他們真正的意涵與在各種情況下的處置，但我們卻沒這麼做。我們知道的頂多是有些「<a rel="nofollow" href="http://www.moj.gov.tw/ct.asp?xItem=31781&amp;CtNode=7948&amp;mp=001" accessdate="2010/1/10">生活法律</a>」之類的書籍或資訊罷了。當然這或許不能說是理想，但社會會變成這樣總是有其背後的<span title="肇因">道理</span>。因此對 <a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81" accessdate="2014/7/14" title="開放原始碼">open source</a>，「<a rel="nofollow" href="http://jedi.org/blog/archives/005962.html" accessdate="2010/1/10" title="自由軟體的自由 | Jedi's BLOG">增加親和力</a>」或許在現階段還是理想吧？我們無法冀望大家都會寫程式，就如同不能妄想大家都懂法律；也不能要求程式撰寫者都能夠做好親和力工程；可以的話現在的世界大家都能懂法律，也不太需要<a rel="nofollow" href="http://www.jrf.org.tw/mag/mag_02s.asp?SN=89" accessdate="2010/1/10" title="司改會著作．法案－司改雜誌－何謂公設辯護人？">公設義務律師</a>的存在了。我們所見到的是，與法律相同，有很多人正是靠這分隔閡來賺錢。所以資料庫的證照與系統管理的不能互通，而我們要某個功能的應用程式，還是得找軟體設計公司。也所以<a rel="nofollow" href="http://www.pcschool.com.tw/" accessdate="2010/1/10" title="=== 巨匠電腦 www.pcschool.com.tw ===">巨匠電腦</a>資訊課程才能如此壯大啊。
+<div class="timeStamp">2010/1/10</div>
+
+昨天參考 <a rel="nofollow" href="http://plog.longwin.com.tw/my_note-unix/2009/05/20/git-learn-test-command-2009" accessdate="2010/11/16" title="Git 初學筆記 - 實作測試 | Tsung's Blog">Git 初學筆記</a>試了 Git，還把它用在前一陣子開始，混合 eclipse 編輯的 CeL framework 上。今天準備再擴大到日記與評論等文檔的部分。我平日會常常變更的，大概也就這些罷了。
+<div class="timeStamp">2010/1/22</div>
+剛剛查一下 Google 地圖，驚訝的發現所住的這個區塊邊有街景圖了。大概是最近才加的？<a rel="nofollow" href="http://it.solidot.org/article.pl?sid=10/01/22/0255241" accessdate="2010/1/22" title="Solidot | Google 全台湾的街景上线
+半年前，Google 街景在臺灣只有臺北的街景。開始拍攝一年以後的現在，已經覆蓋全臺（想繞島環遊的人可以參考）。但澳門、香港還沒有出現。">可能沒錯</a>。不過看了一下圖面資料，似乎少說也超過兩三個月前了。比較吸引我注意的是其中的車牌以及人臉等都已經過霧化處理。看來他們也吃過不少苦頭，所以才知道要審查的。
+<div class="timeStamp">2010/1/22</div>
+
+<a rel="nofollow" href="http://www.comsharp.com/GetKnowledge/zh-CN/It_News_K965.aspx" accessdate="2010/5/20" title="HTML 简史 - 基于 COMSHARP CMS
+W3C 的 HTTML 5 在 5 之前有個空格，而 WHATWG 的 HTML5 則沒有空格">HTML5</a> 沸了好一陣，我一直沒多所著墨，因為覺得反正就看<a rel="nofollow" href="http://www.w3schools.com/html5/html5_reference.asp" accessdate="2010/2/1" title="HTML 5 Tag Reference">有什麼 tag</a> 加什麼。雖然看到 <a rel="nofollow" href="http://seogadget.co.uk/html5-examples-in-the-wild/" accessdate="2010/2/1" title="HTML5 Examples in the Wild - Real HTML5 Demos">aside</a> 這種 tag，還是會懷疑一下假如沒有 blog 的出現，今日的 HTML5 中會不會還有這樣的東西。（畢竟普通的書本媒體並沒有 aside，報紙等排版會更複雜，而這東西也並非當今網頁排版所必須的——尤其在你想造個與眾不同的網站時。）比較明確的示例可以參考 Matthew Papakipos 等人<a rel="nofollow" href="http://www.comsharp.com/GetKnowledge/zh-CN/It_News_K889.aspx" accessdate="2010/1/23" title="与 Google 畅谈 Chrome 操作系统， HTML 5 以及 Web 的未来（下） - 基于 COMSHARP CMS">這篇訪談</a>，提到希望把日常作業移到網路上。聽起來很像之前 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/Novell_NetWare">Novell NetWare</a> 等<a rel="nofollow" href="http://en.wikipedia.org/wiki/Network_operating_system" accessdate="2010/1/23" title="network operating system">網路作業系統</a>的時代，不是嗎？只是這次終端部分也能做一些更強悍的工作，而某些（例如私密）資料我們也可以選擇存在本地。但我想我們早該更進一步超越<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6" title="application software">應用軟體</a>的範疇，想想有沒有辦法讓機器貼近人類直覺的思維方式（例如能用想的，就別用說的。），而盡量別讓人得依循機器的運作模式，不時得 workaround。<a rel="nofollow" href="http://edalpha.blogspot.com/2007/06/nokia.html" accessdate="2010/1/23" title="AlphaAudio: Nokia 整合性行銷">所謂</a>科技始終來自人性，也<a rel="nofollow" href="http://techorange.com/2012/04/24/pony-and-kevin-kelly-2/" accessdate="2012/5/2" title="馬化騰 VS. 凱文凱利：網際網路千億級的考問（下） | TechOrange">使人變得更加「人性化」</a>（科技化？成熟理性化？），不是嗎？基於這點，對 Matthew Papakipos 所提「<a rel="nofollow" href="http://www.comsharp.com/GetKnowledge/zh-CN/It_News_K888.aspx" accessdate="2010/1/23" title="与 Google 畅谈 Chrome 操作系统， HTML 5 以及 Web 的未来（上） - 基于 COMSHARP CMS">需要多種不同的設備</a>」，我其實覺得我們不但有可能只用一臺機器處理我們所有的作業，甚至我們還不想帶著它，而希望在我們看不到的地方照我們的需求處理好事情。甚至——連我們沒料到的都幫我們做了
+<div class="timeStamp">2010/1/23</div>
+
+<a rel="nofollow" href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010336804" accessdate="2010/1/23" title="原文作者：Peter D. Kramer
+譯者：張美惠
+出版社：張老師文化
+出版日期：2006年07月10日">如果梵谷不憂鬱</a>這本從第一章看來，本書最重要的是要告訴我們「憂鬱症百分之百符合疾病的定義」，和憂鬱的情緒不同。另外被我延伸過的副題是，假如我們可以依靠藥物來改變性格，那麼人的價值寓於何？換句話說若內在和外在一樣，是可以「整形」的話，人又有什麼價值可言呢？我想後者所要探討的比前者驚悚多了，但我似乎早就給過答案，因此不再贅言。其實對本書，我本來醉翁之意在憂鬱症的病狀與對心理的影響。まあ、多少有點自艾自憐的感覺。<span title="真無聊。">Nonsense.</span>
+<div class="timeStamp">2010/1/23</div>
+
+突然想到，今天我們在人工智慧的部分之所以沒什麼突破（大進展），連在語意方面都以統計，而不是推論與分析為最有效方法，可能是因為我們把方向搞錯了。今天任何一個可以作<span title="語意">合理</span>判斷的人類，都是從幼年期開始<span title="學習">培養</span>，直到長成，已經累積了<span title="．">大量</span>的先備知識。而我們卻想一步登天，靠著某種<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E6%BC%94%E7%BB%8E%E6%8E%A8%E7%90%86" accessdate="2010/1/29" title="演绎推理">演繹法</a>就想對付充滿特例、（即使是）大部分的人類資訊表示法，未免是天方夜譚。以這角度來，也難怪統計會比規則的演繹更有用。因此我們也想以人類的方法來了解人類的表示法，恐怕也得讓機器「學習」，讓他們累積知識吧。
+<div class="timeStamp">2010/1/29</div>
+
+
+郭凯提到他<a rel="nofollow" href="http://kaieconblog.spaces.live.com/Blog/cns!B4C829CC97B9EDD8!13199.entry" accessdate="2010/2/7" title="不当暴发户 - Windows Live">很多同事都送自己的孩子去學中文，因為覺得中國會崛起</a>。雖然覺得<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E4%B8%AD%E6%96%87%E7%86%B1" accessdate="2010/2/14">中文熱</a>還沒有坊間所傳的那麼蓬勃，但中文的影響力應該如他所言，正在上升中。畢竟，大陸<a rel="nofollow" href="http://news.xinhuanet.com/newscenter/2005-01/11/content_2446228.htm" accessdate="2010/2/14" title="新华视点：全球中文热升温的背后">這些年的發展</a>，以及其背後人口的支撐，都是其他國家所不能忽視的。但我突然想到，現在的大陸是因為有個強力的政府。若過個十年，情勢可能就不同了。政府不一定有能力克制新興的私人力量。不能大刀闊斧，也就無從談起要超越美國啥的了。對了，搞半天，覺得中國大陸掌管經濟最高部門，和這邊<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E7%B6%93%E6%BF%9F%E9%83%A8" accessdate="2010/2/7" title="中華民國經濟部">經濟部</a>最接近的應屬<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%AE%B6%E5%8F%91%E5%B1%95%E5%92%8C%E6%94%B9%E9%9D%A9%E5%A7%94%E5%91%98%E4%BC%9A" accessdate="2010/2/7" title="中华人民共和国国家发展和改革委员会">发改委</a>吧。對岸的政府組織與這邊還真是差很多啊。
+<div class="timeStamp">2010/2/7</div>
+
+昨天看到有網友評 <a>CARNIVAL</a>，回了一下，今個兒問道就算不殘酷，有何美麗可言。最近趕工作趕到昏天暗地，突然發現自己頭腦鈍鈍，想不起來該怎麼解釋了。<span class="expletive">（汗）</span><br />
+假如要以一個詞來表達，應該是達觀（看透人世機轉）吧，因為一心無罣礙，抱持赤子之心，看到什麼事物都是恬適靜謐的，自然美好。不過這該怎麼去解釋比較好呢？或許這麼說吧。<br />
+到澳洲旅遊，一日吃完飯，偶見無尾熊懶掛樹上。心裡面想著什麼？當然，這邊的問題無關生態保育等奇怪的面向。要不再模擬一下，活得差不多了，人生該做的事也做完了。哪天子女歸省，看著兒孫嬉鬧，心中又怎麼想呢？<br />
+再或者，發現自己被偷一千的時候，會覺得不甘願吧。但若是知道對方也是被搶才落得身無分文，其實已經餓三天呢？當然這些時候也還是可以收束所有的感情，認為無喜無樂。但這邊的重點是，看透之後只是去除「殘酷」，並沒把平靜也一併取走。
+<div class="timeStamp">2010/2/9</div>
+
+最近看到某些書其實不過是把歷年來研究整合，而在每次修訂新版時加入與上次修訂之間的 diff。突然想到，我在 <a>Wikipedia</a> 的編輯模式似乎與此非常類似啊。
+<div class="timeStamp">2010/2/11</div>
+
+近幾年，電視臺播報大陸新聞漸漸有點本地化了？有些時候，明明是大陸的事，感覺卻像在報導臺灣的新聞。まあ、気のせいかもね。
+<div class="timeStamp">2010/2/13</div>
+
+不知道是哪位神明的什麼<span title="祭り">慶典</span>，零時三十分左右還有鞭炮齊放。
+<div class="timeStamp">2010/2/22</div>
+都一點了還有鞭炮聲。查了一下春節習俗，農曆初九天公生，<a rel="nofollow" href="http://bbs.longhoo.net/viewthread.php?tid=676618&amp;page=1" accessdate="2010/2/22" title="【春节习俗】正月初九 - 金陵古韵 -  龙虎论坛  - Powered by Discuz!">0 至 4 時間要放鞭炮</a>的樣子。困るな。<br />
+
+<div class="timeStamp">2010/2/22</div>
+聽說<a rel="nofollow" href="http://hi.baidu.com/%EA%C1%D2%D5/blog/item/e5b2f18fa7cac8f1513d9287.html" accessdate="2010/2/22" title="[春节习俗]正月初九：天日节_炅艺_百度空间">不能晒衣服</a>，上頂樓把掛了兩天的衣服拿下來。煙硝味甚濃。意外發現南邊某戶頂樓燈火通明，看來在<a rel="nofollow" href="http://opinions.sinchew-i.com/node/13609" accessdate="2010/2/22" title="蔡思潔‧拜天公 | 評論">拜天公</a>的樣子。
+<div class="timeStamp">2010/2/22</div>
+
+近來 DNSSEC 越來越受到注目，意外發現自己之前列出實作（實際設定）方法的文章排在 Google 搜尋中文網頁 "DNSSEC Howto" 的前三名，為了讓大家更方便的使用，寫了個小工具。工具的用途為自動探測並更替(rolling) ZSK key，限制條件為已經自己操作過 DNSSEC 的設置，熟知其機制，使用 bind9，並且僅有單一組 ZSK key 的情況。
+<div class="timeStamp">2010/2/24</div>
+
+<h3><a rel="nofollow" href="http://en.wikipedia.org/wiki/Food,_Inc." accessdate="2010/2/25" title="美味代價 食品公司">Food, Inc.</a></h3>
+此片告訴我們，在現在這年代，一般民眾只不過如同另類牛隻般，為大工廠所豢養著。又如同跨國大企業賺錢的小螺絲之一，沒有自主性。我們不是高高在上的顧客，而是被牽著走的牛，是不知自己身處豬圈中卻心滿意足的豚彘。看這部總得提一下 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AD%9F%E5%B1%B1%E9%83%BD" accessdate="2010/2/25" title="孟山都">Monsanto</a> 這家近十年來<a rel="nofollow" href="http://www.wretch.cc/blog/phigroup/15203021" accessdate="2010/5/29" title="糧食戰爭的大贏家 孟山都/by Gosh">飛躍成長</a>的公司。若<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%9F%BA%E5%9B%A0%E6%94%B9%E9%80%A0%E9%A3%9F%E5%93%81" accessdate="2010/5/29" title="genetically modified foods, GM foods, genetically engineered foods, GE foods, bioengineered foods">基因改造食品</a>真能無害的造福人類當然很好，尤其是在全球<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E7%B2%AE%E9%A3%9F%E5%AE%89%E5%85%A8" accessdate="2020/8/3" title="food security">糧食安全</a>危機加上人們不能接受人口突然銳減的窘境下，但現在還是未知數。無論如何我覺得與其要接受基因改造食品，不如降低人口還來得有好處。縱使尚未達到<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E7%8E%AF%E5%A2%83%E6%89%BF%E8%BD%BD%E5%8A%9B" accessdate="2011/6/11" title="carrying capacity">環境承載力</a>的極限人數；地球上現在的人口，起碼在現階段可用的科技來說，<a rel="nofollow" href="http://solidot.org/articles/11/06/09/0931228.shtml" accessdate="2011/6/11" title="Solidot | 地球可持续发展的最大人口是多少？">看來卻已超過</a>要維持<span title="．">我們所期望</span>那般生活水平的人數；而情勢在緯來數十年似乎還會每況愈下。而他們這些廠商會有那麼多困擾、<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AD%9F%E5%B1%B1%E9%83%BD%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%96%E7%95%8C" accessdate="2010/5/29" title="孟山都眼中的世界/The World According to Monsanto">Le monde selon Monsanto</a> 之類的<a rel="nofollow" href="http://www.wretch.cc/blog/cliquer/17797306" accessdate="2010/5/29" title="誰是孟山都(Monsanto) ?─ 印度篇 I (by Ideolotopia)">負面評價那麼多</a>，除了 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E8%BD%AC%E5%9F%BA%E5%9B%A0%E7%94%9F%E7%89%A9" accessdate="2010/5/29" title="genetically modified organism (GMO) or genetically engineered organism (GEO), 转基因生物
+通過基因改造實現基因改變的生物">GMO</a> 本身的無害性尚未被確認外，我覺得主要是<span title="誠意">心意</span>，或者說是態度問題。有道是生財有道，讓人感覺<a rel="nofollow" href="http://www.wyzxsx.com/Article/Class20/201002/132895.html" accessdate="2010/5/29" title="孟山都公司是正人君子，还是十恶不赦的跨国公司?">貪婪無厭</a>、<a rel="nofollow" href="http://env.people.com.cn/GB/11180171.html" accessdate="2010/5/29" title="孟山都转基因模式是否存在阴谋--环保--人民网">惟利是圖</a>而未考慮對生態的影響、<a rel="nofollow" href="http://data.book.163.com/book/section/0000JSXc/0000JSXc9.html" accessdate="2010/5/29" title="五、孟山都的玉米中到底藏着什么(1)_书库_网易读书">耍手段</a>、<a rel="nofollow" href="http://www.coolloud.org.tw/node/46211" accessdate="2010/5/29" title="孟山都又出包了 | 苦勞網">文過飾非</a>、隱瞞事實與真相、打壓<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E6%8C%81%E4%B8%8D%E5%90%8C%E6%94%BF%E8%A7%81%E8%80%85" accessdate="2018/7/8" title="持不同政見者, dissident">異議人士</a>；並因為獨占，而直接或間接使得人們失去選擇權就不好。像是其對專利與種子的控制致使 <a rel="nofollow" href="http://www.wyzxsx.com/Article/Class4/200906/87725.html" accessdate="2010/5/29" title="种子公司如何影响一个国家">Argentina 對大豆作物無法自主</a>與 <a rel="nofollow" href="http://www.bioweb.com.tw/feature_content.asp?ISSID=560" accessdate="2010/5/29" title="華文生技網 - feature_content">Percy Schmeiser 案</a>關於<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%9F%BA%E5%9B%A0%E6%B1%A1%E6%9F%93" accessdate="2010/5/29" title="genetic pollution">基因污染</a>的疑慮就很難看。講講道理，我覺得已經擴散的基因改造生物不能以這方法要求專利權，否則他們最起碼先得將受基因污染的生物全部回歸原狀。這是幾乎不可能做到的事。無論如何，似乎沒有國家要挺身抗議他們汙染了自己家的農作物。Monsanto 接著該不會想在協議中加上「購我種子者，須負防止花粉擴散（注：這可能致<span title="基因汙染">基因漂移</span>）之責」這麼不容易做到的條約吧？這就有點 <a rel="nofollow" href="https://en.wikipedia.org/wiki/Trust_(business)" accessdate="2010/11/20" title="corporate trust, 商業信託, 托拉斯">trust</a> 的味道了：人家不是因為有選擇權才購買你的種子啊，而是市場上只剩下你的貨了。而對農民與消費者來說，沒人希望自己的未來交由他人所掌握，特別是對方除了無情無義外還不可信。當然，做得太絕可能會自取滅亡就是，遲早有人會揭竿起義的。此外，如果主要糧食作物的<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%9F%BA%E5%9B%A0%E6%B1%A1%E6%9F%93" accessdate="2010/5/29" title="genetic pollution">基因污染</a>是可接受的，我懷疑<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%B9%B9%E7%B4%B0%E8%83%9E" accessdate="2014/9/23" title="英語：stem cell">幹細胞</a>研究或優生學不會比較糟。既然這麼嚴格限制幹細胞的使用，那又怎麼能放縱基因改造生物散布於自然環境中呢。<br />
+這片還提到，雖然快餐之類的垃圾食物實際成本理應比蔬菜高，但在畸形的補貼政策下，垃圾肉類製作的快餐竟然會比新鮮蔬菜便宜。雖然這從某個角度來說可能是種特殊成就，卻絕對不是好事。當我們被迫只能作「比較好」的抉擇，而沒辦法隨意挑選時，這並不是真正的自由。這點在 <a>Justice</a> 中，論兵役制度時也提到過。或許要改變現況，只有等東窗事發個幾次，連這些大公司都無法隻手遮天時。或者，直到最後自然擊潰自以為人定勝天、滿是野心的人類，當這個消耗體制怎麼樣也無法持續下去時。
+<div class="timeStamp">2011/10/15</div>
+
+<h3>±2°C</h3>
+接續著之前看過 <a rel="nofollow" href="http://en.wikipedia.org/wiki/The_Age_of_Stupid" accessdate="2010/2/24" title="愚昧年代">The Age of Stupid</a>、<span class="creation_title">Food, Inc.</span>、<a rel="nofollow" href="http://en.wikipedia.org/wiki/Home_%282009_film%29" accessdate="2010/2/25" title="家園">Home</a> 以及<a rel="nofollow" href="http://blog.udn.com/martinique/3414320" accessdate="2010/2/25" title="全球暖化的真相：It's all about POWER. - 自由美國觀察 - udn 部落格">對全球暖化說的質疑</a>，晚上看了一下 <a rel="nofollow" href="http://www.youtube.com/user/Porcohwu" title="臺灣必須面對的真相－正負2度 C">±2°C</a>。（<a>Wikipedia</a> 竟然還沒有此條目。不過相信就快了…？←後來發現果然還是有，只是被稱作<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%8A%A0%E6%B8%9B2%E5%BA%A6C" accessdate="2010/05/01" title="《±2°C》（又名「加減2度 C」、「正負2度 C」），臺灣紀錄片。">加減2度 C</a>。）不說<a rel="nofollow" href="http://www.youtube.com/watch?v=_tMKedRvp_o" accessdate="2010/3/3" title="正負2度 C 開拍記者會宣傳片（6分鐘）">記者會</a>上那些把矛頭指向政府亂花錢、沒給自己公司方便的董事長們；我頗詫異的是正片中一直將地球視為與人類對立一方的立場，說反撲、忍耐啥的。其實，自然不會說話，這些都是人的選擇。片中的作法似乎把自然人格化了。當然，有的人更願意稱作咎由自取。但我的看法仍是停在<a>地球少女アルジュナ</a>那時。<br />
+以人類的條理來說，就算氣溫並沒上升，人類就算<b>從來沒浪費過資源</b>但<b>再怎麼努力<a rel="nofollow" href="http://www.lex.idv.tw/?p=3877" accessdate="2011/11/13" title="從大自然的尺度看地球，在《人類尺度》 | 張清浩律師的部落格">氣候還是會「異常」</a></b>，我們還是應該贊同人類對經營一個有效率（這可以致使環保）的社會文明。本片真正的價值（地位）應該在於地球少女中提到的，人類的自我制約<b>調節機制</b>。但早在 2007/5/5 或者更之前就提過，說到頭有多少人真正體會到優雅、清潔整齊的現代化生活，包括我們的西裝革履、高科技產物（不只是<a rel="nofollow" href="http://hardware.solidot.org/article.pl?sid=10/02/23/0216239" accessdate="2010/2/25" title="Solidot | 中国电子垃圾10年内将增长四倍">他們所造成的廢棄物</a>）、經過科技掩飾的「有機」飲食；甚至包括我們所推崇的<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%9A%9C" accessdate="2015/2/11" title="社會保障（英語：social security）一般包括社會保險、社會互助、社會救濟、社會福利、優撫安置等">社會保障</a>、完善的醫療體制多麼的奢侈？我們願意回去過骯髒而衣衫襤褸、每天日落而息且滿身臭汗的<a rel="nofollow" href="http://blog.udn.com/chaopo/3807747" accessdate="2010/3/3" title="誰的「正負二度 C」? - World Traveler 的部落格 - udn 部落格">原始生活</a>嗎？「<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E7%A2%B3%E7%A8%8E" accessdate="2016/4/17" title="carbon tax">碳稅</a>到底要課徵到什麼程度呢？」的解答說不定是「連先進國家都寧可過原始生活的程度」。（這邊得先鄭重聲明：無論講出多麼冠冕堂皇的話，我畢竟不是冠冕堂皇之人。）又有多少政府能承擔人口的一再降低？（妙的是，寫完發現<a rel="nofollow" href="http://www.youtube.com/watch?v=OQbbmqlBiHU" accessdate="2010/2/25" title="正負2度 C 紀錄片8-1.mpg">正負2度 C 紀錄片 YouTube 版</a>上面也有<span title="gwn33333 (1 小時 以前)   -5">類似的言論</span>，但人們果然是不能接受的，後來都被當垃圾評論了。）<a label="社會心理學">責任分散</a>。我們根本不知道該在乎，直到火燒屁股，真正面對的是我們<span title="．">自己</span>。有些時候，我覺得這些災難多次將人口降低或許也是種可能發生、且不見得比較糟的演變。<br />
+哎、事實上我這篇算是種「見光死」吧。有些事是只能體會，不能說的。尤其是對<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%85%A8%E7%90%83%E5%8F%98%E6%9A%96" accessdate="2010/3/23" title="global warming">全球暖化</a>這事，被攻訐會很正常。正如上面所言，畢竟就算沒暖化也罷，少浪費資源畢竟才是<span title="．">道德</span>的。的確我是在冷眼旁觀，但高唱多少仁義道德都救不了我們自己，若我們只是將之當作定人死罪的工具。
+<div class="timeStamp">2010/2/25</div>
+
+晚上看了點圍棋的紀事。現在世界前幾強中，似乎南韓實力最強，中國直追中，臺日落後。日本首位張栩也是外國人。感覺其實也沒什麼，就之前提過的，越悲壯的鬥爭倖存者越有能罷了。
+<div class="timeStamp">2010/2/28</div>
+
+剛剛又來<a rel="nofollow" href="http://zh.wikipedia.org/wiki/2010%E5%B9%B4%E7%94%B2%E4%BB%99%E5%9C%B0%E9%9C%87" accessdate="2010/3/7" title="2010年甲仙地震 - 維基百科，自由的百科全書">地震</a>，只感覺到一次，可能是 8:18 的時候。震央在甲仙附近。隨即就停電了分鐘，這感覺比較像人為的。房內損害…光碟堆太高掉下來。似乎有<a rel="nofollow" href="http://songshuhui.net/archives/34594.html" accessdate="2010/3/7" title="科学松鼠会 » 地震变得越来越频繁？
+
+科学松鼠会 » 海地地震与智利地震真的没有关联吗？
+http://songshuhui.net/archives/35043.html
+">地震越來越頻繁的感覺</a>，但那也可能是因資訊流通加上媒體渲染所造成。
+<div class="timeStamp">2010/3/4</div>
+
+聽說深夜又要<a rel="nofollow" href="http://iservice.libertytimes.com.tw/liveNews/news.php?no=338363&amp;type=%E7%94%9F%E6%B4%BB" accessdate="2010/3/6" title="自由電子報 即時新聞 - 冷氣團來 明起4天溼冷">轉涼</a>，幸好昨晚洗完衣服了。頭還是有一絲絲的痛，認真去感覺才能發現就是。看了一下<a rel="nofollow" href="http://columns.chicken-house.net/post/GoodProgrammer1.aspx" accessdate="2010/3/6" title="該如何學好 &quot;寫程式&quot; ??">該如何學好 &quot;寫程式&quot; ??</a>與另一些文章，發現有些東西，例如「<a rel="nofollow" href="http://www.javaworld.com.tw/roller/qing/entry/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E7%9A%84%E5%85%A9%E5%80%8B%E8%A7%80%E9%BB%9E_1_2" accessdate="2010/3/6" title="程式者的胡言亂語 : 程式者的胡言亂語">許多演算法與資料結構早已被包裝成能被簡單使用的模式</a>」也是我的想法。現在在網頁的應用上，由於 ECMAScript 這 meta-framework 的限制，常用的要不是已經規定在標準內，要不就是有人做出來了。只要懂原理，會看說明似乎比<a rel="nofollow" href="http://www.codinghorror.com/blog/2009/02/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels.html" accessdate="2010/8/21" title="Coding Horror: Don't Reinvent The Wheel, Unless You Plan on Learning More About Wheels">自己造輪子</a>有用。現在寫程式有點像在用<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%82%BB%E7%93%9C%E7%9B%B8%E6%9C%BA" accessdate="2010/3/30">傻瓜相機</a>，我們已經不必自己調焦、設定光圈和快門了。（大家其實都知道，這並不若李立群在廣告中「<a rel="nofollow" href="http://blog.yam.com/kitlin/article/4047835" accessdate="2010/3/30" title="陽光、空氣、屎和尿: 什麼都賣，什麼都不奇怪--廣告流行金句 - yam 天空部落">它傻瓜，你聰明</a>」所言，而是 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Idiocracy" accessdate="2010/3/30" title="蠢蛋進化論 (2006)">Idiocracy</a> 的序曲。）相機本身自動作的調整能適用普通的情況，甚至大多數時候，僅僅是指排序、資料的增刪時，library 所附的實作方法都比我們自己搞的還來得更有效率。從某個角度來說，學習如何好好地利用這些 library 會比強記像是 qsort 的實作方法來得更有效率。因為「不用強記，只要會閱讀說明文件（當然這還是得耗點時間）、會挑選（而這得要具備<span title="．">基礎</span>的理解：我們不必精通所有層面）與使用」，現在寫的程式的門檻降低了，對程式新鮮人，甚至是廣大的程式設計者來說<a rel="nofollow" href="http://software.solidot.org/article.pl?sid=10/03/07/118251" title="Solidot | 编程到底出了什么问题">是否也是種幸福呢</a>。當然我還比不上他們（想想活了這把年紀，還真是慚愧。），而他們也還不算頂尖。更甭提尖端不代表一切。
+<div class="timeStamp">2010/3/6</div>
+
+晚上硬碟又怪怪的了。一直搞不清楚這樣的問題是硬碟還是排線造成的。
+<div class="timeStamp">2010/3/11</div>
+
+或許未來無線充電技術成熟後，notebook 這類型的終端大多數時間可以擺脫充電器或電線的糾纏，但最起碼現在的我連網路線都脫離不了；使用 notebook 總是得接個網路線以及電源。ま、勿論贅沢は言えない。畢竟這些機器皆為他人所資助或贊助。這麼說來裡面竟沒一臺是我的。情況和十年前一樣糟糕。由於成天抱 notebook 在床上ごろごろ，不只是駝背變嚴重，網路線也三不五時故障。堅固一點的是網路線頭卡榫斷掉，糟一點的（例如壓的時候沒壓到外皮）則是裡面細電線斷掉，造成網路不通。剛剛把這邊撐不下去的三條網路線全部 renewal 過，換了接頭。這邊看來是以 <a rel="nofollow" href="http://en.wikipedia.org/wiki/T568B" accessdate="2010/3/18" title="TIA/EIA-568-B">T568B</a> 為主的樣子。在忍痛(?)剪掉一條感覺比較高級的線（人家做好那種）時，突然發現這還真不是普通高級。一開始只是覺得線太粗，套子套不進去。後來竟發現這線除了裡面有一層鋁箔(?)薄膜包住所有線材，中間還有跟十字軟塑膠條。四組兩兩交纏的纏繞線纜就被分隔在四象限中，而普通（較差的）網路線中細人工合成絲線竟還被細鐵絲所代替，雖然僅存在於其中一組線中。（可能是高速傳輸線，預防訊號干擾吧。）電線也較軟，所以比較不容易塞進去。（當然，最後還是要緊緊的、用力的塞到線頭碰到壁為止。）這算我接觸過，最高級的一次了。講到這說不定已經知道這條啥牌子的。However, 我碰過的其實都是便宜爛貨，而且也沒啥經驗…それは言わない約束だよ。
+<div class="timeStamp">2010/3/18</div>
+
+真是糟糕。太糟了。剛剛才發現 <a rel="nofollow" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" accessdate="2010/4/8" title="Standard ECMA-262">ECMA-262 5th edition</a> strict mode 已經<a rel="nofollow" href="http://webreflection.blogspot.com/2009/05/ecmascript-5-do-not-remove.html" accessdate="2010/4/8" title="Web Reflection: [ECMAScript 5] Do Not Remove arguments.callee !">禁掉了 arguments.callee</a>（會 [[ThrowTypeError]]）。看來我之前寫的一大堆 code 都得重新處理。唉、我早就知道這件事才對，可是一直沒注意到。不過說實在的，以我的感覺，拿掉這東西對我們這些常常使用 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Closure_%28computer_science%29" accessdate="2010/4/8" title="Closure (computer science)">closure</a> 與 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Lambda_calculus" accessdate="2010/4/8" title="Lambda calculus">anonymous function</a> 的人來說，的確是件麻煩事。當然我總是會選 strict mode 的，可惜以後寫出的程式似乎變得比較不「美」了，到處得用上函數名。想想在記事本而非 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" accessdate="2010/4/9" title="集成开发环境">IDE</a> 下，在一個大函數中想改函數名的情況。我寧可把 callee 當作 function 內欲設填入 function 本身的 redefinable various，甚至是<a rel="nofollow" href="https://mail.mozilla.org/pipermail/es-discuss/2008-September/007487.html" accessdate="2010/4/9" title="Ye olde arguments argument (was: Topic list - pending changes and	issues for the ES3.1 spec)">保留字</a>也沒關係。不過聽說之後連 <a rel="nofollow" href="https://mail.mozilla.org/pipermail/es-discuss/2008-September/007484.html" accessdate="2010/4/9" title="Ye olde arguments argument (was: Topic list - pending changes and	issues for the ES3.1 spec)">arguments 本身都會消失</a>…
+<div class="timeStamp">2010/4/8</div>
+
+聽說 Visual Studio 2010 <a rel="nofollow" href="http://developers.solidot.org/article.pl?sid=10/04/12/1432218" accessdate="2010/4/14" title="Solidot | Visual Studio 2010和.NET Framework 4发布">支持多顯示器</a>，將能跨螢幕。想到現在 cloud computing 這麼流行，那算是某種程度的跨機器資料了。於是，我又想到 SF 中出現過能將自己從一臺電腦移到另一臺、具有自我意識的人工智慧。不久後，我們說不定就能看到跨機器的程序出現。
+<div class="timeStamp">2010/4/14</div>
+
+由於伺服器發生問題，現在暫時使用舊的資料代替。我們正準備轉移伺服器中，很抱歉造成您的不便。<br />
+早上起來就發現 server 掛了。下午也沒好。六點多通知，說是硬碟的關係。看了一小時左右，應該也是。不過這次似乎救不起來。應該說上次就已經這樣了，之前不過是運氣好，自動回復罷了。回想起來，那應該就是次警訊了，提醒人該準備新機器了。更糟的還在後頭。由於這顆是 SCSI，就算要救援，還得花點時間準備機器；以後還是用普通 PC server 就好。線上儲存之類 cloud computing 或代管服務？我想我們要的可能還不太符合那經濟效益，畢竟要自己的主機以獲得完全掌控沒那麼容易。再來，我沒把握能讀到多少。雖然以開機能開到一半來說，救回大部分資料的機會還是有的。However, 問題發生在現在這節骨眼總是我所不樂見的。
+<div class="timeStamp">2010/4/15</div>
+
+不知為何，雖然午睡過，卻還是很倦。
+<div class="timeStamp">2010/4/24</div>
+還是過來了。沒想到的是 XP 已經灌起來，這樣的話 FreeBSD 的問題反而大增。這次準備先跑跑 PCMark05，過了的話再試試<a rel="nofollow" href="http://www.pendrivelinux.com/create-a-ubuntu-9-10-live-usb-in-windows/" accessdate="2010/4/24" title="Install Ubuntu 9.10 to a Flash Drive from Windows | USB Pen Drive Linux
+如何製作 Ubuntu Live USB « 高登工作室
+http://gordon168.tw/?p=323">從 USB 灌 Ubuntu 9.10</a>，linux 的選項的確比較多。
+<div class="timeStamp">2010/4/24</div>
+PCMark05 過了，沒想到的是不能從 USB 開機。困った。硬碟的話，還是在 Waiting 5 seconds for SCSI devices to settle 時 AutoSense Failed。
+<div class="timeStamp">2010/4/24</div>
+結果換 CDROM 版 <a rel="nofollow" href="http://www.ubuntu.com/" accessdate="2010/4/29" title="Ubuntu Home Page | Ubuntu">Ubuntu</a> 上場，才到第一個語系選取畫面，又是 power 燒掉。回來了。
+<div class="timeStamp">2010/4/24</div>
+試了一下將 Ubuntu 9.10 desktop 裝進系統（之後還換了 Ubuntu 10.04 RC desktop），這系統的易用性的確已經不錯，但還是發現了點問題。
+<ul><li>安裝選單竟沒中文？這問題不大就是。到 10.04 就有了 TW 版，雖然在 Windows 時的介面還是簡體中文版。
+</li><li><a rel="nofollow" href="http://article.wxiu.com/system/linux/200911/05-7405.html" accessdate="2010/4/26" title="Ubuntu 9.10安装图文教程（单双系统）_中国电脑维修联盟 - 做最好的电脑维修网">安裝到 80% 會停住</a>。（<a rel="nofollow" href="http://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg2085847.html" accessdate="2010/4/27" title="[Bug 445385] Re: Installer hangs at 80% on &quot;Configuring apt&quot;">10.04 版約在 79%</a>，若網路不快還是會卡住。）雖然可以 skip，但未完成前就 skip 並開始使用系統的話，可能會造成系統功能出錯，以及重新開機卻重安裝系統的問題。
+</li><li>沒有安全卸載就將同一 USB 隨身碟插到另一個孔中可能造成重開機才能消除 mountpoint 的問題，顯示 "Error creating mount point: File exists"。
+</li><li>輸入法部分，9.10 可以用<a rel="nofollow" href="http://chewing.csie.net/" accessdate="2010/4/27" title="新酷音:智慧型注音輸入法 Chewing - Headquarter of Intelligent Chinese Phonetic Input Method Development">新酷音</a>，不過 10.04 RC 似乎還沒準備好，<a rel="nofollow" href="http://moskyat.pixnet.net/blog/post/24226576" accessdate="2010/4/27" title="iBus，linux 平臺上新的輸入法框架 @ MOSKY :: 痞客邦 PIXNET ::">裝</a>不起來。iBus 輸入法無法重新選字，用 iBus 的新酷音選字時亦不能用方向鍵。
+</li><li>3 GiB 看起來是賞析用大小，再多裝兩個語系空間就滿了。後來發現想裝的東西都弄一下，比較穩定時已經 6 GiB。很遺憾的，若是以 "Install inside Windows" 的方法，要在原 partition 加大分割的空間似乎重新安裝比較快。
+</li><li>裝完應該馬上<a rel="nofollow" href="http://tern.pixnet.net/blog/post/17176984" accessdate="2010/4/27" title="[ubuntu]修改 Ubuntu 8.04 的 sources.list 成臺灣的主機 @ 毓林園地 :: 痞客邦 PIXNET ::">改一下 sources.list</a> 讓下載速度加快。這問題在 10.04 已經處理，自動會改成臺灣的 mirror。
+</li></ul>
+ま、的確有其長處的，比起之前方便（親民）多了。當然，實際說來<a rel="nofollow" href="http://tetralet.luna.com.tw/index.php?op=ViewArticle&amp;articleId=209&amp;blogId=1" accessdate="2010/5/16" title="今天的 Tetralet 又在唧唧喳喳了 | 為什麼 Linux 會比 BSD 更受到人們的歡迎？">還不只這樣</a>。我都在考慮是不是跳槽到 linux 了。
+<div class="timeStamp">2010/4/24</div>
+結果晚上碰到 <a rel="nofollow" href="http://forum.ubuntu.org.cn/viewtopic.php?t=228790" accessdate="2010/4/27" title="Ubuntu 中文论坛 &amp;bull; 查看主题 - 终于挂了一次">GLIBC_PRIVATE not defined in file libc.so.6</a>。最後終究重裝了。
+<div class="timeStamp">2010/4/26</div>
+
+All night rain.
+<div class="timeStamp">2010/04/30</div>
+晚上洗衣服才發現這禮拜沒有襪子。原來全穿涼鞋了。從上禮拜脫鞋之後，感覺要穿襪子還是有點髒。然後發現和上次一樣，更新完的 Ubuntu 10.04 RC 又掛了。看來 beta 版還是得小心，很容易出問題。懶得再找原因解決，直接又砍掉重練了。多次下來，速度多少快了點。這次裝 10.04 LTS 正式版，果然問題就少了很多，起碼之前一直出現「大小不符」而不給裝的新酷音與 fonts 一開始就 OK 了。
+<div class="timeStamp">2010/05/01</div>
+晚上再度出現 2010/4/22 提到過，連 <kbd class="key">Tab</kbd> 都反應遲鈍的問題，休息幾分鐘還是沒效。由於在進入 Windows 前就已經出現症狀，猜測當是硬體問題。
+<div class="timeStamp">2010/05/01</div>
+過半小時再重開又好了。是經過冷卻的緣故嗎？
+<div class="timeStamp">2010/05/01</div>
+這幾天主要準備環境，把 Ubuntu 改得舒適點。精神一直不太好，然後間或大口大口喘氣，不知是不是缺乏運動的緣故。晚上又回到 60 kg。兩三天來右下犬齒部分的牙齒腫起來了。
+<div class="timeStamp">2010/05/02</div>
+兩天來左食指根部（掌指關節？）肌肉不斷不受控制的不自主抽動，彷彿是中風一般？
+<div class="timeStamp">2010/5/5</div>
+
+現在的解決方法是拿另外一臺可以跑得起 Ubuntu 的，進 desktop mode，然後 mount 上兩顆硬碟，把東西全 copy 出來。學到了點 <span title="# 2010-05-11 20:29:37">mount ufs2 的方法</span>，man page 裡面沒注明的。或許打一開始就應該這麼做了。
+<div class="timeStamp">2010/5/11</div>
+
+聽說<a rel="nofollow" href="http://songshuhui.net/archives/37833.html" accessdate="2010/5/15" title="科学松鼠会 » [美国技术写作精选导读三]盛满时间的空酒杯">人們消耗在肥皂劇上的時間足以支持兩千個維基百科</a>。若是人們都把看電視的時間拿來耗在 Wikipedia 上…冗談だ。那就像是要大家人手一書一樣。不過我真的覺得我們所有的新聞、社交都應該整合到一個知識導向的平臺比較好，讓大家閒閒沒事最大的娛樂改成增長見識。<br />
+大學生的固有影像不是有張手抱書在胸前的嗎？我有時會把書替換成 laptop，不過在當今世界這似乎還是太前衛了。
+<div class="timeStamp">2010/5/13</div>
+
+Windows 7 跑得有點慢，以為是之前 TortoiseGit 的問題，想說開啟工作管理員之後該不會上百支的 tgit.exe 在跑。不過這次改版果然堅實了不少，不是這問題。那麼硬碟一直讀取，RAM 使用上看 2 GiB 但沒有特別耗記憶體的程序，該不會是放 Offline Explorer 跑了一天的緣故？又打開資源監視器，只見 System 大行其道，看起來是的。不過特別的是把程序關到清得差不多，還是佔 1.32 GiB。不得已重新開機，這才回到近 700 MiB 的程度。Windows 7 的記憶體管理還是有加強的空間啊。
+<div class="timeStamp">2010/5/16</div>
+
+
+這些日子來感覺 <a>Wikipedia</a> 的速度實在太慢了。
+<div class="timeStamp">2010/5/18</div>
+
+整個晚上又是耗在 server 上。用 mdconfig(1) 把位於 ad0 的 image file 掛上，但由於除了 / 外都要換上，所以花了點時間。結果還是沒找當開機就自動掛上的方法就是。另外比較大的問題是發現有些 library 檔都壞了，更棘手的是有不少 "Bad file descriptor" 的 directory 與檔案，又不給 fsck（之前 fsck_ufs 會出現 can't read disk label，上線一禮拜之後則是 "THE FOLLOWING DISK SECTORS COULD NOT BE READ", "CANNOT FIGURE OUT FILE SYSTEM PARTITION" 等。或許因為這不是實體的硬碟，所以參數要自己設定吧？），只能以 mv 到同 partitions 的方式處理（即使是在這麼做的時候，也很容易出問題。）。雖然位在 /usr/lib 下，但不確定是不是因為壞軌的問題。覺得直接 makeworld 並更新所有 pakeage 比較快。不過想到這工程與未來要付出的成本，不如裝個新的系統還比較快。今天還是沒有動論文的東西。聽說有豪大雨，趕緊把衣服收回來了。
+<div class="timeStamp">2010/5/22</div>
+結果還不到中午還是被叫來了。凌晨過零時機器就掛掉，看來也是這問題。
+<div class="timeStamp">2010/5/23</div>
+放棄掛上 /usr，現在乾脆只求把基本的東西搞起來，用新系統。不過卻發現連要裝個 apache-2.2.15_9 都很麻煩。
+<div class="timeStamp">2010/5/23</div>
+長い、長い時をかけて、やっと…サーバはただいま復帰しました。問題はまだ色々残っているのですがね。
+<div class="timeStamp">2010/5/23</div>
+<h3>關於五月初以來的停機</h3>
+由於硬體以及資金問題，使機器到現在才暫時上線。造成大家的不便，非常抱歉。惟機器尚未穩定，之後還有可能出現中斷情形。請見諒。
+<div class="timeStamp">2010/5/23</div>
+雨還真的一直下到現在。
+<div class="timeStamp">2010/5/23</div>
+
+前幾天的<a rel="nofollow" href="http://news.cts.com.tw/cts/society/201005/201005200477410.html" accessdate="2010/5/25" title="就愛混血兒! 買洋妞借腹生子-華視新聞-華視新聞網">混血兒案</a>使我不禁聯想到之前看過<a rel="nofollow" href="http://science.solidot.org/article.pl?sid=10/05/04/0517225" accessdate="2010/5/25" title="Solidot | 研究发现混血儿确实更有魅力">混血兒較一般人具魅力</a>的說法。或許雜交就像有性生值般，真的<a rel="nofollow" href="http://science.solidot.org/article.pl?sid=09/09/24/1121243" accessdate="2010/5/25" title="Solidot | 杂交能提供进化优势">有其優勢</a>吧。
+<div class="timeStamp">2010/5/25</div>
+
+剛剛確定不能以 cvsup 更新 source tree，碰上地雷了。
+<div class="timeStamp">2010/5/26</div>
+
+一早風頗大，這幾天也下了不少雨。聽說今明還會下大雨，剛剛上去也是殘衣打溼掉滿地，而風雨尚未停；所以把衣服收回來了。
+<div class="timeStamp">2010/5/28</div>
+
+下午搞到現在 moodle 還是沒建起來。主要因為我用了 PHP 5.3.2，然後環境也不太乾淨的緣故。只好一直 trace。白白花費了一堆時間。
+<div class="timeStamp">2010/5/30</div>
+
+凌晨一點，不知怎的還是輾轉難眠。但早上可就爬不太起來了。現在精神很差。剛剛試了一下，確定 /usr/local/bin/sarg 會使機器掛掉。
+<div class="timeStamp">2010/5/31</div>
+找了一下發現 sarg output directory 下一大堆都掛了("Bad file descriptor")，推測可能是當天過午夜執行 sarg 期間死掉的？應該還不到一點？
+<div class="timeStamp">2010/5/31</div>
+結果順便把 squid 升到 3.1.3_1。
+<div class="timeStamp">2010/6/1</div>
+晚上把時間花在看文章，主要因為下意識等著到現在才響起的馬達聲。真是浪費時間。想到這階段的生活結束後，該實踐之前那個個人知識庫的構想了。
+<div class="timeStamp">2010/6/1</div>
+發現 Drupal6 不太容易套入外加的檔案啊。
+<div class="timeStamp">2010/6/2</div>
+
+這兩天聽說羅漢果所含 mogroside 比蔗糖甜三百倍，價格也沒多高，出門就想買幾個。水果店沒賣，只能找中藥店之類的。最後在小雜貨店找到，不過小小一顆直徑 5 cm 卻要 TWD15。只要了兩顆。還沒想到要怎麼調理。<br />
+前兩天<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E6%BD%94%E9%BD%92%E5%8A%91" accessdate="2010/6/3" title="潔齒劑">牙膏</a>沒了，之後只用牙刷了事。這樣比較能夠感受到鹹味（牙齦出血的味道）。雖說<a rel="nofollow" href="http://www.commonhealth.com.tw/article/index.jsp?id=1477" accessdate="2010/6/3" title="康健雜誌：我該用哪種牙膏？">牙膏似乎非必要</a>，不過項今天這種大蒜餐吃起來，怎麼刷還是有殘留氣味。這種情況下，牙膏的重要機能應該就是口氣清新吧。
+<div class="timeStamp">2010/6/3</div>
+最後採用輸入格式 "PHP code"，然後 <code>&lt;?php include '_path_to_html_file';?&gt;</code> 的方法，不過有時更改完這 static HTML 檔，竟然還得重新 edit 一次才會出現反應。困った（後來發現應該是錯覺）。順帶一提，昨天裝的 <a rel="nofollow" href="http://my.opera.com/desktopteam/blog/2010/05/31/opera-10-60-alpha-1" accessdate="2010/6/3" title="Opera Desktop Team - Opera 10.60 Alpha 1: Speed,  eye-candy, and bug fixing">Opera 10.60 Alpha 1</a> 再度出現 "Error initializing Opera: module 9" 的問題，就孤單的訊息框，連個應用程式的畫面都不給隨即消失。官網 knowledge base 上<a rel="nofollow" href="http://www.opera.com/support/kb/view/937/" accessdate="2010/6/3" title="Opera fails to start, with dialog: &quot;Error initializing Opera: module 9&quot; - Opera Knowledge Base">提到的方法</a>無效，找到 Opera 官方中文社区<a rel="nofollow" href="http://bbs.operachina.com/viewtopic.php?t=49481" accessdate="2010/6/3" title="Error initializing Opera: module 9怎么解决啊？ - 查看主题 - Opera 官方中文社区">這篇</a>終於想起上次把 <code class="path">%APPDATA%\Opera\</code> 下舊版的設定整個 copy 到新版的資料夾中才勉強運作，最後好容易跑起來。（後來發現功能設定檔 <code class="path">%APPDATA%\Opera\Opera[ version]\operaprefs.ini</code> 下加上<span title="[User Prefs]
+Preferences Version=2">一小段</span>就夠了。）只是 <code class="path">sessions\autosave.win</code> 還是不會自動更改，所以開啟的 session 始終不會自動記錄。或許這是因為我改過應用程式資料儲存資料夾權限設定產生的問題，但想到第十版後每次更新都得這麼玩，覺得有點累啊。
+<div class="timeStamp">2010/6/3</div>
+
+昨晚把 phpBB3 與 Drupal6 的驗證換成了 reCAPTCHA，比較訝異的是 <a rel="nofollow" href="http://googleblog.blogspot.com/2009/09/teaching-computers-to-read-google.html" accessdate="2010/6/5" title="Official Google Blog: Teaching computers to read: Google acquires reCAPTCHA">Google 收購了這家公司</a>，所以不用創建新帳號了。
+<div class="timeStamp">2010/6/5</div>
+搞了一整天到現在才把 upload 的部分做完。
+<div class="timeStamp">2010/6/5</div>
+
+小睡起來，泰半都死了（環境沒升到3級）。我想這遊戲給我的啟示除了環境污染外，還有越纖細的生物越難養活。別期望水族箱能和自然生態一樣，都不管它就能欣欣向榮。水族箱就是水族箱。雖然沒有遺憾感，但我知道了原來睡覺時，應該 "Stop Time"。
+<div class="timeStamp">2010/6/6</div>
+
+
+晚上搞了半天還是在匯入資料前，想著該怎麼組織 database。剛剛十一點半馬達聲才響起，洗澡準備睡覺。早上也是被馬達聲吵起的，翻來覆去無法入睡，時間也差不多了，只好起來。這兩天睡眠不足，造成了沉重（深沉）的打擊，腦袋的底面掛了個大鐵球，動不了。然後不時能感到具腐蝕性的血液如同將最後一滴鋁箔包（或袋裝）飲料吸乾時的乾澀與機動，胡亂流竄於腦內，整個腦袋有如快燒起來一樣（火燒腦）。總之腦細胞不之死了多少堆。<br />
+發現 server 在晚上尖峰時刻，剛剛一個小時也才一百出頭 MB 的流量。
+<div class="timeStamp">2010/6/7</div>
+
+2007/11/6 就提過，Google Reader 上的訂閱越來越多了。這兩年來又有些發現。一是現在訂這些文章有時不是用來看，而是用來搜索的：很多時候搜索這些訂閱的文章得到的資料會比直接用 Google 更新，也更能達到我的要求；普通網頁常常沒有那麼多內容，知識也不夠新潮。真要一篇篇閱讀的話，面對每天多一兩百篇的文章，自己根本沒那時間與精力。還是老話一句，該做個個人知識庫了。<br />
+另外還是之前 2009/3/22 提過，這次想加強說明的：大陸那邊的翻譯小組也多了起來，不只是專門網站如<a rel="nofollow" href="http://www.yeeyan.org/" accessdate="2010/6/10" title="译言网首页">译言网</a>或<a rel="nofollow" href="http://yyyyiiii.blogspot.com/" accessdate="2010/6/10">译者</a>，連 <a rel="nofollow" href="http://www.tedtochina.com/" accessdate="2010/6/10">TEDtoChina</a> 這種針對某言論集合（如 blog、雜誌等）的網站都出現了。（當然理想應該是主站上就有中文版，如 <a rel="nofollow" href="http://www.ted.com/translate/languages/chi_hant" accessdate="2010/6/10" title="TED | Translations | Talks in Chinese (Traditional)">TED Open Translation Project</a>。）記得十幾年前看過對日本的分析，說美國剛出的書，有時他們當天就一同出版翻譯版。有人或許會說大不了就學個英語就好，何必搞自閉？但母語的隔閡畢竟不是容易破除的，我們最能流利運用的，還是母語。而且正是這種資訊的快速流通，使日本人們就算不懂英語，也能迅速掌握最新知識。我只能期待未來本土也能多些人投入在這方面。當然，直接抬出繁簡轉換工具也不是不行啦，不過那就只能慶幸兩岸文字隔閡還沒到無法互通的地步了。
+<div class="timeStamp">2010/6/10</div>
+
+<h3>Story of Stuff 高解析度影片中文字幕看法</h3>
+昨天提到 <a rel="nofollow" href="http://www.storyofstuff.com/international/index.html" accessdate="2010/6/13" title="The Story of Stuff with Annie Leonard">The Story of Stuff</a>（這邊大多翻作「東西的故事」），上官網發現除了已經放出影片下載，還多了另兩片。大概是之前非得連上去看，速度過慢的緣故。其實像本片與 ±2°C 這種宣導影片，版權談得攏的話都應該想辦法開放下載比較好，畢竟這樣才能達到目的。<br />
+廢話少說。這次的目的是把它以中文字幕放出來。但意外的出了點狀況，所以在此メモ一下。首先，下載回來的是 StoryofStuff_NTSCcompressed.mov，我用的是 K-Lite Codec Pack Full，放了一下發現比例不太對。用 QuickTime 放則正常。後來發現這問題可以把 Media Player Classic - Home Cinema 的 "View" menu → "Video Frame" submenu → Touch Window From Inside 改成 Touch Window From Outside 即可解決。<br />
+但接下來就麻煩了。官網上雖然有提供 <a rel="nofollow" href="http://www.storyofstuff.com/international/scripts.html" accessdate="2010/6/13">Translated Scripts</a>，但幾個步驟（其實還花幾分鐘寫了小程式，因為正使用的 text editor 不夠力。）改成理論上可行的 srt 檔後卻依舊沒反應；無論怎麼改字幕都沒效。後來索性把影片改名成 mp4…成了。雖然這不是理想的標準解決法，倒也不失為一個可行的 workaround，提供各位參考。<br />
+對了，Blogger 的電子郵件發布功能若是態就沒手動發新文章就會失效的樣子。之前發現近一年來都沒文章發出，2009/1/30 寫了個 DNSSEC Howto 之後才發現可能與這有關。一直沒記下來。但剛剛看一下卻又不能確定。
+<div class="timeStamp">2010/6/13</div>
+
+
+結果到現在才完成資料 import 的部分。
+<div class="timeStamp">2010/6/13</div>
+
+
+晚上試了一下 Microsoft Office 2010（Visual Studio 2010 最起碼得等明天了），裝完卻意外發現不穩，動不動就 freeze。依過去的經驗，首先懷疑增益集。不過連選項頁面都開不起來，這就沒辦法了。繞了一圈找到<a rel="nofollow" href="http://office.microsoft.com/zh-tw/powerpoint-help/HP010354300.aspx" accessdate="2010/7/5" title="使用 Office 安全模式
+按住 CTRL 鍵執行">手動開啟使用安全模式的方法</a>（竟然沒有專門的 shortcut…），關了幾個才發現是 <a rel="nofollow" href="http://www.endnote.com/enword2k7.asp" accessdate="2010/7/5" title="EndNote - Word 2007/2010 News">EndNote X3 COM 增益集的問題</a>，這也<a rel="nofollow" href="http://www.sciencenet.cn/m/user_content.aspx?id=319471" accessdate="2010/7/5" title="科学网-翁建武的博客-关于 Endnote X3 与 Word 2010的兼容问题">掛得太糟糕了</a>，沒講沒人知道啊。只好改 Endnote X4 來用，現在倒 OK 了。
+<div class="timeStamp">2010/7/5</div>
+人生是座舞臺。每個人也確實都是（自己的）主角。但第一耀眼的卻不是我們。而縱使是那醉人的明星，在窮極閃亮的時刻，卻不曉得自己才是最燦爛的。所以，沒有任何野心家真正完成了自己的大業。
+<div class="timeStamp">2010/7/6</div>
+早上裝完，到剛剛試用了一下 Microsoft Visual Studio 2010。沒想到安裝程式不會移除舊版，只好手動把 2008 以及 MSDN 除掉。硬碟快被我塞爆了，只好清一點空間出來，現在還有 10 GiB。乍看之下，比較令我注目的是 <a rel="nofollow" href="http://blog.miniasp.com/post/2010/04/Visual-Studio-2010-jQuery-Development-Tips.aspx" accessdate="2010/7/6" title="在 Visual Studio 2010 活用 jQuery 的開發工具使用技巧">JavaScript 說明文件的部分</a>。另外的話，就是我常用的格式化功能感覺比 eclipse 快了些，自動完成也更強大（雖然沒有自動完成括號的功能）。<br />
+<div class="timeStamp">2010/7/6</div>
+
+或許因為作息不正常，頭がくらくらしてる。今天都花在<span class="creation_title">伝説の勇者の伝説</span>原作上了，想想情況實在不樂觀啊。
+<div class="timeStamp">2010/7/11</div>
+
+發覺<a rel="nofollow" href="http://songshuhui.net/archives/51971" accessdate="2011/4/17" title="科学松鼠会 » 晚上一杯奶，有个好睡眠？">吃太飽頭腦反而會昏沉欲睡</a>。還是別吃太多吧。
+<div class="timeStamp">2010/7/16</div>
+不知怎的，約二十分鐘前開始下雨，十分鐘前開始打大雷。
+<div class="timeStamp">2010/7/16</div>
+
+近幾天下午都會下雨。
+<div class="timeStamp">2010/7/24</div>
+
+糟糕的是水還一直不斷的淹啊，雖然比起電視上那些，這邊<span title="完全沒得比">只是小兒科</span>…
+<div class="timeStamp">2010/7/27</div>
+
+剛剛整理了一下剛剛借相機以來的照片。發現我保留相片的標準是關聯度：和我有關係的就留，沒關係的話，除非是美女（其實這也要看情況，除非是絕品，否則沒關係的大多還是剔除。），否則就 out。
+<div class="timeStamp">2010/8/13</div>
+陸續試了幾次，這茶果然沒啥提神效用。未知何故。
+<div class="timeStamp">2010/8/14</div>
+
+再度試了一下 Window 7 的語音辨識功能，還是很難用。每一句平均大概得更正或是重念（因為有時要「更正」幾個程序還不如重念較快）三到四次才能完成。就算平均沒那麼高，思緒還是很容易被打斷。而整體速度還是與打字差不多。因此這還是被我定位在照著念比較合適的工具。要寫文章的話，光是在那邊改正就忘記本來要說什麼了。總覺得既然效果這麼差，他們就不能換個方式輸入嗎？例如錄下音檔，全部輸入完再回來檢查之類的。不過這一次試用了日文語音輸入，雖然我的咬字不清不楚的，卻也有大概一半的辨識率了。可惜的是，這項功能得要變更顯示介面的語言才能使用，不能在輸入文件時隨時切換。因此還是很不方便。<br />
+
+<div class="timeStamp">2010/8/14</div>
+結果昨天那杯濃茶就讓我撐到五點多，似乎有點效果，雖然會有點反胃。再起來快十一點了。準備吃飯。發現昨天（或前天）發生異常的 notebook 螢幕與鍵盤部右結合處果然是故障了。或許是因為我開闔的頻率異常的高，因此損耗得也快。
+<div class="timeStamp">2010/8/15</div>
+
+近兩三個禮拜現在用的喇叭常常出現得要突然把音量調高，聲音才會出來的毛病。這兩天變得越來越嚴重。左邊（左聲道）的喇叭可能在一年前就已經變得很小聲了，只是以我平常的姿勢，到前一兩個月才發現。這兩個都是用久以後常見的問題，但我並不知道有什麼解決之道。依照之前的經驗，看來又得要換新的了。<br />
+準備開始 CANAAN，不過得先大概了解一下 <a rel="nofollow" href="http://ja.wikipedia.org/wiki/428_%E3%80%9C%E5%B0%81%E9%8E%96%E3%81%95%E3%82%8C%E3%81%9F%E6%B8%8B%E8%B0%B7%E3%81%A7%E3%80%9C" accessdate="2010/8/22" title="428 〜封鎖された渋谷で〜">428</a> 在說什麼。
+<div class="timeStamp">2010/8/22</div>
+<h2>遊戲分類方法</h2>
+可能是為了極力「去色化」，有些人似乎<a rel="nofollow" href="http://www.keyfc.net/bbs/showtopic-17018-4.aspx" accessdate="2010/8/22" title="第一次看到关于 CLANNAD 的负面评价 - CLANNAD &amp; Tomoyo After - KeyFansClub 我们的梦想
+「以「Hgame」的範疇來說……」
+看到這裡還需要看下去麼……-.-">相當在意</a> "<em>H</em>game" 這字眼。（這些評論其實早就見識過了，只不過近來從 referer analysis 又回味了一下。）想一想，還是全部改作更精準點的用詞，例如在探討內涵時使用<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%8E%E3%83%99%E3%83%AB" accessdate="2010/8/22">ビジュアルノベル</a>好了，反正劇本本身才是我的本意。不，平心而論我的重點還不是在<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E3%82%B2%E3%83%BC%E3%83%A0" accessdate="2010/8/22">美少女ゲーム</a>。真要說我其實連<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%A3%E3%83%AB%E3%82%B2%E3%83%BC" accessdate="2010/8/22" title="ギャルゲーとは、「ギャルゲーム」（Gal game）の略であり、主に魅力的な女性が登場することを売り物とするタイプのコンピュータゲームの俗称。類似の概念に美少女ゲーム、萌えゲームがある。">魅力</a>啥的都沒放在眼裡。目的僅在表現<span title="精神">內涵</span>不一定需要美女、魅力少女來呈現，更甭提 "Hgame"。只不過我確實多是在玩這樣的遊戲罷了。當然 <a>CLANNAD</a> 本身並不是，當時因為有許多人還在想會不會出個 🔞18禁版，因此隨隨便便就用了這個詞。事實上我覺得這沒啥必要爭議或不齒的，不過用詞精準一點又能少被人詬病的話，那當然比較恰當。<br />
+歸結一下，本站現在對於以劇本為重的遊戲，分類之用詞定義與指稱範疇如下：
+<table>
+<caption>本站所使用<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB" accessdate="2013/7/11">コンピュータゲームのジャンル</a>（by 作品テーマ）</caption>
+<tr><td rowspan="7"><b>ゲーム</b><br />所有遊戲的 meta-catalog。</td><td rowspan="6"><b>テキストゲーム</b><br />以遊戲形式表現的劇本。涵義請參考 <a>ELF ALL STARS 本格的脱衣雀2</a> 的討論。許多 <a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0" accessdate="2013/7/11" title="アドベンチャーゲーム">ADV</a> 屬之。<br />這也算是一種 meta-catalog，本站會盡量避免利用此自創詞，而以ビジュアルノベル代替。</td><td rowspan="5"><b>美少女ゲーム</b><br />以男性為主角、服務男性；有吸引人的女性登場，通常這些養眼因子亦為劇本不可或缺要素的遊戲。（注：這邊為圖方便分類，不限於<b>美少女</b>。惟本類終以美少女為大宗。）</td>
+	<td rowspan="3"><b>アダルトゲーム</b>、<b>エロゲー</b><br />有男女<span title="濡れ場、H シーン、H scene">情色場面</span>或其他限制級因素的遊戲。本站遊戲心得八九成都是這類型劇本。</td>
+		<td><b>官能ゲーム</b><br />僅僅為情色場面而存在的遊戲，俗稱抜きゲー。於本站，此類別亦稱 R指定（ゲーム），尚包括<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E8%84%B1%E8%A1%A3%E9%BA%BB%E9%9B%80" accessdate="2013/7/11">脱衣麻雀</a>等脱衣ゲーム。</td></tr>
+		<tr><td><b>ビジュアルノベル</b><br />此為本站遊戲評論的重心。這詞更精準的用法為以劇本為重的遊戲，因此事實上<em>不限於美少女ゲーム</em>。請注意：<b>這與一般的定義不同</b>！包括<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%8E%E3%83%99%E3%83%AB" accessdate="2013/7/11">サウンドノベル</a>與一本道的<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%8D%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%8E%E3%83%99%E3%83%AB" accessdate="2013/7/11">キネティックノベル</a>、一般的<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E6%B3%A3%E3%81%8D%E3%82%B2%E3%83%BC" accessdate="2013/7/11">泣きゲー</a>都被歸於此類中。</td></tr>
+		<tr><td>其他不以劇情為重，以及僅僅不是以情色場面為重的<b>凡庸</b>遊戲、<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E6%AE%8B%E9%85%B7%E3%82%B2%E3%83%BC%E3%83%A0" accessdate="2013/7/11">残酷ゲーム</a>、<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%82%AF%E3%82%A4%E3%82%BA%E3%82%B2%E3%83%BC%E3%83%A0" accessdate="2013/7/11">クイズゲーム</a>、部分 RPG 與卓球ゲーム等。</td></tr>
+<tr><td colspan="2"><b>ギャルゲー</b><br />特性為有美女、少女登場，主要服務男性但<span title="．">沒有</span>情色場面的遊戲。</td></tr>
+<tr><td colspan="2">其他：如<b><span title="女性（または思春期の少女）同士の恋愛 橘里橘氣">百合</span>ゲーム</b>、<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E4%B9%99%E5%A5%B3%E3%82%B2%E3%83%BC%E3%83%A0" accessdate="2013/7/11">乙女ゲーム</a>等。部分<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E5%A5%B3%E6%80%A7%E5%90%91%E3%81%91%E3%82%B2%E3%83%BC%E3%83%A0" accessdate="2013/7/11">女性向けゲーム</a>屬之。</td></tr>
+<tr><td colspan="3">其他沒有美女、少女的遊戲：<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%BA%E3%83%A9%E3%83%96" accessdate="2011/4/20" title="ボーイズラブ（Boys Love、略して BL）とは、日本における男性の同性愛を題材とした小説や漫画などのジャンルのこと。">BL</a>ゲーム等遊戲。完全不以女性為主打的遊戲，例如 <a>ODEON</a> 雖然有情色場面，亦分類於此。</td></tr>
+<tr><td colspan="4">其他遊戲：此非本站重心，故不討論之。</td></tr>
+</table>
+當然未來還有修正可能，且這還不夠嚴謹。不過我就算玩到那樣的東西，這些用詞大概也沒機會派上用場吧？
+<div class="timeStamp">2010/8/22</div>
+
+</div><br />
+
+</body></html>

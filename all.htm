@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/TR/XHTML1">
+<head><title>Submenu</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css.css" title="style" />
+<link rel="meta" href="/ICRA.rdf" type="application/rdf+xml" />
+<base target="MAIN" />
+<script type="text/javascript" src="../lib/JS/ce.js">//{"run":"resources/reviews.js"}</script>
+<style>
+#a_list a{
+	display: block;
+	/*
+	margin-left: .5em;
+	text-indent: -.5em;
+	*/
+	background: #eff;
+	margin-top: .5em;
+	border-bottom: 1px solid #bbf;
+
+	border-left: 2pt solid #aaf;
+	padding-left: 1pt;
+}
+</style>
+</head>
+<body style="background-image:url(resources/images/bg3.gif);margin:1px;" onload="setTopP();">
+<a href="menu.htm" target="_self" title="Back to main memu select">←主選單</a>
+<div id="a_list"></div>
+<script type="text/javascript">
+
+function initialization(){
+var l=location.search,Loc=1,Loc2=g.length,e,C_=new Array,k,s='',e//,w=document.write:這招NS不行
+,t='<div style="margin-left:0px;margin-right:0px;background-color:white;border-style:double;border-color:#0000a0;font-size:9pt;padding:9px;padding-left:0;padding-right:0;"><span style="color:green">'+title+':<\/span><br />';
+
+if(l)if(l.substr(0,3)=='?k=')k=unescape(decodeURI(l.substr(3))).turnU(),t+=' <span style="color:brown;white-space:nowrap">search key:<\/span> [<b style="color:purple">'+k+'<\/b>]',k=new RegExp(k,'i');else{
+ var a=l.substring(1).split(','),g_;
+ function initG(){if(typeof g_!='object'){g_={};for(var i=0;i<g.length;i++){g_[g[i].t]=i;if(g[i].s&&!g_[g[i].s])g_[g[i].s]=i;}}}
+ function checkG(n){if(isNaN(a[n]))initG(),a[n]=g_[decodeURIComponent(a[n])];else a[n]=parseInt(a[n]);}
+ if(checkG(0),Loc<a[0])Loc=parseInt(a[0]);
+ Loc2=a[1]||a[1]==""?(a[1].charAt(0)=='+'?Loc:0)+(isNaN(a[1])?(checkG(1),a[1]||Loc):parseInt(a[1])):Loc;
+ if(Loc>Loc2){var T=Loc;Loc=Loc2,Loc2=T;}Loc2++;
+ if(!Loc||Loc<0)Loc=1;if(isNaN(Loc2)||Loc2>g.length)Loc2=g.length;
+}
+
+if(g[Loc])document.title=document.title+': '+g[Loc].t.turnU()+(Loc==Loc2-1?'':' - '+g[Loc2-1].t.turnU());
+try{e=k||Loc>=g.length?0:(Loc2==g.length?c.length:g[Loc2].i)-g[Loc].i;}catch(e){e=0;}
+if(k||e)for(var i=g[Loc].i;i<c.length;i++){
+ while(Loc<g.length&&i>=g[Loc].i)
+  if(Loc>=Loc2){Loc++;break;}
+  else{
+   s='<hr style="color:tan;height:1px" /><a class="header" id="'+g[Loc].t+'"><\/a><span style="color:purple;background:pink" title="'+Loc+': '+g[Loc].t+'"> '+g[Loc].t+(g[Loc].s?(g[Loc].s.length>3?'<br /> ':'')+'<span style="color:olive">('+g[Loc].s+')<\/span>':'')+' :<\/span><br />';
+   Loc++;if(!k)t+=s;//在search時不顯示空的項目
+  }
+ if(Loc>Loc2)break;
+ //if(c[i].c&&c[i].c.indexOf('<')>=0){var tmp=c[i].c.substring(c[i].c.indexOf('<')+1),t2=tmp.indexOf('>')+1;c[i].c=tmp.indexOf('<')<t2?tmp.substring(t2):tmp.substring(t2,tmp.indexOf('<'));}
+ if(!k||c[i].t.turnU(1).match(k)||c[i].l.match(k)){
+  if(k)e++,t+=s,s='';
+  t+=' '+(c[i].l?'<a href="'+hL(i):'<span style="color:gray"')+(c[i].c||c[i].w?'" title="'+(c[i].c?c[i].c.gText()+(c[i].w?'\n':''):'')+(c[i].w?c[i].w:''):'')+'">'+c[i].t+(c[i].l?'<\/a>':'<\/span><br />')+'';
+ }
+}
+t+='<hr />'+(e?'<span style="display:block;text-align:right;color:peru;margin-bottom:-.5em">共 '+e+' 項.<\/span>':'<span style="color:red">No item in the range!<\/span>')+'<\/div>';
+document.getElementById('a_list').innerHTML=t;
+}
+
+</script>
+
+<!-- ana1 -->
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-346568-1'],['_setDomainName','meicho.com.tw'],['_setAllowLinker',true],['_trackPageview']);(function(){var ga=document.createElement('script'),s=document.getElementsByTagName('script')[0];ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(ga,s);})();</script>
+<script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+<script type="text/javascript" src="http://tw.js.webmaster.yahoo.com/344350/ystat.js"></script><noscript><a href="http://tw.webmaster.yahoo.com"><img src=http://tw.img.webmaster.yahoo.com/344350/ystats.gif></a></noscript>
+<!-- end ana -->
+
+</body></html>

@@ -1,0 +1,452 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://kanasimi.github.io/CeJS/ce.js">//{"run":"../resources/reviews.js"}</script>
+<title>Colorless echo JavaScript framework</title>
+</head>
+<body>
+
+<a id="CeJS"></a><div id="c_CeJS" class="c2" title="Colorless echo JavaScript framework">
+<div class="notice">
+<h3>請注意</h3>
+本文為<span title="殴り書きメモ">未完稿</span>。
+</div>
+
+<h2>Colorless echo JavaScript framework</h2>
+<h3><span title="簡介">Introduction</span></h3>
+This is a JavaScript module framework that is simple to use.
+本計畫的目的是建立一個能簡單上手的 JavaScript 模組架構。您可想成是一個類似於 <a rel="nofollow" href="http://developer.yahoo.com/yui/" accessdate="2011/11/27" title="YUI Library">YUI</a> 的 library。
+
+<h3><span title="特色">Feature</span></h3>
+地址/住址輸入表單現有臺灣可用。
+
+<h3>注意事項</h3>
+本 library 將使用到 global 變數 'CeL'。您可使用 .get_old_namespace() 來獲得原先之 CeL 值，或是以 .recover_namespace() 來復原變數 'CeL'。
+
+<h3>Demonstration</h3>
+您可將整個計劃下載到本機硬碟上做測試。<br />
+線上演示可參考 <a rel="nofollow" href="http://kanasimi.github.com/CeJS/demo/demo.htm" accessdate="2011/8/20" title="test suite">demo page</a>。
+
+
+<h3>Tested browsers</h3>
+Opera 11, firefox 5, Safari 5, Internet Explorer 8, Chrome 10.
+
+<h3>Download: 如何獲得原始碼</h3>
+您可以利用 <a rel="nofollow" href="https://github.com/kanasimi/CeJS" accessdate="2011/8/27" title="kanasimi/CeJS - GitHub">CeJS@GitHub</a> 或 <a rel="nofollow" href="http://code.google.com/p/cejs/" accessdate="2011/8/27" title="cejs -
+
+
+ Colorless echo JavaScript project home - Google Project Hosting">CeJS @ Google Project Hosting</a> 來取得最新原始碼。
+
+
+<h2>Usage: How to include resource</h2>
+本 library 與 HeadJS 相同，皆可以單行指令載入其他 resource 與本 library 所附的 module。<br />
+首先 include 基本 script：
+<code class="block">
+&lt;!--	load library	-->
+&lt;script type="text/javascript" src="path/to/ce.js">&lt;/script>
+
+&lt;script type="text/javascript">
+//	預防 initialization 到一半彈出警告視窗，所以設大一點。
+CeL.log.max_length = 20;
+//	set debug
+CeL.set_debug();
+
+
+//	判別是否已經 load 過
+if(typeof CeL !== 'function' || CeL.Class !== 'CeL')
+	//	CeL has not been loaded
+	;
+&lt;/script>
+</code>
+
+或使用初始序列：
+<code class="block">
+&lt;script type="text/javascript" src="path/to/ce.js">
+{
+	"set_run" : "initialization.js"
+}
+&lt;/script>
+</code>
+
+<code class="block">
+&lt;script type="text/javascript" src="path/to/ce.js">
+{
+	"set_run" : [ "initialization_1.js", "initialization_2.js" ]
+}
+&lt;/script>
+</code>
+
+之後，載入 resource 的方式有下列幾種：
+<dl><dt>.set_run( running sequence )</dt><dd>
+照 sequence 執行。<em>推薦使用 .set_run 此泛用方法</em>。
+
+<code class="block">
+//	include single JavaScript file
+CeL.set_run(
+	"path/to/JavaScript.js",
+	callback
+);
+
+CeL.set_run(
+	"http://host.name/include.full.URL/JavaScript.js"
+);
+</code>
+
+<code class="block">
+//	include single CSS file
+CeL.set_run(
+	"path/to/CSS.css",
+	callback
+);
+
+CeL.set_run(
+	"http://host.name/include.full.URL/CSS.css",
+	callback
+);
+</code>
+
+<code class="block">
+//	include single module
+CeL.set_run(
+	"full.module.name",
+	callback
+);
+</code>
+
+<code class="block">
+//	進階用法：以下依序載入 4個同步載入組。
+CeL.set_run(
+
+	[
+		//	下面的幾項將會同時載入。
+		"path/to/JavaScript.0.js",
+		"full.module.name.0",
+		"full.module.name.1",
+		"path/to/JavaScript.1.js",
+		"path/to/JavaScript.2.js"
+	],
+
+	[
+		//	下兩函數與 resource 將會等待上一同步載入組載入完成之後才執行。
+		function(){
+			//	codes
+		},
+		function(){
+			//	codes
+		},
+		"full.module.name.2"
+	]
+
+	//	下一個同步載入組：下面這幾項亦會一同載入。
+	[
+		"full.module.name.3",
+		"path/to/JavaScript.3.js"
+	],
+
+	function(){
+		//	本函數將會於最後執行。
+	}
+);
+</code>
+
+本函數會先嘗試使用 XMLHttpRequest <span title="synchronously">同步</span>的方式依序取得、載入 module。
+無法以 XMLHttpRequest 循序載入時，則插入 node，以<span title="asynchronously">非同步</span>的方式載入 resource。<br />
+
+特別需要注意的是，本函數亦具有 jQuery.ready() 一般的功能，會在 DOM 準備好之後才觸發。其原理為本函數會在 DOM 尚未準備好前，先把序列存入 queue 中。待準備好後再執行。但為了效率考量，本函數會在 DOM 準備之後置換 .set_run 自身，因此建議若要作 alias of .set_run，請在 DOM 準備之後再作 alias：
+<code>
+//	alias of CeL.set_run
+var sr;
+CeL.set_run(
+	function() { sr = CeL.set_run; },
+	//	之後再使用 cache
+	function() {
+		sr('module_name', function(){
+			// FunctionBody
+		});
+	});
+</code>
+
+</dd><dt>.get_file( file path )</dt><dd>
+get_file 是這幾種方法中第二常用的 function，常常在 function 中使用。以<span title="synchronously">同步</span>的方式依序取得、載入單一 resource。由於使用 XMLHttpRequest，可能為了 browser 安全性設定而無法取得 resource。
+<code class="block">
+//	get contents of [path/to/file]:
+var file_contents = CeL.get_file('path/to/file');
+CeL.log(file_contents);
+</code>
+
+</dd><dt>.use( full module name )</dt><dd>
+載入指定 module。本函數通常可以 .set_run 替代。
+<code class="block">
+//	include module
+//	注意：以下的 code 中，CeL.warn 不一定會被執行（可能會、可能不會），因為執行時 log 可能尚未被 include。此時應該改用 CeL.set_run('application.log', callback);
+CeL.use("application.log");
+CeL.warn('WARNING message');
+</code>
+
+<code class="block">
+//	include module than run callback()
+CeL.use(
+	"full.module.name",
+
+	function callback(){
+		//	codes
+	}
+);
+</code>
+
+
+</dd><dt>.include_resource( URL )</dt><dd>
+以<span title="asynchronously">非同步</span>的方式載入單一 resource 之後執行 callback。實際機制為在 &lt;head> 中插入對應的 document object，戴載入後執行 callback。本函數通常可以 .set_run 替代。
+<code class="block">
+//	Including JavaScript file asynchronously.
+CeL.include_resource("path/to/JavaScript.js", callback);
+</code>
+
+<code class="block">
+//	Including CSS file asynchronously.
+CeL.include_resource("path/to/CSS.css", callback);
+</code>
+
+</dd></dl>
+
+
+<h2>Concepts: 資源載入的內部運作原理</h2>
+.set_run 會循序讀入同步載入組。<br />
+對組內每一項，先判別是 module 或者一般 URL。對尚未載入的 module 會使用 <code>.use(module_name, callback)</code> 載入，.use 會先嘗試 .get_file，若可用 XMLHttpRequest，則會循序載入資源；若失敗則以 <code>.include_resource(module_path, callback)</code> 載入，.include_resource return 後則 wait module file loaded to call .setup_module。對一般 URL，.set_run 亦會經過類似的步驟，先嘗試循序載入，否則 call .include_resource。<br />
+於 module file 內，module 會 call .setup_module 來作初始設定（見下一節）。若 module 有 dependencies，則會先嘗次載入 dependencies，並把依附其下的其他 resource 移至之後載入。
+
+
+<h2>如何製作 module（或是說 plugin）</h2>
+下面示範幾種較常用的 module 寫法。
+<code class="block">
+//	簡單範例 @ full/module/name_1.js
+typeof CeL == 'function' &&
+CeL.setup_module(
+	'full.module.name_1',
+
+	function(){
+		//	code_for_including
+		var _ = function(){};
+		_.good_method = function(){/* .. */};
+		return _;
+	}
+);
+
+
+//	use it
+CeL.set_run(
+	'full.module.name_1',
+	function(){
+		CeL.good_method(/* .. */);
+	}
+);
+
+</code>
+
+module name 以 '.' 分隔，代表位在哪個目錄分組中。例如 'full.module.name_2' 表示位在 full/module/name_2.js 之 JavaScript 檔案。因為本 library 允許同時 loading，因此<b>必須</b>設定 module name 以確定 loading 的是哪個 module。<br />
+此外 module <b>必須</b>將 require 設定於 module.require，而無法在 code_for_including 中才設定。
+
+<code class="block">
+//	簡單範例2 @ full/module/name_2.js
+typeof CeL == 'function' &&
+CeL.setup_module(
+	/**
+	 * 本 module 之 name(id)，不設定時並不會從呼叫時之 path 取得。
+	 * @type	String
+	 * @constant
+	 * @inner
+	 * @ignore
+	 */
+	'full.module.name_2',
+
+	{
+		require : '<span style="color:#3b4;">full.module.name.required.1.<b>method_1</b></span><span style="color:red;">|</span><span style="color:#3b4;">full.module.name.required.2.<b>method_2</b></span><span style="color:red;">|</span><span style="color:#3b4;">full.module.name.required.3</span><span style="color:red;">.</span><span style="color:red;">|</span><span style="color:#3b4;">full.module.name.required.4</span><span style="color:red;">.</span>',
+		/**
+		 * 若欲 include 整個 module 時，需囊括之 code。
+		 * @type	Function
+		 * @param	{Function} library_namespace	namespace of library
+		 * @param	[load_arguments]	需要使用繼承功能，呼叫 code 時之 argument(s)
+		 * @return	module namespace
+		 * @constant
+		 * @inner
+		 * @ignore
+		 */
+		code : function(library_namespace){
+			//	requiring
+			var method_1, method_2;
+			eval(library_namespace.use_function(this));
+
+			//	設定 module name
+			var module_name = this.module_name;
+
+			var	data1 = method_1(/* .. */),
+				data2 = method_2();
+
+			//	code 中，library_namespace === CeL
+			var _ = function(){};
+			_.good_method = function(){
+				library_namespace.debug('Some debug message', /* debug level */ 1, module_name + '.good_method');
+			};
+			return _;
+		}
+	}
+);
+
+
+//	use it: see above
+
+</code>
+
+
+<h2>Concepts: module 載入的內部運作原理</h2>
+.setup_module 會 call .parse_require 依 (module name-space).require 設定:
+<ul><li>(module name-space).require_module = module name[]
+</li><li>(module name-space).require_variable = {variable_name: full_name_with_module_name}
+</li><li>(module name-space).require_URL = URL[]
+</li></ul>
+
+若有未載入之 dependencies，則先 check 登錄。若本身已經在需求名單中，可能是<span title="circular dependencies">循環參照</span>，則還是放行（執行 module 中 code_for_including），避免相互需要造成<span title="Out of stack space / Stack overflow">堆疊空間不足</span>。<br />
+若本身未在需求名單中，則登錄 module_name 正在 call 之記錄，module_require_chain[module_name] = dependencies by .parse_require()。之後 call .use(require_module)。無法採用 XMLHttpRequest，造成有未載入之 dependencies，則不載入 module，直接 throw。此時 .include_resource 會 call callback(path, module_name)，傳入此 module 所需之 dependency list 來進一步處置。
+
+<p>
+若 dependencies 皆已載入，.setup_module 會執行 module 中的 code_for_including。
+</p>
+
+於 module: code_for_including 內，可於一開始以 .use_function 設定 required local variables。但須注意可能因為<span title="circular dependencies">循環參照</span>，事實上 required 並未正確設定；於其後執行時將之當作 function 直接 call 即可解決。<br />
+.setup_module 執行完會清除載入中之登錄：<code>delete module_require_chain[module_name];</code>。
+
+
+<h2 title="design pattern">設計理念</h2>
+
+<h3>盡可能別消耗資源</h3>
+例如採用 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Lazy_loading" accessdate="2012/11/13" title="Lazy loading">lazy loading</a>；除非必要，否則當有需要時才執行。
+
+<h3>最簡化：僅部屬必須組件</h3>
+對於永遠不會使用到的功能，例如針對其他 browser 設計的功能，則捨棄之。<br />
+除非成本過高，否則不使用單一函數打包一般性功能，並在每次執行時再檢測一次。要這麼作，不如在第一次執行到時就檢測好（不在一開始就檢測，是為了盡可能別消耗資源。），並只採用需要的針對性函數。<br />
+舉例來說，若處於 IE 環境，則僅載入 IE 需要的組件。但須注意的是，應採用<span title="feature detection">功能檢測法</span>，而非<span title="browser detection">瀏覽器偵測法</span>，除非功能檢測無法鑑別或不管用（成本過高）。
+
+<h3>盡可能相容於長期標準</h3>
+除非成本過高（implementation 過於消耗資源、標準制定或實現得不好）、有必要考量不能放棄的使用者（如 IE 6 user），或是不得已需要暫時性措施（例如在 core function 中需要一個極為簡單的 JSON.parse，並且也僅提供當前 context 短暫使用。）；否則應使 library 的使用者盡可能在任何環境中，皆可以標準的寫法（此標準已經過認定，並預期長期間不會變更。）實現應有的功能。<br />
+例如採用補全 Array.isArray 的方法，而不是自己訂出功能相同之函數。但對 Object 來說，由於標準不存在 Object.isObject 來判別是否為原生 "Object"；在「最小化影響」的理念下，則以 library name-space 下的函數實現。
+
+
+<h3>最小化影響</h3>
+除了標準規定之簡單核心物件外（如 Array, Boolean, Date, Function, Math, Number, RegExp, String, Object），盡量不影響其他外部物件。因此就算要符合長期標準，使程式碼與舊版相容，也盡可能不動到 prototype。其他物件包括環境本身 (global object, window)，更不用說是計算成本高昂之 HTML element。
+
+
+<h2>嚆矢：為什麼會有這計畫？以及雜談。</h2>
+會想到要做這個 library，主要是因十多年來寫了一些 code；近幾年隨著各種 JavaScript framework 的興起與 ECMAScript 標準的制定，想說該讓這些舊 code 踏入新世紀了。因此就算是天馬行空，最起碼還不算平地樓臺。更應該說，就因為是有一筆爛帳擺那邊，所以才想到要讓這些東西有個歸宿吧。畢竟我有盡力不使由己所出的東西被白白浪費的偏執。<br />
+今天既然要趕流行寫（一個較為全方位性的）library set，鑒於過去寫過各種類型的 functions，第一項要務就是分類。當然我對 JavaScript 的認識還遠不及大師級的程度，可以從底層以及設計概念來制定出所需要的規範。因此我所能做的就是將過去所寫過的 code 分出適當的類別。之前開始做本 library 時，其實已經從功能來分化過，但最近則想從另一種角度來試試。
+
+
+<h2>Structure: framework source tree 架構</h2>
+我的想法是，JavaScript 作為一種程式語言，對內有演算的部分，也有對底層（例如機種依存之功能。其實我們熟知的<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7" accessdate="2011/6/28" title="網頁的瀏覽器兼容性指網頁在各種瀏覽器上的顯示效果盡量保持一致的狀態，90年代末的瀏覽器大戰開始時被廣泛使用。">瀏覽器支援度</a>等<a rel="nofollow" href="http://en.wikipedia.org/wiki/Computer_compatibility" accessdate="2011/6/28" title="Computer compatibility">平臺依存</a>問題、<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%90%91%E4%B8%8B%E5%85%BC%E5%AE%B9" accessdate="2010/12/15" title="向前相容/向下兼容/向下相容（downward compatibility），又稱回溯相容（backward compatibility）">回溯相容</a>問題等，都是因為對概念的實踐過程中，不同的實作會造成不一樣的終端解決方法。）、對資料結構的操作。對外的介面操作部分，則有對 DOM 的操作與事件處理。<br />
+所以對常用 JavaScript 操作之底層暫時決定粗分下面幾種類別：
+
+<dl><dt>data/</dt><dd>
+處理資料的 code，包含資料結構、直接處理資料的演算法。例如 file system IO、Ajax 等。
+
+<dl><dt>structure/</dt><dd>
+資料結構。
+</dd><dt>algorithm/</dt><dd>
+純演算法相關的 code。
+</dd><dt>math/</dt><dd>
+數學演算相關的 code。
+</dd><dt>code/</dt><dd>
+對程式碼之支援（將 source 也視為一種資料），包括<a rel="nofollow" href="http://en.wikipedia.org/wiki/Code_refactoring" accessdate="2011/8/18" title="Code refactoring">代碼重構</a>等。
+</dd><dt>code/compatibility.js</dt><dd>
+對不同 JavaScript 版本之支援。這些功能應當於 application/ 下作 link。參考 <a rel="nofollow" href="https://github.com/kriskowal/es5-shima" accessdate="2011/8/19" title="404 - GitHub">es5-shim</a>。
+</dd><dt>native.js</dt><dd>
+對 native objects 或 future objects 以至 DOM 之<span title="extension">擴展</span>。這些功能應當於 application/ 下作 link。
+</dd><dt>CSV.js</dt><dd>
+包含了處理 CSV data 的 functions。
+</dd><dt>XML.js</dt><dd>
+包含了處理 XML file 的 functions。
+</dd><dt>check/</dt><dd>
+檢驗 id、ISBN、MD5 等。
+</dd></dl>
+
+
+</dd><dt>interact/</dt><dd>
+<span title="interface handling">介面操作</span>、與使用者操作互動相關的 code。包括許多 web 介面互動函數。因為 "interface" 已經成為 strict mode 的 FutureReservedWord，所以改用 interact。
+
+<dl><dt>DOM/</dt><dd>
+web DOM 操作，例如 create/search/modify document object。這中間傳入的 function 應該以 .call(document object) 呼叫，使其中的 'this' 即為 document object 本身。<br />
+我考慮了一下最簡單的操作模式，發現 object.action(argument/條件) 是比較恰當的。事實上 jQuery 就是以這樣的方式，先以 $(選擇條件) 包裝物件，再使用 .action(argument)，並以 <code>return this</code> 串接。
+</dd><dt>form/</dt><dd>
+web form 操作。
+</dd><dt>drag_drop.js</dt><dd>
+web drag-and-drop 操作。
+</dd><dt>event.js</dt><dd>
+<span title="event handling">事件操作</span>。event 先備條件包括 function/files loading, timeset。
+</dd><dt>integrate/</dt><dd>
+包含某些<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E7%A7%91%E9%99%85%E6%95%B4%E5%90%88" accessdate="2020/2/3" title="interdisciplinarity, interdisciplinary studies 跨領域研究">科際整合</a>但用途專一且特殊的功能，例如處理 SVG、map。
+</dd></dl>
+
+
+</dd><dt>application/</dt><dd>
+<span title="application functions">應用功能</span>、內部<span title="action">動作</span>與處理用 code。
+
+<dl><dt>debug.js</dt><dd>
+debug 用的 functions。
+</dd><dt>debug/log.js</dt><dd>
+記錄用 functions。
+</dd><dt>deploy.js</dt><dd>
+程式部署、安裝配置、<a rel="nofollow" href="http://en.wikipedia.org/wiki/Software_distribution" accessdate="2011/8/16" title="Software distribution">distribution</a> 用的 functions。
+</dd><dt>API.js</dt><dd>
+包含了 include web API 專用的 functions。
+</dd><dt>net/</dt><dd>
+包含了處理網路傳輸相關功能的 functions。
+</dd><dt>net/Ajax.js</dt><dd>
+包含了 Ajax、XMLHttpRequest 的 functions。
+</dd><dt>storage/</dt><dd>
+IO 存儲處理。
+</dd><dt>storage/file.js</dt><dd>
+檔案處理的 meta class。可能會 require OS/ 下的東西。
+</dd><dt>locale/</dt><dd>
+i18n 系列。
+</dd><dt>OS/</dt><dd>
+對底層 OS 之<span title="support">支持</span>處理機種依存問題。
+</dd><dt>OS/Windows/</dt><dd>
+包含了 Windows 系統管理專用或相關的 functions。
+</dd><dt>OS/Windows/WMI.js</dt><dd>
+包含了 Windows Management Instrumentation 的 functions。
+</dd><dt>OS/Windows/HTA.js</dt><dd>
+包含了支援 Microsoft Windows 上 <a rel="nofollow" href="http://en.wikipedia.org/wiki/HTML_Application" accessdate="2011/10/22">HTML Application</a> 的 functions。
+</dd><dt>OS/Windows/registry.js</dt><dd>
+包含了操作<a rel="nofollow" href="https://en.wikipedia.org/wiki/Windows_Registry" lang="en-US" accessdate="2020/10/27" title="Windows Registry">註冊表</a>用的 functions。
+</dd><dt>browser/</dt><dd>
+對不同瀏覽器相容性問題之<span title="support">支持</span>。
+</dd><dt>transform/</dt><dd>
+針對 object 的轉換，包括物件轉換：object (class, DOM) transformation。前述 jQuery 的包裝方式即為其一。對於這常用功能，考量 JavaScript 至今演變，因為單 char 可用符號剩下不多，大概就 "$", "_" 等，因此 jQuery 就設定為 '
+
+</body></html>
+ 了吧？<br />
+本項目之目的在可以用 <code>.transform(input_form[, (string)output_form_name/output_form])</code> 得到可做泛用操作的 object。輸入可以是多數種類的 row data、number 等。<br />
+一個 object array 的 .type 可以得到 prototype object of this array。若此 array 中之 objects 沒有統一的 type，則設定為 multitype = null/""/undefined。<br />
+這並非函數映射，因為我們做轉換之目的通常是要<b>應用</b>轉換後之物件，而非將重點放在<b>映射</b>這過程上。所以（我想）用「轉換」會比「映射」合適。
+</dd></dl>
+
+
+</dd><dt>extension/plug-in</dt><dd>
+給其他開發者放置擴張功能之 code 用。
+
+</dd></dl>
+
+其中還有些界定不清或不足的部分，可能得待未來補充修正了。有趣的是，後來發現 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/MVC" accessdate="2011/10/22" title="MVC 模式（三層架構模式）（Model-View-Controller）是軟體工程中的一種軟體架構模式，把軟體系統分為三個基本部分：模型（Model）、檢視（View）和控制器（Controller）。">MVC 架構</a>，發現兩者間有異曲同工之妙。與之相對照，約有如下關係：data/ ≈ Model, interact/ ≈ View, application/ ≈ Controller。顯然我想到的，早就有人系統化研究過了。或更應該說，我涉獵不廣、不學無術吧。
+<div class="timeStamp">2011/6/28</div>
+
+
+
+<h2>使用事件觸發、<span title="asynchronously">非同步</span>載入處理之原因</h2>
+在我看來，基於網路的 JavaScript 是種事件觸發的語言。我們得要等待網頁或程式碼載入，之後才能進行下一步的處理。而初始處理後，我們又需要等使用者操作，再針對使用者觸發的不同要求作處理。網路無法即時回應的情況下，使用者也沒辦法即時操作。由於這一項觀念上的認知，使得我只好放棄過去一年來想在同一段程式碼中，於資源載入之後馬上接著後續處理手續的嘗試；不得不改成載入前一段，載入後執行另一段功能。有人<a rel="nofollow" href="http://tagneto.blogspot.com/2011/04/on-inventing-js-module-formats-and.html" accessdate="2011/8/3" title="Tagneto: On inventing JS module formats and script loaders">稱</a>這叫 <a rel="nofollow" href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition" accessdate="2011/8/3" title="Modules/AsynchronousDefinition - CommonJS Spec Wiki">Asynchronous Module Definition</a>。之前一直不想放棄，主要是因為這麼一來，過去的程式都得重寫。看來時勢所趨，現在已經走到應用這一概念的地步，沒辦法。<br />
+在資料處理上，由於 JavaScript 隱含的物件觀念，我們可以加強（或繼承）原有的 object。jQuery 其中一部分的功能就是對 DOM 物件的加強。<br />
+為了方便撰寫，我還得讓 IDE 可以讀懂 library 的 code，寫好說明文件以作 proposal 輔助。最起碼應該包括 Eclipse 與 Visual Studio。這是我現在正在思慮的工作。另外，由於 JavaScript 的流行，我還想讓 library 可以支援以之作為 application 或 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Software_widget" accessdate="2011/7/30">software widget</a> 執行的功能。
+<div class="timeStamp">2011/7/29</div>
+
+
+
+</div><br />
+
+</body></html>

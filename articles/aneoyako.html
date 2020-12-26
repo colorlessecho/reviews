@@ -1,0 +1,61 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://kanasimi.github.io/CeJS/ce.js">//{"run":"../resources/reviews.js"}</script>
+<title>姉母娘でイクッ！</title>
+</head>
+<body>
+
+<a id="aneoyako"></a><div id="c_aneoyako" class="co"><div class="he"><span class="ti">姉母娘でイクッ！
+～大好きな姉を奪ったくせに浮気を続ける
+クズ旦那から姉の娘と共にネトリ返す～</span></div>
+<h2><span class="proper_noun">アトリエかぐや</span>遊戲於不同語系下的設置</h2>
+
+<div class="imgBox" title="
+http://lh5.ggpht.com/-oILnqNm5zxk/UIuR-9Ju9UI/AAAAAAAAAW4/2J33sE6tao4/s314/%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB+%E6%96%87%E5%AD%97%E5%8C%96%E3%81%912.png
+">
+タイトルが文字化けする。
+</div>
+
+若您已<a rel="nofollow" href="http://windows.microsoft.com/zh-TW/windows7/Change-the-system-locale" accessdate="2012/10/27" title="Change the system locale/變更系統地區設定">設定「非 Unicode 程式的語言」</a> (system locale) 為日文，卻發現這家公司的遊戲出現亂碼，甚至都已進入遊戲卻無法順利執行，或許您遇到了與小弟相同的問題。
+
+<h3>為了沒時間的您…</h3>
+
+<div class="imgBox" title="
+http://lh5.ggpht.com/-NOfUMMx5bkI/UIuPeNxYMcI/AAAAAAAAAWo/6_oYodzBMSM/s545/%E5%9C%B0%E5%8D%80%E5%8F%8A%E8%AA%9E%E8%A8%80.%E6%97%A5%E6%96%87+%28%E6%97%A5%E6%9C%AC%29.%E8%AE%8A%E6%9B%B4.png
+">
+變更地區及語言成日文 (日本)
+</div>
+
+您可以試試：
+<ul><li>請打開控制臺「地區及語言」，將系統預設的<a rel="nofollow" href="http://windows.microsoft.com/zh-TW/windows-vista/Change-the-display-of-dates-times-currency-and-measurements" accessdate="2012/10/27" title="變更日期、時間、貨幣和度量的顯示方式">顯示格式</a>改成日文。
+</li><li>自原先的安裝資料夾 copy Save 目錄至安裝目的地。
+</li></ul>
+
+<h3>Trial and error 經過</h3>
+雖然聽說<a rel="nofollow" href="http://www11005ue.sakura.ne.jp/kilauea/hgame/read/1348911956/" accessdate="2012/10/27" title="アトリエかぐやでございます！その167 - 2ch ビューアー">かぐや已經失去昔日的光彩</a>（いや、這不是重點。），但還是興味本位で安裝了<span class="creation_title">姉母娘でイクッ！</span>。執行後卻發現，標題變成亂碼也就算了，要開始本文時就 crash 了。因為 system locale 一直都設定成日文，加上本遊戲特別強力放送 DirectX 的訊息，因此估計大概是 DirectX 語系設置問題。打開 <a rel="nofollow" href="http://support.microsoft.com/kb/190900" accessdate="2012/10/27" title="DirectX: Description of the DirectX Diagnostic Tool">dxdiag.exe</a> 一看，System Information 中果然顯示使用的 Language 是 "Chinese (Traditional) (Regional Setting: Chinese (Traditional))"。這種挑執行環境的遊戲也不是第一次了，之前 minori 系的，如 <a>ef</a> 也頗為狠毒。但改成日文顯示介面、持續改變環境重裝了幾次 <a rel="nofollow" href="http://www.microsoft.com/en-us/download/details.aspx?id=8109" accessdate="2012/10/27" title="DirectX End-User Runtimes (June 2010)">DirectX 11</a> 依舊無效。查了一下，希望 <span title="Microsoft DirectX Control Panel">DirectX.cpl</span> 能改變語系，都裝上了 <a rel="nofollow" href="http://www.microsoft.com/en-us/download/details.aspx?id=6812" accessdate="2012/10/27">Microsoft DirectX SDK (June 2010)</a> 才發現還是沒法解決。再次打開控制臺「地區及語言」，想說「難不成還要重灌系統？」那就太大費周章了，決定死馬當活馬醫，一個個將之改成日本設定試試。才測了「格式」就發現 OK 了。之後發現此設定並非即時性的獲取，因此若有需要，開始執行後便可改回來。另外，遊戲程式似乎會將首次執行時的部分環境紀錄於 save 檔中。為了正確顯示，請在改變環境後，移除原先的 Save 資料夾，避免像是主人公的名字變成亂碼的問題出現。
+
+<h3>原理</h3>
+DirectX 的 Language，包括對非 Unicode 編碼的解讀，採用系統預設的<a rel="nofollow" href="http://windows.microsoft.com/zh-TW/windows-vista/Change-the-display-of-dates-times-currency-and-measurements" accessdate="2012/10/27" title="變更日期、時間、貨幣和度量的顯示方式">顯示格式</a>。雖然我以為這是有問題的設計理念。照理來說，整個系統的介面應該都採用「<a rel="nofollow" href="http://windows.microsoft.com/zh-TW/windows7/Install-or-change-a-display-language" accessdate="2012/10/27" title="安裝或變更顯示語言">顯示語言</a>」的設定才是。但除了 DirectX，似乎也有其他像 Google Chrome 採用了這樣的設計。或許是因為「顯示語言」這東西僅在英文版的 Windows 才看得到，因此不得不作些變通？<br />
+無論如何，<span class="proper_noun">アトリエかぐや</span>的遊戲系統，顯然連在以「API 描画」起動時，對於文字的讀取還是透過 DirectX 獲得；這造成即使設定了 system locale，也不會按照這設定取得文字編碼。為了解決問題，只好改掉顯示格式之設定。
+<div class="timeStamp">2012/10/27</div>
+
+
+<h2>姉母娘でイクッ！</h2>
+女たらし vs. 上手い男の決戦？簡單的說，就是普通寝取られもの的顛倒吧。這次不但站在寝取る的一方，且越看到後面，越有之前那類作品中第三者（男）角度的感覺，使出了許多只在遊戲中才看的到的陳腐題材。不過 H scene 頗濃い。使える。
+<p>
+故事本身長度中等偏短，對現在的我來說已經足夠了。ライトノベル作家の主人公<span class="proper_noun" title="くだか ゆうし">久高有史</span>喜愛的親姊姊<span class="proper_noun" title="かつらぎ よりこ">葛城依理子</span>，高中時就與老師<span class="proper_noun" title="かつらぎ みつお">葛城光男</span><a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%81%A7%E3%81%8D%E3%81%A1%E3%82%83%E3%81%A3%E3%81%9F%E7%B5%90%E5%A9%9A" accessdate="2012/10/31" title="でき婚（出来婚）、できちゃった結婚">奉子成婚</a>了。當時給了主角很大的打擊，但現在卻因為丈夫<span title="浮気性">風流成性</span>，這次又上了位女大生<span class="proper_noun" title="きりのぎ かなで">桐乃木奏</span>，而一氣之下帶著女兒<span class="proper_noun" title="かつらぎ みどり">葛城碧璃</span>離家出走。因為不好意思找其他人，就輾轉到了主角家。<br />
+依理子個性樂觀不拘小節，碧璃則因為父親的不規矩，因此對男性很是不信任。話雖如此，本身卻對性相相當有興趣，積極進攻男友。光男一副女たらし樣；雖然對腳踏兩條船的狀況感到棘手，在<span class="proper_noun">奏</span>面前卻又志得意滿。這邊的設定基本上與官網公布的相同，但要說其合理性的話就沒那麼真實了；在故事進行中，我一再折服於這兩母女的<span title="．">性</span>感。まあ、不是這樣的性格，主角怎有機會趁虛而入呢？<br />
+主角先是藉故滿足姊姊的性慾，之後更計畫要直接寝取る。在不同路線中，可以選擇是要姊姊、姪女，或是乾脆連<span class="proper_noun">奏</span>都一起搶過來。最後總有一幕讓光男後悔莫及的 live 春宮秀，然後這使い捨てキャラ的下場就沒人管了；此番處理正是使我不得不想起之前眾多寝取られもの之處。
+</p>
+主角的武器除了<span title="ヤリチン">イケチン</span>+テク男之外，還很會稱讚女性。女人天性就喜歡這種褒法，因此很快就落入主角<span title="思う壺">下懷</span>。本來認為主角這種打一開始就沒安好心的想法實在不好，但到了其與姊夫意外碰面那幕，狀況又不同了。依作者言語間透露出來的訊息，這傢伙也不是啥好貨；特別選了些表現不知節制的話語，顯現這<s>花心大少</s>…花心大叔並沒真正的覺悟。<br />
+不說姊姊的是近親相姦，連姪女碧璃的路線都有些牽強。碧璃男友本身就夠怪了：這青春男孩被所愛的女友襲來，竟還露出厭惡的表情；此般男孩似乎不太現實啊。而主角雖然一開始還算頗紳士，倒是碧璃竟然還拗不過自己的性慾，主動要求！只能說此位ツンデレ小姐實在是過於悶騷了。無論如何，我還是不認為主角只因為男朋友過於<span lang="nan-Hant-TW" title="pì-sù, 個性內向、害羞，靦腆">閉思</span>，就可以上了碧璃。這樣的做法，在現實中通常只會造成其不幸罷了。另外，初体験一般不會先後再前吧，這樣太不衛生了？<br />
+在到中段時我都還用得頗愉快。不過對那幾幕春宮秀則感到未免過於做作。依理子的好歹還有個理由，雖然我覺得或許可以不用這麼難堪；但另兩場不但沒啥必要，還幾乎只是重現一般的寝取られ濡れ場啊。<br />
+至於最後的結局，怎麼想都不是永久的。連長期也說不上。因此，簡單一句話就是玩家爽就好了。別想太多吧。<br />
+本作 CG 還頗華麗細緻，相較於一般遊戲，有點 <a rel="nofollow" href="http://ja.wikipedia.org/wiki/Tony" accessdate="2012/10/31">Tony</a> 的質感。在細節上不能說完美，舉例來說我還是比較偏好<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E5%B1%B1%E6%9C%AC%E5%92%8C%E6%9E%9D" accessdate="2012/10/31" title="山本和枝">山本大媽</a>…失禮，應該說山本妹妹的輪廓畫風；但能做到本作這程度確實也不錯了。
+BGM 普通，声優表現還不錯。系統大概就前面提到的顯示格式問題，其他還好。
+整體說來，不說劇本，光是當作抜きゲー來說，還頗實用的。
+<div class="timeStamp">2012/10/31</div>
+</div><br />
+
+</body></html>

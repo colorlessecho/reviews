@@ -1,0 +1,165 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://kanasimi.github.io/CeJS/ce.js">//{"run":"../resources/reviews.js"}</script>
+<title>資料庫存取方法空想提議</title>
+</head>
+<body>
+
+<a id="Ideas_About_SQL_Access_Mechanism"></a><div id="c_Ideas_About_SQL_Access_Mechanism" class="c2" title="資料庫存取方法空想提議">
+<h2>資料庫存取方法空想提議 (Ideas About SQL Access Mechanism)</h2>
+
+
+<div class="notice">
+本文請勿任意轉載。文內其他地方若有 CC 等不同的智慧財產權標示，亦以這邊的宣告為主。
+</div>
+
+<h3>摘要</h3>
+資料庫是現代資訊處理中很重要的一個環節。<br />
+舉凡商業公司的顧客以及商品資訊、政府的戶役政資料以及教育統計，以至於利用搜尋引擎查找網頁資訊、線上字典等；可以說只要是大量的數據處理，就脫離不了資料庫的使用。資料庫除了可以作為內部的資訊處理，還常常會在提供資料的查詢或更改時派上用場。例如線上論壇為了讓會員設定密碼、頭像等，就需要作出能讓使用者上傳資訊的表單。<br />
+現今的程式對資料庫的查詢與更改，最常用的是 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/SQL" title="Structured Query Language, 結構化查詢語言">SQL</a>。程式設計時我們會將使用者的輸入經過整理後，用 SQL 來對資料庫下指令，藉以獲得所需的資訊。SQL 雖然好用，但是過於強大的功能也造成了誤用時的危險；SQL Injection 就是其中之一。本文提出可行的預防方式，並在最後對 SQL Injection 此一問題作整體性的建議。
+
+<h3>前言</h3>
+資訊的取得以及統整，在現代社會中業以成為重要的技能。為了應付大量的資訊存儲，發展出<span title="database">資料庫</span>。由於網路使用的普及與使用上的便利性，出現許多應用網路的服務；以前端的<span title="form">表單</span>藉由 <span title="Common Gateway Interface">CGI</span> 等程式來取得或修改後端的資料庫，變成為了當今流行的網路服務方式。不論是以搜尋引擎作網頁或圖片，以至書及商品之搜索、部分公司之線上進銷貨系統等，我們都會應用表單輸入資料，再透過<span title="server">伺服器</span>端的程式，來對資料庫作相應的處置。<br />
+網路與資料庫的結合雖然方便，但其設計之初並未通盤考量到保密與安全問題，連線內容與資料處理機制未受完善的保障，使得網路在被廣泛運用之後，出現了不少問題。本文中所要討論到的 SQL Injection 正是通過表單輸入，在伺服器端處理資料時產生的漏洞。SQL Injection 在臺灣翻譯為隱碼攻擊、SQL 注入等。其影響輕則可能讓資料外洩，重則導致緊要的機密被竄改或清除，或甚至使網站被植入木馬，感染正在瀏覽的顧客，而失去長久建立起的信譽。<br />
+由於 SQL Injection 可能造成嚴重的危害，因此如何預防成為撰寫此類程式時不得不正視的課題。本文期望能提供給程式撰寫者作基本檢核時的參考，以使得程序的運行更為安全。
+
+<h3>SQL Injection 淺釋與致因</h3>
+SQL 是一種存取資料庫時使用的查詢語言。以 SQL 存取資料庫的程式，在撰寫時常常會將使用者輸入的關鍵字詞組裝成固定格式的 SQL 語句，並以之向資料庫作查詢。當使用者改變程式所作的 SQL 查詢語句，而出現程式設計者所未預期的查詢結果；例如列出不該出現的資訊，或是更改不應當被改變的欄位；這時我們就稱此手法為 SQL Injection。<br />
+SQL Injection 採用的方法為將使用者輸入的部分填入特殊的內容，使得語句組裝後，執行時出現非程式預期的效果。SQL Injection 會因為程式員沒有對輸入作檢核而發生。其原因或許是因為程式員喜歡寫簡單的 code，不願意添加繁複的檢核碼或採用更安全但複雜的方法。或許是因為隔天就得趕出程式，時間太少沒來得及對所有的輸入作檢查。也可能是一時疏忽或根本沒能料想得到；畢竟僅僅是達到要求的功能，程式碼寫起來很容易，但會有什麼漏洞存在其中，有時則是想破頭也不得要領的。
+
+<h3>SQL Injection 攻擊常用手法</h3>
+本節條列出常會遇到的 SQL Injection 攻擊手法。
+<dl><dt>輸入不被允許的字元配合上 SQL 指令</dt><dd>
+這是最常見的攻擊。以 <em>'</em> 這個字元用來跳脫前面語句的 <em>LIKE '%</em> 可說是此類攻擊的典型。此類的字元例如 <em>'</em>, <em>"</em> 等。此外在程式處理輸入時對於 <em>\0</em>, <em>\255</em> 等字元也應當加以注意。而與這些字元所配合，在 SQL 中有作用的指令除了 UNION、DROP 等關鍵字之外，還包括分號 <em>;</em> 用來結束語句，<em>--</em> 表示註解，用來忽略之後原先應該被執行的語句等。
+</dd><dt>特殊的編碼</dt><dd>
+SQL 提供了一些方法來表示特殊的字元或字串，例如以 <em>0x</em> 起頭的十六位元字元串表示 <span title="binary string type">binary 類型的資料</span>，<em>CHAR(32)</em> 表示一個空白字元等。若利用指令 <em>EXEC</em> 執行經過編碼的字串，則即便是閱讀紀錄檔也不一定看得出所以然。
+</dd><dt>不合理的輸入長度</dt><dd>
+如同上一節提到的，輸入空字串可能會造成和原先設計不符的輸出。而過長的輸入則可能產生 buffer overflow，這是在處理輸入時得考量到的。此外，由於攻擊有時會用上複雜而冗長，或許是編碼過的語法；禁止過長的輸入還可以防止此類攻擊得逞。
+</dd></dl>
+
+<h3>SQL Injection 攻擊造成的後果</h3>
+攻擊者常有下列意圖：
+<dl><dt>取得非預期的數據</dt><dd>
+透過 SQL Injection，攻擊者能夠取得原先不被允許獲得的資訊。
+</dd><dt>更改網頁或資料庫數據</dt><dd>
+攻擊者可修改或增添數據紀錄，例如學生可能會提高自己存在伺服器中，老師所打的分數。<br />
+近來由於攻擊自動化，有些工具會自動搜索網站各頁面，並將可攻擊的字串欄位變更，或在其後面加上一串 HTML 代碼。若程式把從資料庫所提取的資料直接顯示出來，就有機會使得瀏覽此網站的終端被植入木馬或<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92" accessdate="2020/8/3" title="computer virus 電腦病毒">病毒</a>。
+</dd><dt>取得非預期的權限</dt><dd>
+舉討論區程式為例，原先沒有帳號的攻擊者可能會利用 SQL Injection 而登入，甚至得到刪除及修改文章的權力。
+</dd><dt>癱瘓網頁或資料庫伺服器</dt><dd>
+某些 SQL 指令（如 Microsoft SQL 中的 xp_cmdshell）可以對硬碟等存儲裝置作讀寫的動作，這若為攻擊者所利用，可能會造成無法復原的更動，致使伺服器無法順利運作。
+</dd></dl>
+需注意的是上面僅僅列出了常會遇到的攻擊目的，但若沒有妥善的防護，藉由突破 <span title="資料庫管理系統">DBMS</span> 的安全漏洞等方法，<span title="杨育均(2008)。高校图书馆网站的 SQL 注入防范及补救措施。广东广播电视大学学报，第17卷　总第70期，105-108。">攻擊者甚至可能取得系統管理員的權限</span>。如此一來將會使系統其他部分都處於予取予求的狀況。
+
+<h3>多字節編碼 SQL 漏洞解析</h3>
+將字元置換成另一種表現法固然可以防止攻擊，但這並總不是萬全之計。這節中我們將進一步來討論另一種變形的攻擊法。<br />
+以 Big5 編碼的中文字一個字元占有 2 bytes，前一個叫高位元組，後一個則是低位元組。高位元組通常會採用 80h 之後的 ASCII 碼以與普通的英數字符號區隔，而後接上的低位元組則連 40h 至 71h 都可以使用，這樣可以加大能表現的字數——最起碼制定 Big5 當時是這麼想的。但問題是程式常常會拿倒斜線「\」這個字元來作為<span title="escape character">跳脫字元</span>，而其 ASCII 碼 5ch 可能被當作是低位元組。舉例來說「α」這字元的 Big5 編碼高位元組為 a3h，而低位元組正是 5ch。考慮程式若光是把 <em>'</em> 替換成 <em>\'</em> 的狀況，當我們輸入：
+<blockquote>
+?q=%A3%27%20OR%201=1%20--%20
+</blockquote>
+這個查詢中，%27 亦即 <em>'</em> 會被轉成 <em>\'</em>，而 <em>\</em> 本來應該是獨立的，這時卻與前面的 %A3 組合起來而成了「α」，於是後面的 <em>'</em> 就能產生作用了！<br />
+這邊所提到的技巧可稱之為多字節編碼 SQL 漏洞，在 shell 中也可能發生（叫作 Multibyte Shell Command Escaping Bypass Vulnerability），事實上凡是某個字元其編碼的最後一個 byte 與跳脫字元相同時就能實現此類型攻擊，所以在大陸方面的 GB2312 編碼亦可發現存有相同的漏洞。<br />
+那麼對於此種攻擊又該如何來防範呢？很顯然我們得要囊括對當下字元其編碼的判定法則才行，而這看來並不容易。其實，不用擔心那麼多，各程式語言常常已經幫我們預備好工具了。以 Perl 為例，我們就能應用上 DBI 的函式 &amp;quote()，多字節編碼的問題將迎刃而解。更好的方法是採用<span title="Parameterized Statement">參數化查詢</span>。
+
+<h3>SQL Injection 防範方法</h3>
+事前的預防，或許多了些麻煩的手續，卻總比事後的災難處理來得簡單多了。本節提供一些可行的安全建議。
+
+<dl><dt>對傳輸作保護並檢查輸入參數</dt><dd>
+<em><span title="．">任何</span>使用者可以影響的值都不安全</em>，因此對所有輸入作合法性檢查是必要的。完善的過濾法應該是每一環節都有檢驗；但<span title="client">用戶端</span>以 JavaScript 等所作的查驗充其量也只能是輔助性質，重要的是在<span title="server">服務端</span>的最後防線。<br />
+撰寫服務端程式時，應多做分項，不籠統置入 SQL 查詢語句中作複合查詢。不得已時也應特別注意組合查詢的部分。由上一節多字節編碼 SQL 漏洞的解析我們應該學到，自己所做的簡單防範，不如選擇有良好維護的組件，並常常作必要的更新。<br />
+CGI 的輸入參數不光只用固定的欄位，可加入 session, cookie 等每次都會變動的值，增加破解難度。對登入動作，帳號密碼應加密，如以 https 等協定傳輸，並在伺服器端再作如 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86" title="高級加密標準">AES</a> 等，或更嚴密的編碼。需留意的是，這些加密演算法也有<a rel="nofollow" href="http://solidot.org/articles/09/07/30/1842224.shtml" title="Solidot | AES-256已处于崩溃边缘？！">隨著時間越容易被破解的危險</a>，因此應隨時留意當前使用的加密方法是否需要改善。<br />
+服務端的輸入檢驗方法有許多種，其首選為限定輸入的文法並配合參數化查詢。以 regular expression 確認可以接受的 pattern，在 pattern 中不使用萬用字元例如 <em>.</em>，而完全限制能夠接受的字元以及輸入長度會是較為理想的作法。<br />
+無法規定文法時，起碼應該作合理性的檢查。例如應該是篇文章，就不應出現 <em>\0</em>, <em>\255</em> 等字元。此外，對跳脫字元作特殊處置不如採用參數化查詢。
+</dd><dt>做好系統配置</dt><dd>
+隨時更新作業系統、DBMS 與應用程式，注意資訊安全漏洞資訊。定期跑系統入侵模擬程式與 SQL Injection 偵測與防禦工具，預防無意間暴露的漏洞。<br />
+因為攻擊者可以利用系統的錯誤訊息找出可以侵入的漏洞，所以除了 debug 外，應該自訂錯誤顯示頁面，而防止詳細的錯誤訊息被顯示出來。<br />
+可能的話設置<span title="honeypot">蜜罐</span>。但無論是否有蜜罐，都應提高警覺，隨時檢查網站伺服器與資料庫伺服器的記錄。即使在記錄過於冗長或無法常常檢查時，也應由程式篩選重要的部分經 Email 等再作檢驗。
+</dd><dt>賦予最小權限</dt><dd>
+就算不幸遭到攻擊，也應該限制被破壞的範圍；所以應當盡可能限制連線資料庫帳號存取的權限。實際應用上，對每個系統設置新的資料庫帳號，並僅僅賦予其有必要的存取權。此外，使用特殊帳號，而非以系統管理員來執行資料庫伺服程式。<br />
+為了加大攻擊的難度，我們可以分前後端來建構網站，例如網頁伺服器與資料庫伺服器建在不同的機器上，而紀錄檔又另外放在一臺只允許增添而不允許修改資料（如磁帶機或是一次性 DVD 燒錄）的機器上。
+</dd><dt>減少需要用到資料庫查詢的可能性</dt><dd>
+將資料正規化。假如某欄位的值僅有少數幾種可能性，且我們只會用到判別是否相等的運算，那麼可以將之當作程式中 hash 等資料形態之鍵值。例如，性別只分兩種的話，就可以用兩個數字或是 bool 的型態代表。即便非以文字表示不可，也可以用例如 <b>defined( sex[ _query_key_ ] )</b> 或是 <b>~.sex == _query_key_</b> 這樣的方法進行判別是否符合查詢條件之類的運算，而盡量少用組合查詢。
+</dd><dt>防範<a rel="nofollow" href="http://en.wikipedia.org/wiki/Social_engineering_%28security%29" title="Social Engineering">社交工程</a></dt><dd>
+要防止社交工程，我們常常見到的方法例如對任何請求都需要驗證對方身分，即使在緊急要求下還是得按照程序，不能為求方便輕易放行。另外在極端狀況下，連對熟人都不能透露機密內容。（這有點「小心！<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%8C%AA%E8%AB%9C">匪諜</a>就在你身邊」的感覺…）除了這些坊間常常提到的手法外，還得注意連登入帳號與 Email 等也應盡量不公開，特別是有特別權限的使用者；這會變成明確目標。可以考慮僅顯示代號，而隱藏登入帳號。<br />
+管理者於不同的討論區或站點尚須特別設置相異的帳號密碼，預防攻擊者攻破它站後，利用其帳號密碼測試本站。
+此外，<a rel="nofollow" href="http://it.solidot.org/article.pl?sid=09/08/09/1428240" title="Solidot | 弱密码管理比病毒问题更严重">應做好密碼的管理</a>。密碼應配予適當的強度，例如隨機混雜大小寫字母、數字和符號，長度足夠，並不使用常見字辭、姓名、生日或公開的數字文字。但<a rel="nofollow" href="http://internet.solidot.org/article.pl?sid=09/07/14/0831230" title="Solidot | 强密码没什么用">過於複雜則會增添不易記憶的麻煩</a>。
+</dd><dt>定期備份並作還原演練</dt><dd>
+無論如何看似固若金湯的系統也不保證不被攻破。此時應該有近期的備份，並能迅速還原。
+</dd><dt>預防 Mass SQL Injection 與 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC" title="Cross-site scripting">XSS</a></dt><dd>
+輸出中特殊的字元也應當處理過，如對 <em>&lt;</em>, <em>'</em>, <em>"</em> 等作 escape。主要是為了防止輸出中有 &lt;script&gt; 等字節，這會造成瀏覽網頁時特殊的作用。為了達到進一步的安全，甚至可以學 Google 顯示 cache 頁面的做法，改變輸出時的 hostname。
+</dd></dl>
+
+有些研究者提到，<span title="林錦雲(2003)。利用 XML 驗證之網頁安全防護機制。國立暨南國際大學資訊管理學系碩士論文，未出版，南投縣埔里鎮。
+周杨(2007)。浅议 SQL 注入攻击的原理及防御。實驗技術與管理，24卷10期(2007/10)，85-87。">可以用 filter 的方法</span>過濾掉 "UPDATE"、"DELETE"、"INSERT"、"DROP" 等 SQL 關聯式資料庫查詢指令。但因為下面的原因，過濾法僅能是治標，而且還是不甚恰當的<span title="workaround">迴避方法</span>：
+<ul><li>假如要輸入的是一篇文章，有可能其中就包含這些詞。
+</li><li>攻擊用的 SQL 語句可能被以 BLOB 或是 binary 類型表示，中間還穿插 /* ~ */ 這樣的註解。那麼，就算用 filter 也不一定能正確識別。
+</li><li>未來的標準可能會增加新的 keyword，那麼 filter 就有未竟之處了。
+</li></ul>
+基本上，我們應該<span title="．">從原理上杜絕</span>發生意外的可能性，而不是以見一個堵一個的方法，最後還深怕有漏殺的。
+
+<h3>對「資料庫」此種機制之建議</h3>
+若不希望 SQL 語句作出非期望的動作，或許讓資料庫提供模擬查詢的功能是個不錯的法子。但這種功能沒效率又過於複雜。為了讓程式能和資料庫作更緊密的結合，我們可以考慮將「資料庫」這種機制轉化為程式 native 的物件，以減去繁雜的查詢過程，並避免誤用。這裡姑且稱之為 "static data pool" 概念。回顧過去，<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93" title="object-oriented database, 物件資料庫">object database</a> 也有類似的構想，但 object database 的重點在讓將程式中的物件可以持續性的存在，而查詢時依舊需要使用類似 SQL 的 OQL；相較之下這邊所提出的則是希望能盡量利用語言本身的特性以達到查詢。<br />
+若要達成這個目的，我們除了得更動程式撰寫的語法標準，還有必要將現有需要用到的 SQL 功能全部轉換為原生碼，制定初始化機制，並且建立起跨程式平臺的標準交換格式。這部分或許可以使用 XML，或者建立具運算效率的 binary 形式 data。<br />
+<br />
+下面我們做一個簡單的概念示例，先是定義性別部分：<br />
+<pre class="noWCount">
+StaticPool sex = new StaticPool(int autoincrease id, String sexType);
+
+//      alternative method:
+// sex.schema.id.set(StaticPool.datatype.autoincrease);
+
+// autoincrease 欄位可省略
+sex.push([,'male']);
+sex.push([,'female']);
+</pre>
+<br />
+而後是工作的定義：<br />
+<pre class="noWCount">
+// work 被定義後除了可以作為一種資料形態，還可以如同一個 object 一般，具有 method 以及 property。
+StaticPool work = new StaticPool(int id, String workType);
+
+work.schema.id.set(StaticPool.datatype.autoincrease);
+
+work.push(["student", "manager", "nurse", "singer"]);
+</pre>
+<br />
+以及 staff 的定義：<br />
+<pre class="noWCount">
+StaticPool staff = new StaticPool(String name, sex.id, int age, work.id);
+staff.push(
+	["John",	0 /* sex */,	22 /* age */,	0 /* work: student */],
+	["Susan",	1 /* sex */,	30 /* age */,	1 /* work: manager */]
+);
+</pre>
+<br />
+最後是簡單的功能示範：<br />
+<pre class="noWCount">
+int listStaff(staff person){
+ cout &lt;&lt; person.name &lt;&lt; " is a " &lt;&lt; person.work &lt;&lt; endl;
+}
+
+
+staff.select( name=="John" &amp;&amp; sex==0 ).run(listStaff);
+//      alternative method (but maybe have problem):
+// listStaff(staff.select(name=="John" &amp;&amp; sex==0));
+
+//	We can even use regular expression to select what we want.
+//	e.g., use /key/ instead of LIKE '%key%', /key$/ instead of LIKE '%key'.
+//	Here we use an native Regular Expression function borrowing from JavaScript to find out anyone who's name starts with 's'.
+staff.select( /^s/i.test(name) ).run(listStaff);
+</pre>
+<br />
+當然，這種想法不會很容易實現。果真要實作出這些功能，過渡階段我們可能僅僅會實現 SELECT 與 INSERT 等指令最簡單的部分，並且將這當作是原先 SQL 機制的並行替代方案。不過真的能實現的話，寫程式應該會減輕點負擔，並增加些安全性。事實上，不久前才出現的 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E8%AF%AD%E8%A8%80%E9%9B%86%E6%88%90%E6%9F%A5%E8%AF%A2" title="Language Integrated Query">LINQ</a> 正是這種概念的實作之一。LINQ 雖然可以以一套 native 的查詢方法應對不同的 database，但當前的語法還過於接近 SQL；而這邊提出的概念則是要將 SQL 的查詢方法內化到程式中，最終目的是要盡量使用原先的語法，提出可以不依靠 DBMS，兼擁有 SQL 功能的解決方案。
+
+<h3>結論與討論</h3>
+SQL Injection 的防範如今幾乎可說是寫程式，尤其是需存取資料庫 CGI 時的常識。但因為程式員或系統管理者的疏忽，很多時候以為萬全的系統還是可能被入侵。更不用說由於寫程式時的惰性，導致程式漏洞百出的情況。過去就曾經有過大考中心被入侵的例子。在文中我們提出了一些建議，希望能提供給資料庫程式設計人員一點參考，使得被攻陷的機會減低。畢竟預防勝於治療，很多事情等到東窗事發已經覆水難收。<br />
+最後對資料庫存儲功能建議的部分，雖然以當下的環境來說不太可能完全實現，但或許有朝一日會有類似的機制出現也說不定。<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93" title="relational database">關聯式資料庫</a>發展至今，雖然未能被<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93" title="object database">物件資料庫</a>取代，不過現在卻有 <span title="微軟公司">Microsoft Corporation</span> 於 .NET Framework 中引入 LINQ，即可謂例證之一。或許真是因為程式設計人員常常沒注意到，所以才需要這種改變整個環境的技術，來一勞永逸的解決掉困擾吧。另外，一個可能的方法是改變 database server，使 SQL 指令具有不同的執行模式。例如只允許基礎功能，而複雜的部分則需要特殊的環境下（例如程式本身寫死的）才允許執行。
+<div class="timeStamp">2008‎/12‎/30‎</div>
+
+<hr />
+之前寫了篇這篇文章，提到將「資料庫」這種機制轉化為程式 native 物件的概念。現在卻看到<a rel="nofollow" href="http://www.comsharp.com/GetKnowledge/zh-CN/TeamBlogTimothyPage_K804.aspx" title="让 JavaScript 拯救 HTML5 的离线存储 - 基于 COMSHARP CMS">讓 JavaScript 拯救 HTML5 的離線存儲</a>這篇，發現 Mozilla 正<a rel="nofollow" href="http://labs.mozilla.com/2009/04/towards-better-browser-storage/" title="Mozilla Labs » Blog Archive » Towards Better Browser Storage">嘗試在 Web 上做這件事</a>。遅かった。但還是把他整理了一下放上來吧。雖然說來說去除了多字節編碼 SQL 漏洞與對資料庫機制之建議外，不過是把其他人的文章拿來掉一下書袋罷了。
+<div class="timeStamp">2009/6/17</div>
+</div><br />
+
+</body></html>

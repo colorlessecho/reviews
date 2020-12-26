@@ -1,0 +1,217 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://kanasimi.github.io/CeJS/ce.js">//{"run":"../resources/reviews.js"}</script>
+<title>DHTML 網頁製作</title>
+</head>
+<body>
+
+<a id="DHTML"></a><div id="c_DHTML" class="c2" title="DHTML 網頁製作">
+<h2>DHTML 網頁製作教學 - 原始碼寫作及潮流篇</h2>
+<div class="notice">
+<h3>請注意</h3>
+以下紀錄補完計畫增錄。原文件是當時懵然無知的我初識 DHTML，為了對一些觀念作一下整理，順便炫技而生的教學用網頁；雖然總歸是無用。這邊僅節錄出概念介紹的部分，純粹湊字數用，然後展示一下當時有多麼愚昧，對概念以及工具使用之認識有多貧乏。恥ずかしい限りだ。由於其中概念過度不成熟，未來不準備以此為藍本做增修。僅能自我記錄、讓人看看笑話，不建議閱覽。
+<div class="timeStamp">2011/7/7, 2011/7/8 00:06:02</div>
+</div>
+
+<h3>前言+主頁</h3>
+到達這種程度，我想您已經具有相當的寫作經驗。或許您也和我一樣，具有一些怪癖：因為懶惰，萬事能 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Digitizing" accessdate="2012/3/9" title="Digitizing, 電子化、數字化、數位化">digitize</a> 就盡量做以省麻煩，越徹底越好；厭惡 Microsoft Office 的獨占及無效率、除了作業系統外幾乎看不到他們的東西（待時機成熟準備轉 UNIX），所以文件全數 HTML 或純文字化（所有的文件格式<a rel="nofollow" href="http://hardware.solidot.org/article.pl?sid=12/05/17/0142213" accessdate="2012/5/26" title="Solidot | 谁拥有你的数据？">除非有公開標準</a>，否則都有形同亂碼的可能。相較之下，純文字算是最不容易變質的編碼了，即使連這也無法完全保證千年後能被辨識。畢竟就算存成紙本，連文字本身都不見得能長長久久了。）；使用電腦時必有音樂相隨，所以上網時遇到 BGM 播放（如 midi、mp3 等），第一動作就是把他關起來，關不起來大部分整頁就 pass；系統常保乾淨，按下總電源到開機完畢不用一分鐘；寫程式時使用最精簡的方法表示並加一堆註解——在自己及未來的自己都能看得懂的範圍內；對 HTML 原始碼，若是被 Dreamweaver 改過也一定要自己再檢視一次，務求最佳化；（HTML 較無看不看得懂得問題，script 比較嚴重。）即使如此做出的網頁仍過於複雜，teleport 抓不下，Microsoft FrontPage 及 Dreamweaver 都看不懂？<br />
+或許您還沒有，不過，加加油，您很快就會到達那境地了<span class="expletive">（笑）</span>。<br />
+順帶一題，我美工相當差，所以叫我畫插圖是不可能的（肖像那張除外），沒太多好看的圖，請多包涵了。
+<p>
+本網頁將介紹當您會用 FrontPage 上傳及製作，並且已熟練 HTML 的模式後，如何展開下一階段，精熟。<br />
+請注意，這是對對以 FrontPage 寫作網頁已具相當程度，閒來無事時會好奇那些標籤在幹麼，因此想對原始碼作更深層認識的人而做，請沒興趣、程度不足或過高者當下把此頁關掉或離開。
+</p>
+<div class="timeStamp">2001/9/23PM 第一階段完成（原始碼部分 24539bytes）, 2001/10/2 09:44PM 上網抓了些資料，加一點注釋，結束。</div>
+
+
+<h3>撰寫注意事項</h3>
+您已經對 FrontPage 過於沈重的原始碼感到不堪負荷。現在，準備來減肥吧。
+
+<h4>撰寫工具及流程</h4>
+比較高明的人們聽說有許多使用 Dreamweaver。但據我使用經驗，網頁撰寫的步驟最好先設計出表格等的配置，老實說表格還是拿 Microsoft Office 系列的比較快。字先不用打沒關係。
+之後，到 Dreamweaver 除去 Office 系列總是肥大的原始碼。
+<p>
+結束後才開始正式撰寫：除了元件配置之外，我的習慣是原始碼之類都自己打，反正打久了比 Dreamweaver 或 FrontPage 中拉來拉去還快。重要的是，很遺憾的我有非常、非常嚴重的潔癖。那用什麼編輯？推薦一下我使用了數年的好伙伴：UltraEdit。<br />
+此軟體較佳處在他為 target 著色，迅速又方便的編輯功能。（Dreamweaver 編原始碼因為程式大，速度慢。）應該有不少熟練之士也使用此套吧。當然您也可以用其他編輯器，重要的是能編輯純文字，並且用得上手。<br />
+假如您仍是此方面的入門，那我強烈推薦 UltraEdit。東西總是要用了才知道，您可多試試。
+</p>
+<p>
+如果要減肥，有哪些地方需注意的呢？
+減文不如減多媒體。HTML 是一篇純文字，其中再用 HyperLink 連取其他（網路上的）資源，這也就是為何叫做 HTML 的原因。
+文字部分亦即原始碼，處理方式如上所述。但這些多媒體資源比起純文字可真是大得多，通常有數十以至數百倍之差。因此，HTML 碼大致維持在看得清楚地範圍也就夠了，重要的是圖怎麼減肥之類的。那其他 resource 有哪些呢？通常有下列幾項：
+</p>
+<dl><dt>Flash 5</dt><dd>
+學到這，你理應會的東西。flash 的檔因為是向量式的，通常做起來需費些工夫，成果則既漂亮，檔案又小。除了必須外，大可不必加太多圖及複雜的音樂，有時候 flash 中的點陣圖表現出來不太妙；那些擺在 HTML 中表現就行了。
+</dd><dt>PhotoImpact 6</dt><dd>
+同上。圖形類減肥有些妙招，例如 gif 或 jpg 垂直改變比橫向改變更耗空間等，但最強大的方法是解析度及圖的大小，降底品質及選個好的格式都能讓你得到更快的速度。
+</dd><dt>Cakewalk Pro Audio 9.03-TcC</dt><dd>
+編 midi 用，通常沒人直接編，除非太閒了。midi 檔是相當小而輕便的東西，雖然拿來壓縮卻可發現 mp3 無法達到的壓縮率。其原理不多談，需要音樂的話，還是多用 midi 吧，除非是本機上的檔案。
+</dd><dt>MusicMatch Jukebox 6.1</dt><dd>
+這是轉檔用的。通常是 wav → mp3 or wma，mp3 其實不大建議放在網路上，太大了——比起其他格式來說。<br />
+使用 MMJB 壓 mp3 的原因請見 MMJB 說明：MPEG Layer-3 audio coding technology licensed by Fraunhofer IIS. 聽說這是速度最快，品質最好的 code。<br />
+mp3 為最近才被瀏覽器接受的格式，之前只有 wav 及 mid，想用 mp3 都還得將之用 wav 包裝起來。<br />
+假如是自己要用的 mp3，請用 <span title="Variable Bit Rate encoding">VBR</span> 格式：因為此種比 <span title="Constant Bit Rate encoding">CBR</span> 節省空間又不傷品質。（不過 MMJB 的解釋卻是：
+<blockquote>
+Use VBR encoding when consistent audio quality is the top priority and predictable MP3 file size is not critical.
+</blockquote>
+這個嘛…我們用起來好像會比較小啊…）
+</dd></dl>
+至於 avi,qt,mpg 等影片，我斷然不會放在自己的站上，即使縮得「小小」的，還是很大很大。除非你仗著網路世界越來越快，「現在大家不是用 ADSL，就是寬頻上網。撥接？那就犧牲他們吧。」我還聽過有想將數百 M 的 QuickTime 檔擺在網路上的，那真會整死人。
+<p>
+編寫方面大概就這些需要注意的。啥？軟體不會用？多摸摸就知道了啊。<br />
+我的製作過程或許是麻煩了點，不過一切自己來感覺比較心安，當每個字元都是自己修改的時候，就不怕哪天出現奇怪狀況，不知如何解決了。OK, 製作完就以 FTP 上傳，解決。<br />
+有人想知道關於 CGI 的事嗎？我四年前也摸了一段日子，若需要經驗提供（我實在不敢奢望分享<span class="expletive">(^_^;)</span>），那等等吧，有時間有人要求時會抽空寫的。那是何時呢…
+</p>
+
+
+<h3>DHTML - JavaScript</h3>
+<p>
+DHTML，亦即 <span title="動態網頁">Dynamic HTML</span>，最最最簡單的說法就是 JavaScript + CSS。（順帶一提，HTML 是指 HyperText Markup Language，超文件標記語言。）JavaScript 用在特殊效果處理上，是「動」的。而 CSS 則用在靜態效果呈現。「讓靜態效果動起來」就是 DHTML 啦<span class="expletive">（笑：掰得真好）</span>。<br />
+JavaScript 就如同普通的程式，假如光是用人家套裝的是無法表現出新意的。所以，FrontPage 或是網路上諸多範例，請記住那是「例子」，不是拿來讓自己用的，而是要去參考、學習「人家怎麼用」，學起來就變成自己的了。至於怎麼找範例，怎麼學？請別問我，多混個幾年總是能上道的。還是老話一句，有心有興趣就學得來。<br />
+Dreamweaver 用在寫原始碼及 JS 上感覺總有點緩慢，所以還是找專為編輯純文字而做的工具比較好。接下來應該說明如何插 JS 進入 HTML 是嗎？<br />
+&lt;script type="text/javascript"&gt;這<span title="tag">標籤</span>的插入時刻很簡單，通常在 head 標籤內我們可能放一個，然後再於 body 中隨便愛放哪就放哪。執行順序 <span title="Internet Explorer">IE</span> 是順 body 讀到哪執行到哪；待 body 讀完再取用 head 標籤內的來吃。若要用附加檔形式，請在 head 中加入&lt;script type="text/javascript" src="__URL__"&gt;&lt;/script&gt;。<br />
+JS 寫法?!嗯…這就值得長篇大論了，等我有時間再增補吧。<br />
+這些東西看似複雜，寫久了卻也就習慣了。好處是，因為會了後能力比較強，想要的東西就比較容易展現，邊寫不邊加上些效果還會覺得手癢癢的<span class="expletive">（笑）</span>。所以假如有需要，通常我都會盡量做出來——即使為了做這個效果卻花上三四小時也在所不惜。看到了左邊的 menu 吧，那就是一早上的心血，包括那爛爛的背景和爛爛的框。<br />
+</p>
+
+<h4><span title="基礎概念">起步</span></h4>
+script，簡單的說是利用 script 對各<span title="object">元件</span>的屬性，包括位置、顏色、filter 等進行控制。所以重點自然在於：
+<ol><li><span style="color:gray">（特殊環境及習性瞭解）</span>
+</li><li>元件及各屬性名稱
+</li><li>控制方法
+</li></ol>
+我們一一來講述。
+<dl><dt>特殊環境及習性瞭解</dt><dd>
+能夠處理 script 的瀏覽器平臺並不多，可以由 W3C 取得相關資訊。最常用的則幾乎大家都耳熟能詳：IE 及沒落的 NS。但此兩者所制訂的都不是「標準」的 script 形式。VBScript 當初只有 IE 能用，所以勢力並不如 JavaScript 一般強。常用的也就只有這兩種，所以大概都會學 JavaScript 吧。<br />
+同是 JavaScript，IE 和 NS 仍有很大的不同，尤其是用到一些炫麗的新效果時。document 的各種 layer 屬性互不相容，更早之前，NS 用的是 layer（或 div）tag，而 IE 用的是 div。大家都知道，layer 現在幾乎已不用了。（這場戰爭好像誰先讓步誰就輸的樣子？）所以為了統合兩者，我們竟然得在自己的 script 中定義各種使用的元件名。（從此頁所使用的 script 檔中能夠看到）<br />
+IE 和 NS 都不是純標準 script，他們都會加一些特別的功能（當然不能跨平臺），而也有少許標準 script 該有的功能沒實做出來。不過事實上大家用的也就是這些瀏覽器，所以「標準」離我們反而比較遠。為了迎合這些不「標準」的瀏覽器，通常學習者得一試再試，直到所想要的效果出來。<br />
+而從語言本身來說，JavaScript 自然是近似 Java 的東西，常用 C 的人會發覺 C 的語法也通用無阻。不過，較早期的瀏覽器編譯起來還會有些問題，如元件的創造，?:運算子的使用等。越後期的瀏覽器通常功能越「正常」，或是說，「完全」。<br />
+再從物件的屬性來說，連相似的東西也沒統一，例如工具提示於 img 是 alt，在 font 或 a 中卻是 title，這都是需要長期的嘗試才能適應的。雖然不便，也沒辦法。
+</dd><dt>元件及各屬性名稱</dt><dd>
+最主要的元件叫「window」，其他還有有關瀏覽器及 script 的屬性。事實上可以寫一個 script 來展現這幾乎所有的元件及屬性，只是實用上還是有本指導手冊比較好。這些屬性往往會隨瀏覽器的進步而加增，例如 div 的 filter 功能是5.5起才提供。為了知道最新的版本加了啥，通常我們需要上網找找相關資訊，偶爾會找到一些奇奇怪怪的站，搞出自己不瞭解的效果，那有可能就是新屬性了。當然，因為所知有限，flash 剛出來時，還不曉得的我也曾以為那是什麼特殊的效果<span class="expletive">（笑）</span>。
+</dd><dt>控制方法</dt><dd>
+如前所述，JavaScript 語法近似 C，所以當時學起來相當簡單。<span title="物件導向">OOP</span>（算是嗎？）的 JavaScript，其元件通常有 property 及 method 兩項屬性，前者是一些值，後者是函數。如同 C++，我們靠這改變這些值或執行函數來控制他們。
+</dd></dl>
+有了這些「怎麼做」的概念後，再摸索起來會較簡單。
+<hr />
+現在就讓我們來舉些簡單的例子。<br />
+<table>
+<tr><th>範例（可按）</th><th>解說</th></tr><tr></tr>
+<tr><td onClick="alert('as')">alert('as')</td><td>出現顯示 as 的警告視窗</td></tr>
+<tr><td onClick="message=prompt('haha','I love you!');alert('message= '+message);" style="white-space:nowrap;">message=prompt('haha','I love you!');<br />alert('message= '+message);</td><td>出現提示 haha，預設值 I love you! 的訊息框，輸入完後將值設給 message ，再顯示 as 的值。可以嘗試改變、不改變或直接按 × 關掉（亦可按 <kbd class="key">Esc</kbd>）後的值。</td></tr>
+<tr><td onClick="status='huhuhaha'">status='huhuhaha'</td><td>狀態列顯示 huhuhaha（換句話說：指定狀態列的值為 huhuhaha）</td></tr>
+</table>
+在此範例中示範了兩個函數，alert 及 prompt。函數的使用法，應該不必我再贅言了吧，就是：<br />
+<span style="color:red">函數名(參數1,參數2,參數3,..);</span><br />
+在 JavaScript 中函數的使用法比較寬鬆，是故雖然參數輸入的不夠，還不會有錯誤出現。但 C 中就沒那麼簡單過關。<br />
+另外是 status，亦即狀態列的值，這三個都是物件 window 的屬性及函數，window 的屬性及函數比較特殊，不必詳細列出"window."；要加也是可以的，就成為 window.alert(), window.prompt(), window.status。
+<p>
+使用這些東西就只是這樣，函數加上參數去執行，屬性則直接用「=」指定即可。
+</p>
+
+<h4>進階…？</h4>
+老實說怎樣算進階，我也不知道。像我，也只不過把一些常用函數寫出來，然後<b>按照想要的方法使用</b>而已。所以，只要想表現什麼就知道是否「能」表現，以及在可能時確實實作出來，這樣應該也就夠了吧。
+<div class="timeStamp">2001/9/25PM JS 頁增加</div>
+
+
+<h3>DHTML - What's CSS?</h3>
+<p style="background:#cfc;border:#8080FF 1px solid;border-bottom:#ccc thick solid;border-right:#ccc thick solid;color:#170668;font-style:italic;margin-bottom:0.5em;margin-top:0.5em;padding:1em;width:15em;float:left;margin-left:0em;margin-right:1em;text-align:left">
+CSS 造成網頁（文字）美化的革命！<span class="expletive">（哦？）</span>
+</p>
+CSS 是什麼？話說從前，會 Script 就很「強壯」了，但現在光是 Script，效果仍然不足。那些標準製造組織幫我們搞到了更為好用的表現形式，就叫做 <span title="串接樣式表">Cascading Style Sheets</span>，如今已出到 CSS2。<br />
+依照 W3C 官方(?)說法：
+<blockquote>
+Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g. fonts, colors, spacing) to Web documents.
+</blockquote>
+以及
+<blockquote>
+Style sheets describe how documents are presented on screens, in print, or perhaps how they are pronounced.
+</blockquote>
+簡單的說，CSS 是一些表現法，當有需要時就能派上用場；所以 CSS 也可以說就是這些屬性。例如 img, div, ..<span title="tag">標籤</span>就有 filters <span title="屬性">功能</span>，能讓其變深，變淡（左邊 frame 就是用此效果）；現在我的用法通常是分出許許多多的 div，再將之分層做出不同效果，疊起來之後效果就不錯了。善用 margin 屬性，有時能替代 div。<br />
+只是，說老實的，有許多功能 flash 做起來更能跨平臺，效果更好也更穩。說不定 CSS 會給 flash 取代，先是變成 JS 的附庸，然後終於勢力變弱？也說不定 XHTML 會加強到具有 flash 一般的效果。再看看吧。
+
+<h4>How many attributes that can use?</h4>
+這類型屬性的問題請找各瀏覽器說明及 W3C，其中的文件一定會說得比我清楚。<br />
+各瀏覽器支援的 CSS 及 JS 都不盡相同喔，雖然這是很遺憾的事，不過因為是事實，請節哀順變。
+<div class="timeStamp">2001/12/7AM CSS.htm</div>
+
+
+<h3>XML & <span title="Extensible HyperText Markup Language">XHTML</span></h3>
+<p>
+這部分…其實我也還在學。好吧，就照我所知道的部分講好了。
+</p>
+您有看過本頁的原始碼嗎？為何&lt;html&gt;之前還多了一堆有的沒的？為何&lt;br&gt;都寫成&lt;br /&gt;？XHTML 是 W3C 新訂定出來的規格，為 XML 的一個子領域，而未來這趨勢將漸漸成為標準，您怎可錯過？<br />
+在過去，<span title="tag">標籤</span>及其中的屬性我都用大寫表示，甚至有&lt;td&gt;沒&lt;/td&gt;。但就在大約一年前，偶爾看了 XHTML 的書，於是後來 tag 及其中的屬性就全改成小寫了。HTML 改過很多次版，直到4.0後，他們簡化 SGML 成 XML，才在 XML 的基礎上造出 XHTML。有鑑於說的太深沒實用性，在此就簡單介紹一下 XHTML 與原先 HTML 的最大相異處：
+<ul><li>
+容錯性：沒錯，應該從這個開始講。過去瀏覽器大多具有一定的容錯性，即使少寫個榴槤<span lang="nan-Hant-TW" title="pua̍t-á, 番石榴, 俗寫為芭樂">菝仔</span>，還是可以跑出東西；但是未來缺東缺西將漸漸不行，因為標準會變得更嚴格些，越來越像寫程式了<span class="expletive">(^_^;)</span>。因此，以下所列的相異出就更顯得重要。
+</li><li>
+檔頭：XML 文件都需要清楚標明一些東西，表示文件的身分。而 HTML 只要一個&lt;html&gt;即可。其實現在的檔頭只有兩種，以1.1為例，就是：<br />
+
+<dl><dt>普通 XHTML 文件</dt><dd>
+
+(Strictly Conforming Documents)
+(1.1)<br />
+<textarea rows="4" cols="99%" style="background-color:#DBEDF7;color:#717892;border-right:thin outset;border-bottom:thin outset">
+&lt;?xml version="1.1" encoding="Big5"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+</textarea><br />
+
+(1.0)<br />
+<textarea rows="5" cols="99%" style="background-color:#DBEDF7;color:#717892;border-right:thin outset;border-bottom:thin outset">
+&lt;?xml version="1.0" encoding="Big5" ?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/TR/XHTML1"&gt;
+</textarea><br />
+
+</dd><dt>框架 XHTML 文件</dt><dd>
+
+(1.0)<br />
+<textarea rows="3" cols="99%" style="background-color:#DBEDF7;color:#717892;border-right:thin outset;border-bottom:thin outset">
+&lt;?xml version="1.0" encoding="Big5" ?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "DTD/xhtml1-frameset.dtd"&gt;
+</textarea>
+
+</dd></dl>
+
+</li><li>
+tag 全改為小寫，屬性值皆用「"」框起來：這就是我現在全用小寫的原因了：順著趨勢啊。未來大小寫有分，而定義中 tag 全都是小寫。（感覺上猶如從 BASIC 進入 C？）而且，過去 IE,NS 的屬性值都是可框可不框，不框就用空白作為分界。現在也不同囉。
+</li><li>
+有些廢棄或不推薦的 tag 及屬性：除了有定義的 tag 外全視為 illegal，如 &lt;font&gt;, &lt;b&gt;, &lt;s&gt;, &lt;center&gt;, &lt;nobr&gt;,.. （但這些我至今仍在使用<span class="expletive">(^×^;)</span>）及 font 中屬性值 color, font-face 等；這些都是為了整合的緣故：在 CSS 中我們有更為完整的屬性可利用，因此這些舊式的表現法就變得有點礙眼了，應該全改用 CSS 來表現。至於「有定義」的 tag 及屬性到底有哪些？不用特地買書來看，因為連書都不得不遵照的標準，就在 W3C 定的 <span title="the Document Type Definition">DTD</span>（不要管這是啥，只要知道這是定義 tag 及屬性名字的東西就好了。）。<br />
+有人說，好用的 font 現在都不能用了，那該用啥代替呢？span 似乎是個不錯的選擇，在 DTD 中的敘述是 span: generic inline container，只要把所有 color, font-face 有的沒的全轉成 CSS 就好了。<br />
+順帶一提，某些人一直強調用 CSS 能「為 HTML 減肥」，我個人是相當質疑。只是把拉拉雜雜的屬性統合叫做「CSS」而已，其實「長度」是加長不是縮短。廢話休提。
+</li><li>
+tag 要「有頭有尾」。有&lt;html&gt;就得要有&lt;/html&gt;，有&lt;a&gt;就得要有&lt;/a&gt;。那只不需要結束 tag 的&lt;br&gt;和&lt;hr&gt;呢？我們在 tag 內直接結束，加了「/」成為&lt;br /&gt;及&lt;hr /&gt;就行了。W3C 的解釋：
+<blockquote>
+End tags are required in XML for non-empty elements; empty elements require an end tag or the start tag must end with "/&gt;".
+</blockquote>
+</li><li>
+<span style="color:red">&gt;</span>→&amp;gt;，<span style="color:red">&lt;</span>→&amp;lt;，<span style="color:red">&amp;</span>→&amp;amp;這些特殊符號不再能隨便出現。為了嚴謹性，特殊符號全轉作了 "&amp;" 開頭的表示法。
+若將原來的 HTML 檔經過以上處理，則除了一些如 JavaScript 的例外，大多可順利成為 XHTML 格式。
+</ul>
+順道一提，有看過人用手機上網嗎？或是您自己就曾這麼上網過？假如想寫自己的手機網頁該用哪種方式寫？<br />
+這就要問您是否聽過 WML 了。WML 是手機上網頁的協定，每頁都很小，以符合手機的需求。假如對此有興趣，可以買本 WML 的書來看看。
+
+
+<h3>自我介紹…之類的東西？<span class="expletive">(@_@)</span></h3>
+原始碼寫作四年，結果在許多方面還是門外漢。嗯…嗯…也沈寂/沈淪/沈默/陣亡了四年。做過一些他人眼中不算什麼的荒唐事，過著總是不應該卻仍然平和的生活。<br />
+其他沒啥好談的，說內容我也不過是個空殼…反正越是專精某方面的人好像就越怪。看來似乎漸漸有那種傾向了，雖然什麼東西都沒搞出過。說到興趣倒還有一些：
+<dl><dt>アニメ主題歌歌詞 @ Colorless echo -the days never back-</dt><dd>
+日本動畫歌詞及翻譯。以資料庫來說應該起碼是 BIG5 界前十名了吧。另有日本 Xgame 心得及介紹，包括我部分的人生哲學。
+</dd></dl>
+另外，對了，好像還沒留通訊方法之類的東西啊。就到上面那地方逛逛吧，站還在的話，會有地方聊天和留言的。若那已經不在了…唔、那我大概也…<span class="expletive">（笑）</span><br />
+我用工作站上的 mutt 收信，所以若想寄 Email 請確定您用的不是 OutLook，然後用純文字寄到下面這組：
+
+盡量別夾檔吧，我很懶的。連明信片都懶得拿起來看的傢伙，怎麼會拆信封呢？
+
+
+<h3>其他主題（預定編修？）</h3>
+<ul><li>用 telnet 來作 HTTP &amp; FTP &amp; SMTP request（因為我也只會這三種的入門<span class="expletive">←笑</span>）<br />
+這其實應多看看 RFC。讀此頁若有任何不懂處，請自行上網搜尋。
+</li><li>CGI
+</li></ul>
+
+</div><br />
+
+</body></html>
