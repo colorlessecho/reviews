@@ -14,8 +14,7 @@
 <dl><dt>入手 PDF</dt><dd>
 以搜索引擎遍尋網路，好容易找到 2006-10-2 pubb 校對過，品質好點的，卻又因為積分問題不容易到手。本來決定好好上傳個文件，累積分數，卻一直等不到審核通過，只好一不做二不休，直接用上 <a rel="nofollow" href="http://10minutemail.com/10MinuteMail/index.html" accessdate="2012/8/13">10 Minute Mail</a> 重新註冊。雖然這有些不誠實，但很遺憾的，這招的確比在那邊苦等快。然後凌晨終於下載回來，還得將簡體轉檔繁體。因為是 PDF 檔，又多了道手續。
 </dd><dt>轉 Word 檔</dt><dd>
-上班回來，先轉 HTML，發現會有眾多斷句（或斷段落）問題。要閱讀這種殘廢版的，不如回歸原先「看簡體掃描版」的結論。於是轉成 Microsoft Word 檔，發現格式似乎維持得比較好。
-</dd><dt>處理排版</dt><dd>
+上班回來，先轉 HTML，發現會有眾多斷句（或斷段落）問題。要閱讀這種殘廢版的，不如回歸原先「看簡體掃描版」的結論。於是轉成 Microsoft Word 檔，發現格式似乎維持得比較好。</dd><dt>處理排版</dt><dd>
 然後當然要先解決 PDF 轉換時出現的斷句。遇到之前就已經很頭痛的問題：Word 不能用 regular expression。之前一直沒深入研究過 <a rel="nofollow" href="http://www.gmayor.com/replace_using_wildcards.htm" accessdate="2012/8/13" title="Replace using wildcards">Word 的 wildcard characters</a>，這次看了看覺得果真不比 regular expression 有整體系統性考量。這點我不怪<span title="Microsoft">他們</span>，畢竟這都不知幾十年前的設計了。（<span class="expletive">汗</span>…沒那麼久啦。這是在諷刺嗎？）但 Word 沒提供 regular expression 這就得怨幾句了。無論如何，採用迂迴方式處理：
 <ol><li>去除中文字間空白：<code>([!a-zA-Z0-9.,;-]) ([!a-zA-Z0-9.,;-])</code>→<code>\1\2</code>
 </li><li>去除分頁：<code>^m</code>→<span class="fadeout">(null)</span>
@@ -361,8 +360,7 @@ Diamond 引用了 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Elman_Ser
 </dd></dl>
 由上面的推論，人們並非有意識的簽訂契約、自願歸屬國家，而是被動著自然而然就這麼演變的。此外，當人口越來越多，<span title="我們業已斷定，複雜社會的形成以某種方式與人口的壓力聯繫在一起，因此我們現在應該尋找一下人口壓力與戰爭後果之間的某種聯繫。為什麼戰爭總是在人口稠密而不是在人口稀少的時候造成社會的合併呢？答案是，戰敗民族的命運取決於人口的密度，這有 3 種可能的後果：凡是人口密度很低的地方，就像在狩獵採集族群占據的地區所常見的那樣，戰敗群體的倖存者只要離開他們的敵人遠一點就行了。新幾內亞和亞馬遜河地區遊牧部族之間戰爭的結果往往就是這樣。">使社會組織間也產生衝突時</span>，將會加速社會的合併。外力威脅可促使社會較平等的合併，戰爭征服則使戰敗的社會歸屬於勝者；兩者同樣導致技術交融與激盪的可能性，而戰利品（包括物資、奴隸）與殖民（或<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AE%97%E4%B8%BB%E6%9D%83" accessdate="2012/11/5" title="宗主權">進貢宗主國制度</a>）則導致國家主動引發戰爭，冀求征服他者。<br />
 至於演化到國家階段後，當人民開化、體制理論建構完備，我想或許能進入到下個較平和的階段；政治不再交由少數人壟斷，無論是誰當決策者都能作出最佳、且以公眾利益為依歸的政策。（這算是我個人的願景吧。當前打著民主旗號的政黨政治並不理想，請參照我對<a>民主</a>的一些嘀咕。更甭提任何以人為主體的寡頭政治。說明白點，我不信任人性。）但即便到這階段，只要我們不改造自身天性，戰爭與衝突恐怕還是在所難免。<br />
-把 Chapter 14 解決掉之後，卻意外難以入眠。
-<div class="timeStamp">2012/11/05</div>
+把 Chapter 14 解決掉之後，卻意外難以入眠。<div class="timeStamp">2012/11/05</div>
 
 <h3 title="PART FOUR: AROUND THE WORLD IN FIVE CHAPTERS">第四部分 在 5 章中環遊世界</h3>
 這部分主要將前面的理據應用在真實案例中。

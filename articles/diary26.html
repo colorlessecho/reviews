@@ -7,13 +7,10 @@
 <body>
 
 <a id="diary26"></a><div id="c_diary26" class="c2" title="日記#26">
-
 中午或比了近十家吧，最後考慮到想找個底座，就拿 TWD3300 買了顆中國製，看來還有點舊、從其他店換下來（回來才發現盒子裡面黏有磁條。我入手的商家不需要，依照過去的經驗，這可能是順發等大店退場之後留下來的遺跡。）的 Seagate FreeAgent GoFlex Desk 2 TB 3.5吋外接硬碟，3年保固。底座下方 PN: 9ZH9P7-RAA（網路上有公布 SN: NA1Q7LHM 的）。看了一下，<span title="裡面裝的">中の人</span>果然是<a rel="nofollow" href="http://www.pcdvd.com.tw/showthread.php?t=923153" accessdate="2011/8/13" title="Seagate 新硬碟 Green sata3 全系列也會有雞瘟？ - PCDVD 數位科技討論區">残念な子</a>、2 TB Seagate Barracuda Green Drive ST2000DL003-9VT166，PChome 線上購物時價 2699；換句話說就是六百元買底座就是（外殼對我毫無價值，因此不算在內。）。但我的韌體 CC98，不一樣。只希望別真的遇人不淑，發生雞瘟。會買這顆主要還是為了那底座，不然就買 WD 了。還是趕快找找硬碟測試軟體測測看吧。まあ、光看讀取 32 MBps（主要因為我只有 USB 2.0）就有些遺憾了。
 <div class="timeStamp">2011/8/13</div>
 剛剛試了一下，還真的可以把以前的 SATA 硬碟拿來插。不過需要接上 USB 才會開始提供電源就是，並且另一顆竟識別成了 "Seagate   FA GoFlex Desk USB Device"。這點可能還需確認，晶片倒沒判別錯。現在的問題是不曉得是該照其設計直的擺，或是橫著（倒著）放置。まあ、既然可以迅速進入 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Production_environment" accessdate="2011/2/9" title="生產環境, 正式上線模式">production environment</a>，那也沒啥好抱怨的了。算一算，順利的話這樣一顆應該能撐三個月左右吧。
 <div class="timeStamp">2011/8/13</div>
-
-
 用了好幾個老半天才將 CeL 修改到之前的程度，大致在 local 上能跑出 test suite 除了 select_input 進階 test 的部分。疲れた。不太想再動了啊。接下來就蹉跎一下，上網應付點留言吧？<br />
 硬碟使用 HD Tune 檢查壞軌，意外的看來竟需要超過 15小時（最後用了 17.5）。USB 2.0 傳輸 31 MBps 的速度果然不可小覷，慢到我無法接受了。看來這顆硬碟得明天才能派上用場。妙的是 SeaTools 只需要五個多小時，很顯然 SeaTools 有使用到一些內部的指令。大概是直接送指令到硬碟上的晶片，然後只回傳進度與結果吧。
 <div class="timeStamp">2011/8/14</div>
@@ -23,7 +20,6 @@
 <div class="timeStamp">2011/8/15</div>
 搞了半天才發現原來是把一組數值作了 cache，因此造成沒有同步的問題。やっと…終わった…回到接近之前的進度了（說明文件的部分還沒完成），只多了個同步載入功能。まったくだ。不過，這一步沒做好，總是不能安心睡覺啊（大げさだ）。
 <div class="timeStamp">2011/8/15</div>
-
 昨天到現在搞的是 GitHub 以及少量文檔補全。順便把過去一點問題解決了。下面簡單敘述：
 <dl><dt>No supported authentication methods available</dt><dd>
 我使用 TortoiseGIT，但其內附的 ssh "TortoisePlink" 卻不支援 GitHub 唯一允許使用的 public key。解決方法就是移除後重新安裝一次，選擇系統內附的 ssh。<br />
@@ -38,8 +34,6 @@
 <div class="timeStamp">2011/8/17</div>
 今天主要處理 cross-browser 的問題。
 <div class="timeStamp">2011/8/17</div>
-
-
 今天到現在，主要改造 module tree，按照原先的設計將 CeL 分類好。接著 commit 一下，上傳完 source 就準備休息了。
 <div class="timeStamp">2011/8/18</div>
 自從前幾天有點感冒的樣子後，喉嚨左部就漸漸痛起來。今天起來還是沒好，反而更嚴重了。看似出現了傷口。這幾天又斷咖啡及斷茶，還是開始好睡起來，作息也越來越正常。果然這種刺激性的東西不能吃太多？
@@ -53,33 +47,23 @@
 <div class="timeStamp">2011/8/20</div>
 沒想到舊的說明生成程式還勉強可以用，雖然有許多地方還是有問題。不過咖啡使得我腦袋怪怪的，做事情很吃力，卻又睡不著（無法好好休息），今天已經不太想動了。
 <div class="timeStamp">2011/8/20</div>
-
 一早開到 Google+ 就著了 <a rel="nofollow" href="http://www.google.com/support/+/bin/answer.py?hl=en&amp;answer=1228271" accessdate="2011/8/25" title="Your name and Google+ Profiles : Google+ Answers - Google+ Help">Google+ Names policy</a> 的道，只好先改一下。
-
 <div class="timeStamp">2011/8/25</div>
-
 稍微改了一下 <code>game.js (resources/reviews.js)</code>，不過因為工作做一半，看起來更糟了。看來明天會有場<span title="heavy work">硬仗</span>要打。
 <div class="timeStamp">2011/8/28</div>
-
 因為鬧鐘不知去哪了，充當鬧鐘、快十歲的手機又壞掉（不準備再補充了）。找對面的問一下，說從一百五漲到一百八。想想兩三年前前從十元的店買的才六十元的樣子，還是努力點把鬧鐘找出來，不然就看看有沒替代的吧。沒辦法，貧困人就得有貧困生活的過法。<span class="expletive">（←ママ、何かヤバイよ、この人！）</span>
 <div class="timeStamp">2011/8/28</div>
-
 好容易在本機上做了部分檔案的基本演示。最麻煩的就是改 <code>document.write()</code> 的部分。可以的話，順便上傳試試。有點累了。
 <div class="timeStamp">2011/8/29</div>
 結果 preferences.htm 用了太多 <code>document.write()</code>，因時間差不多，準備睡了。只好擇日再說。
 <div class="timeStamp">2011/8/29</div>
 上去果然有些問題。剛剛是 cache 沒清完。幾個檔修復到現在才勉強可看，問題還一堆。
 <div class="timeStamp">2011/8/29</div>
-
 昨天載入方法大調整，有些功能尚未修復。剛剛算是把已知的問題解決了。
 <div class="timeStamp">2011/8/30</div>
-
-
 Kris Chu <a rel="nofollow" href="https://plus.google.com/u/1/111713352910700470478/posts/4jVtgbu2zLg" accessdate="2011/9/3" title="Kris Chu - Google+ - 部落格的社群網站分享裝置通常是按鈕（share…">提到</a>現在 blog 總是一堆分享連結與按鈕，很妨礙觀瞻。或許把他們集結在一個「評價與分享」之類的欄位內，讀者有需要時再手動展開，就不會那麼礙手礙眼了？<br />
 昨晚十一點前睡，但七點前又自動起來了。中間還醒過一兩次。喝了點茶，發現精神還是有些異樣，一直打呵欠伸懶腰。似乎想多睡眠以消解疲累，但又睡不著。
 <div class="timeStamp">2011/9/3</div>
-
-
 看來今天也有不少烤肉的。隔壁的竟然就在頂樓烤肉。
 <div class="timeStamp">2011/9/10</div>
 雖然今天已經沒電扇直吹，結果還是 5:59 就起來了。然後想到一大堆雜事，煩惱纏心又睡不著了。我開始猜想該不會與生理時鐘有關。
@@ -109,18 +93,13 @@ Kris Chu <a rel="nofollow" href="https://plus.google.com/u/1/1117133529107004704
 <div class="timeStamp">2011/9/11</div>
 接著又是到處訪價，發現還有 2011/8 出廠、中國大陸製造威建代理的 <a rel="nofollow" href="http://www.hitachigst.com/" accessdate="2011/9/11" title="Hitachi Storage">Hitachi</a> 7K3000 2 TB Deskstar 7K3000 <a rel="nofollow" href="http://www.mobile01.com/topicdetail.php?f=297&amp;t=1909580&amp;p=8" accessdate="2011/9/12" title="也是 Hitachi 7K3000 2TB SATAIII 入手測試分享~~~~ - Mobile01">HDS723020BLA642</a>，就到中山路郵局提了錢（一時間忘了先領出來）砸下去。<br />
 這兩顆盒子比起上次 Seagate 的非常小，簡單的說只有一個透明的硬碟保護罩，再加上紙盒包裝。價錢就不簡單了，費了 TWD3200×2，簡單的砍卻砍不下，說最近漲價且手上沒多少顆；價格說來算是與網路上差不多，沒怎麼便宜到。保固都是 3年，當然這東西能不用到最好別用。而我實際上可能也操不到半年就把他們全冰起來了。但總之只能期望自己運氣別太糟。規格為 <a rel="nofollow" href="http://www.techbang.com.tw/posts/4942-cheap-hard-drives-are-also-fierce-burst-speed-hitachi-deskstar-7k3000" accessdate="2011/9/11" title="扮豬吃老虎，平民效能王 Hitachi Deskstar 7K3000 | T 客邦 - 我只推薦好東西
-4張碟片、7顆磁頭結構，單碟片只有 600GB 容量">4張碟片</a>，不是 5張，不過這也好。一點多回來後接上 Seagate 的 SATA 轉 USB 器材，開始初始設定。先使用系統內附磁碟管理 compmgmt.msc 設定 <a rel="nofollow" href="http://technet.microsoft.com/zh-tw/library/cc738081%28WS.10%29.aspx" accessdate="2011/9/11" title="磁碟分割樣式">MBR 磁碟分割表格</a>以確保 Windows XP 下別無用武之地，之後建立磁碟磁碟分區、快速格式化。即使硬碟本身是 SATA 3.0，USB 也有 USB3，但總之是用不上，隨便看看總是只能到 32 MiBps，所以效能也不想管了，直接使用不再評測。
-<div class="timeStamp">2011/9/11</div>
-
-
+4張碟片、7顆磁頭結構，單碟片只有 600GB 容量">4張碟片</a>，不是 5張，不過這也好。一點多回來後接上 Seagate 的 SATA 轉 USB 器材，開始初始設定。先使用系統內附磁碟管理 compmgmt.msc 設定 <a rel="nofollow" href="http://technet.microsoft.com/zh-tw/library/cc738081%28WS.10%29.aspx" accessdate="2011/9/11" title="磁碟分割樣式">MBR 磁碟分割表格</a>以確保 Windows XP 下別無用武之地，之後建立磁碟磁碟分區、快速格式化。即使硬碟本身是 SATA 3.0，USB 也有 USB3，但總之是用不上，隨便看看總是只能到 32 MiBps，所以效能也不想管了，直接使用不再評測。<div class="timeStamp">2011/9/11</div>
 八點多再起身到現在仍無強烈睡意，想想還是晚上再睡了。只是這樣恐怕整天精神都不太好。
 <div class="timeStamp">2011/9/12</div>
-
 沒想到用 HDD Regenerator 掃半小時，playlist 就全部消失無蹤了，連用 undelete 的工具簡單看一下也沒啥跡象。唉、還是從頭來吧。
 <div class="timeStamp">2011/9/13</div>
 簡單測了一下，約少了一成、二十小時，共 311 首常聽音樂檔。面對這資料量，突然有種無力感，不想再找回來了。
 <div class="timeStamp">2011/9/13</div>
-
 舊的牙刷這幾天刷牙時已經出現刷毛脫落的現象，換了媽推薦的 <a rel="nofollow" href="http://www.denpro.net/" title="歯科医院サポートのデンタルプロスタッフ
 DENTAL PRO STAFF co., Ltd">DENTALPRO</a> 牌抗敏感性日本貨。
 <div class="timeStamp">2011/9/15</div>
@@ -130,17 +109,14 @@ DENTAL PRO STAFF co., Ltd">DENTALPRO</a> 牌抗敏感性日本貨。
 比較特殊的是ななこ的語調。那語尾的「なう」雖然是 twitter 的流行語，在声優<span class="proper_noun" title="さとう実琴?">町田あみ</span>念起來卻有種趣味。部分 H シーン笑點比實用度高，這點也不多見。至於遊戲本身那一些特殊設計，對為了節省時間，完全按照攻略跑的我來說其實沒啥新奇點；反而因為必須跑許多次，非得持續 skip 與選擇，有點作業ゲーム的感覺。<br />
 簡單的說，還是消遣用。沒這需求的，倒可跳過了。
 <div class="timeStamp">2011/9/16</div>
-
 這幾天隨便看了點<a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/HEAT_-%E7%81%BC%E7%86%B1-" accessdate="2011/9/16" title="『HEAT-灼熱-』（ヒート しゃくねつ）は、武論尊原作、池上遼一作画の日本の漫画作品。『ビッグコミックスペリオール』（小学館）に連載されていた。単行本は全17巻（小学館ビッグコミックス）。2004年2月に映画化された。第47回（平成13年度）小学館漫画賞受賞。">HEAT -灼熱-</a>。這些年來多少也看了點黑道義氣武鬥，例如<a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B0_%E3%83%95%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3" accessdate="2011/9/16">クライング フリーマン</a>這一派的作品。對本作，較為簡易的說法是要人們率性而為、覺得對的就應去做，擁有堅強的意志，而非屈服於權威；找回純真，別沉淪於慾望與弱肉強食中。但更好的說法應該是要伸張「善」；比起拳頭大的說了算之類的力量決定一切論，從<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%90%8C%E7%90%86%E5%BF%83" accessdate="2018/4/29" title="empathy, 共感">同理心</a>出發的推誠布公更說得通、沒有矛盾。對此我當然也同意。但人與人總是有因信念而生的衝突。就算沒有私心，總是設身處地為人著想，不同的意志還是會造成不同的抉擇。畢竟不同的人，就具有不同的評價標準（見<a>人生的意義</a>）。若太過擇善固執，完全不留轉圜餘地，那衝突就不能解決。<br />
 而更大而根本的問題，還在這世界其實根本就不存在任何規律。無論是勝者為王、允執厥中、兼愛非攻等，都不過是人為自己設下的牢籠。而這些標準甚至都不比天有不測風雲，更甭提要與漫浪的時空相競。就算在較小的尺度中，我們總是沒作中主角那麼<span title="帥">格好いい</span>（他們常常本身就已經很強大而光鮮亮麗了，所以才有辦法改造<span title="．">他們認為</span>不合理的世界。看這些作品，以為能回歸本初知心的同時，我們終究還是沉溺於以為自己夠強大的幻想中。）；世界通常也不真的像這些作品中所描述的，能那麼隨心所欲。即便要改變，身為普通人的我們所能做的，一般也只有全力以赴而已。
 <div class="timeStamp">2011/9/16</div>
 今天主要清理了一下累積的漫畫。對於一些 heroism 與膚淺的愛情劇就不多提了，現在對這種東西沒啥興趣，也擠不出什麼想法。<br />
 看了 <span class="creation_title" title="小谷憲一著 ジャンプコミックスデラックス">DESIRE 2nd season</span> 1–4，屬於單元劇，感覺上劇本多是滿足オタク類男人（主角大多是還算普通而小家子氣，沒有城府而容易理解；只是沒有堅強信念，一遇強烈攻勢就招架不住的傢伙。）對投懷送抱愛情的期望。幾乎都是愜意的完滿結尾（起碼對主角來說），還有不少都是一夜情性質的；沒有後顧之憂，對激情可能引發的負面效應也沒著墨。女性對這種情節會不會有興趣就不知道了。
 <div class="timeStamp">2011/9/17</div>
-
 上禮拜中秋又拿了個胖胖杯回來，測一下容量約 850cc。因為與50嵐用的同是 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E8%81%9A%E4%B8%99%E7%83%AF" accessdate="2011/9/18" title="聚丙烯">PP</a>，還可重複使用。這種杯體類型的出現大概也才一兩年吧，到現在實際喝過也才兩三杯。正式名稱似乎是<a rel="nofollow" href="http://www.pea.com.tw/shop/prodshow.asp?ProdId=1091" accessdate="2011/9/18" title="1000cc 透明射出杯(胖胖杯)-商品詳細資料">透明射出杯</a>，滿怪的。
 <div class="timeStamp">2011/9/18</div>
-
 <h2>外來詞彙入侵</h2>
 之前提過，自從<a>東日本大震災</a>發生（或許還在那之前一點？），我間或，或應該說幾乎每天都會打開電視看看新聞，差只差在時間長短。<br />
 這段時間常常會聽到一些不熟悉的詞彙從名嘴、記者甚至播報員的口中吐出來。舉例來說，像是「物件」、「素顏」等。前者對學過 OOP 的人來說大概很熟悉，因為本地對 object 的近官方翻譯就是這名稱。但新聞中使用這詞通常不會是在程式設計上，而是報導房仲業時。我驚訝的不是我不懂這是什麼意思，而是為甚麼會這麼用。事實上我非常容易推測得出這詞是怎麼來的，不外乎本地對於房屋案件沒有明確通用的稱謂，所以從日本語借了過來。於是之前說「買房子」，現在說「<a rel="nofollow" href="http://www.youtube.com/watch?v=LrcU60_Q3Rc" accessdate="2011/9/21" title="591房仲 yes 資訊網-影音教學-訪客如何找物件">找物件</a>」。但我更訝異的是，這詞看起來並不是經過哪一大家推波助瀾，哪一大新聞事件的助長，藉由大流行而定型下來；而是猶如蠶食鯨吞的，由幾個人、幾十個人，新聞提過一兩次，竊竊私語間交流三四次，最後大家都知道這是甚麼、應該怎麼用了。原來詞彙的移花接木也有這種成就方法。<br />
@@ -154,7 +130,6 @@ DENTAL PRO STAFF co., Ltd">DENTALPRO</a> 牌抗敏感性日本貨。
 啊、我忘了，這篇本來是詞彙研究報告的。都怪我半年來政論節目看太多了，隨便寫都會扯到政治上去。政論節目果真害人不淺啊。<span class="expletive">（←明明就是你自己<a rel="nofollow" href="http://zh.wiktionary.org/wiki/%E5%98%B4%E7%82%AE" accessdate="2011/9/21" title="又稱嘴砲，泛指滿足發言者單方面心理需求之無意義言論，例如未提出建設性方法的空泛意見。">嘴炮</a>，還害人<a rel="nofollow" href="http://wiki.komica.org/wiki3/?%E6%88%90%E5%8F%A5%2FXXX%E8%BA%BA%E8%91%97%E4%B9%9F%E4%B8%AD%E6%A7%8D" accessdate="2011/9/21" title="成句/XXX 躺著也中槍 - KomicaWiki">躺著也中槍</a>！←汗…）</span>
 <div class="timeStamp">2011/9/21</div>
 差不多能睡了。不過下午吃太飽，準備再看一點<span class="creation_title">サライ</span>。
-
 <h2>サライ</h2>
 上一本漫畫看完，到凌晨都在處理<a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%A9%E3%82%A4_%28%E6%BC%AB%E7%94%BB%29" accessdate="2011/9/24" title="『サライ』は柴田昌弘による日本の漫画作品。">サライ</a>，順便更正了一些 Wikipedia 上的錯誤資訊。對我來說，本作的世界設定甚至比劇情更有看頭。作中描述到失控的科技可能造成極嚴重之結果，並創出不少特殊的存在（情境）可供討論。不過在此沒打算深入探討，僅簡單提提。<br />
 <span class="creation_title">暗い花</span>提到一個イエティ才算正常，普通無毛裸猿反而被視為醜陋，以至畸形的社會文化。這一節述說不同的環境有不同的價值觀。美醜，甚至對錯其實端賴成員整體的共識而定（「共識」之意涵參考 <a>Justice</a>）。<br />
@@ -165,14 +140,11 @@ DENTAL PRO STAFF co., Ltd">DENTALPRO</a> 牌抗敏感性日本貨。
 <div class="timeStamp">2011/9/24</div>
 之前提過，我的文章大多是因為有感而發，藉由刺激所生的反應，而不是自己無來由的猛然領悟。所以站名才會用上 "echo" 這字。最近在想，或許該把 directory 從 "game" 改成 response 或是 reflections 之類的比較合適。而「Game の部屋」也該有個新名稱了，現在寫的言論大多與遊戲無關。或許「回光集」、「漣漪集」或是「惰性反射」(Inert Reflection)會是個好的開始。對於偏好破滅的我，「回光集」較「漣漪集」吸引力大些；即使我並不具有武士道精神。若是想表現這些文字與時浮沉的特性，那「思想的軌跡」(locus of ideology) 當也不錯<span class="timeStamp" title="2011/11/1 22:44:10">[補]</span>。
 <div class="timeStamp">2011/9/24</div>
-
 因為想到工作上的事，老大早就起來了。情けない。
 <div class="timeStamp">2011/10/8</div>
-
 <h2>記憶中的兩 musical</h2>
 近兩禮拜因為思念起過去的音樂，回味了一下 <a rel="nofollow" class="creation_title" href="http://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_%281986_musical%29" accessdate="2011/10/8" title="The Phantom of the Opera (1986 musical)">The Phantom of the Opera</a> 與 <a rel="nofollow" class="creation_title" href="http://fr.wikipedia.org/wiki/Les_Mis%C3%A9rables_%28com%C3%A9die_musicale%29" accessdate="2011/10/8" title="Les Misérables (comédie musicale) - Wikipédia">Les Misérables</a>。這兩齣 <a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E9%9F%B3%E6%A8%82%E5%8A%87" accessdate="2011/10/8" title="音樂劇（英語：Musical theater，簡稱 Musicals），又稱為歌舞劇，是音樂、歌曲、舞蹈和對白結合的一種戲劇表演。">musical</a> 會吸引我，主要都是因為其動人的旋律。我相當喜愛 Andrew Lloyd Webber 的曲子，其中有不少佳作。而 Les Misérables 中亦有不少令人一聽再聽的好東西。發現這兩作都是重複利用優美的曲調，所以相同的旋律會一再地出現。但再想想，這其實也不能苛求。要每一段都是新的調子太困難了。<br />
 <p>
-
 簡單的說，這根本就是一個寝取られ作品。Erik 從小培育 Christine Daaé，使之具有雄厚的歌唱實力，結果卻只能坐收好人卡。當一手栽培長大、投注這麼多心血與感情，但可愛的小女孩卻隨伊人而去，一切付之一炬；無論是誰，這悔恨想必很難吞下。Erik 最大的問題，大概是欲以恐懼屈服並囹圄人心吧。若他能採用<span title="可回復">可逆</span>的手段（當然就不包括吊死 Joseph Buquet），而故事以 Christine 自發性移情別戀作結，應該會更催情些。因為這展現了人不重公正，而重不能自已（無論是生理需求、一見鍾情、無法抗拒的<a rel="nofollow" href="http://en.wikipedia.org/wiki/Interpersonal_attraction" accessdate="2012/2/27" title="Interpersonal attraction">吸引力</a>、虛榮被滿足…）、<span title="勢利眼">重己利</span>等等的天性，而這卻造成了一種人性的矛盾；正如 Erik 所言，他又不是自願長這樣。所以他理不應受罰。雖然這故事最後似乎以 Erik 完完全全的得不償失、毫無回報作結；但人畢竟不是<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E5%85%A8%E7%90%86%E6%80%A7" accessdate="2017/4/8" title="perfect rationality">完全理性</a>的（真有這樣的人，也不會是我們所能接受的。），正如同權勢總令人腐敗，以這角度我們不能怪罪他人。<br />
 電影版加強了情節描述（我猜應該參考了原作小說版中的情節以補全 musical 中被省略掉的部分），因此看電影應該會比 musical 更容易理解些。以我的狀況，因為對英語不甚熟習，之前一直沒全盤了解此作的劇情。一直到這次看電影版才曉得故事細部內容。電影的分鏡也相當不錯。雖然沒有 musical 身歷其境的臨場感，卻展現了只有在電影才能表現的特殊效果與演出手法。雖然影片有影片的長處，但純粹以音樂來說，無論是以（具部分差異的）旋律、唱技，我還是比較偏好 Original 1986 London Cast 這版本。
 </p>
@@ -181,14 +153,11 @@ DENTAL PRO STAFF co., Ltd">DENTALPRO</a> 牌抗敏感性日本貨。
 對其他的 musical，雖然我曾涉獵過一些，慚愧的是至今幾已不復記憶。
 <div class="timeStamp">2011/10/8</div>
 
-
 七點半起來，想想還是起來別賴床了。打開電視，一如預料的，<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E6%B3%9B%E8%97%8D" accessdate="2011/10/10">泛藍</a>新聞（50–52臺）上正到處介紹<a rel="nofollow" href="http://www.president.gov.tw/Default.aspx?tabid=1287" accessdate="2011/10/10" title="中華民國總統府-首頁 &gt; 新聞與活動 &gt; 特別專輯 &gt; 其他專輯 &gt; 中華民國國慶專輯 &gt; 國慶活動">建國百年國慶大典</a>。不過<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E8%80%81%E4%B8%89%E5%8F%B0" accessdate="2011/10/10" title="老三臺（或三臺）指的是臺灣在1960、1970年代所創辦的三家無線電視臺，分別是臺灣電視公司（創立於1962年10月10日）、中國電視公司（創立於1969年10月31日）和中華電視公司（創立於1971年10月31日）。">三大電視臺</a>與偏<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E6%B3%9B%E7%B6%A0" accessdate="2011/10/10" title="泛綠">綠色</a>的新聞臺倒是按照原先排程，或主打普通新聞。雖然這不能說是他們僅專注在執政一方的慶典活動、或者當作沒總統府國慶日慶祝活動似的（畢竟有太多<a rel="nofollow" href="http://tw.nextmedia.com/applenews/article/art_id/33724838/IssueID/20111008" accessdate="2011/10/10" title="蘋論：升旗 國慶變陷阱 | 頭條要聞 | 蘋果日報">兩難</a>。事實上九點後，許多家也開始播映總統府的儀隊表演、遊行活動。<span class="timeStamp" title="2011/10/10 9:24:21">[補]</span>）；惟若真有不足與超過，則皆非好事，應當以中庸為旨。例如能按照真實比例呈現，參考<a>媒體與社會責任</a>。<br />
 まあ、想說的並不是這些泛政治化的話題。我只是想到，記得還在<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E8%80%81%E4%B8%89%E5%8F%B0" accessdate="2020/7/25">老三臺</a>的時代，每到國慶日都會三臺聯播國慶閱兵。但記憶中，至今總共也才隨便瞄過兩三次吧，還沒從頭看到尾的。很多時候還是沒時間或沒興趣觀賞，寧可關上電視，做著自己的事。這次雖然因為「百年」而擴大慶祝，看來還是沒怎麼能感染那歡欣氣氛。
 <div class="timeStamp">2011/10/10</div>
-
 前面提到過，這幾天不知何故，異常疲倦。十點半前睡到過六點半起床的時候有點著涼，喉嚨癢癢的。雖然氣象預報說這周末都降雨，剛剛上去看，沒想到還出太陽。還是把衣服丟下去洗了。
 <div class="timeStamp">2011/10/15</div>
-
 <a rel="nofollow" href="http://books.solidot.org/article.pl?sid=11/10/17/0150216" accessdate="2011/10/18" title="Solidot | 亚马逊和作家达成图书出版协议">聽說 Amazon 已經壯大到著手準備跳過傳統出版商</a>，使自己成為作者與讀者新的中介。簡單的說，Amazon 想要搞垮實體書出版商，只要使作家體認到作品放在 Amazon 比較容易賣得出去，例如占領通道並足以放送強力廣告；並且使讀者發現比起逛實體書店，網路書店會更省時且方便。就算想聞聞書的味道，也可以訂閱實體書。那這麼一來，傳統出版商的生存空間會更為狹小。就算要怨，到這地步想與 Amazon 一較高下，恐怕也絕非易事。<br />
 <div class="timeStamp">2011/10/18</div>
 對於這些 <span title="mobile personal computer">MPC</span><span class="explanatory">（參考<a>平面媒體的未來</a> <span class="creation_title" lang="en-US">Get further</span>）</span>，由於我尚不習慣輕型隨身處理機構，現在還是以 laptop 代所需要的。沒多餘的錢買<span class="expletive">（汗）</span>，或更應該說，沒這規劃。
@@ -196,13 +165,10 @@ DENTAL PRO STAFF co., Ltd">DENTALPRO</a> 牌抗敏感性日本貨。
 今天天氣有點冷了，有點著涼的感覺。前面提到的 USB 問題，看起來是因為之前買的 DVDROM 外接盒快掛掉了，因此狀況不太穩定。我想到之前用過許多讀卡機，往往經過半年一年也有類似的情況。就不知道這是品質問題，或者這種外接設備常態即是如此。無論如何，為了滿足需求，恐怕得再買個轉換器了。<br />
 Plurk 自從 Karma 過 95 之後，似乎就由 0.02 減半到 0.01 跳了。這樣一來，要成 Karma 100 俱樂部成員似乎又得延後到近四個月後。
 <div class="timeStamp">2011/10/18</div>
-
 本來周末想要購買 SATA 轉 USB unit，順便添購硬碟。沒想到<a rel="nofollow" href="http://hardware.solidot.org/article.pl?sid=11/10/19/0841224" accessdate="2011/10/22" title="Solidot | 洪水导致西部数据关闭曼谷硬盘工厂">因為泰國廠區淹水</a>，<a rel="nofollow" href="http://www.pcdvd.com.tw/showthread.php?t=945884" accessdate="2011/10/20" title="機械式硬碟-大缺貨？漲價？Western Digital 泰國廠 / 硬碟二哥 WD 泰國廠暫停運作、希捷供應緊‎區淹水，延長停產時間‎ - PCDVD 數位科技討論區">兩大家廠商漲價還缺貨</a>，問了一下上次光顧的店家竟沒東西可買。看來只好學個教訓，以後應該起碼有半年的庫存才好。接下來半年得省吃儉用了。
 <div class="timeStamp">2011/10/20</div>
-
 九點半左右睡到了六點整。不過中途起身四五次，我切實地感受到睡眠品質變差了。
 <div class="timeStamp">2011/10/22</div>
-
 <h2>人性的貪婪法則</h2>
 <em>若沒有限制，人會在自己的能力所及範圍內，盡可能的滿足自己的慾望。</em><br />
 我們總說<a rel="nofollow" href="http://en.wikipedia.org/wiki/John_Dalberg-Acton,_1st_Baron_Acton" title="John Emerich Edward Dalberg-Acton, 1st Baron Acton, Lord Acton《自由與權力》：所有權力皆導致腐化，絕對的權力必使人徹底的腐化。All power tends to corrupt and absolute power corrupts absolutely.">權力使人沉淪</a>，並且在生活中也看到了太多的實例；稀鬆平常到宛若這就是公理，是大伙心照不宣的共識，不證自明。比起打破沙鍋璺到底，倒不如想想該怎麼解決。對此我們能做的倒很清楚，就是別讓任何人握有太大的權力。阻止一切大權在握的機會，使人連墮落的門都沒有。但仔細想想，我們沒深究為何會有這樣的現象，真的表示這就是理所當然之事嗎？<br />
@@ -211,11 +177,8 @@ Plurk 自從 Karma 過 95 之後，似乎就由 0.02 減半到 0.01 跳了。這
 因之話說從頭，人手握大權會腐敗可說是種天性，差只差怎麼爛、爛掉多少罷了。畢竟人們一路成長，何者是為合宜、何者過分，正是這麼跌跌撞撞過來的。因此該怪罪的不應是這種慾望，而是該知曉怎麼能得個出路。要避免踰矩行為，除了普遍使用的外在制度監視，以內在防治來說，較簡單的方法是教養：教人做事要有分寸，別恣意胡作非為。但這有可能矯枉過正，造成擇善固執、食古不化。惟這在地位愈高的情況下，有時是較為妥當的。也就是我們所謂「位高權重者該有更嚴格的道德標準」。<br />
 另一個方法是師法 <a rel="nofollow" class="proper_noun" href="http://de.wikipedia.org/wiki/Immanuel_Kant" accessdate="2011/7/11" title="Immanuel Kant, 康德">Kant</a>（參考 <a>Justice</a>）。Kant 教人擁有自己度量的一把尺、遵照可以普世通行的規則；這標準通常是可行的。此外，我認為更好的方法是訓練同理心，因為這是善的源頭。善用同理心為評估行為可行與否的基準，較可能藉以達到自完滿的一套價值觀，使人認可「就算我是他，也不能做得更好」。但無論如何，這些都不會是在任何極端情況下，都能行之無礙的最終法則。因為打從頭就沒有「完美法則」這種東西存在，能在價值觀內達到自洽，與所知環境不存矛盾就已經很了不起了。不太可能完美的解決任何情況下的任何問題。我們能做的，終究還是只有全力以赴、以求於心無愧罷了，雖然這問題看來還是很大。畢竟時至今日，無能也被歸為一種罪不是嗎？
 <div class="timeStamp">2011/10/23</div>
-
 近來中南半島的大水（新聞上版面最大的應屬<a rel="nofollow" href="http://zh.wikipedia.org/wiki/2011%E5%B9%B4%E6%B3%B0%E5%9C%8B%E6%B0%B4%E7%81%BD" accessdate="2011/10/23" title="2011年泰國水災">泰國水災</a>）造成全球性的工業以及稻米災難。工業是因為那邊人力算現在的平衡點（才從中國移過去，下面可能會換到尼泊爾等？），正有許多重要代工工廠。稻米則是因為那邊是全球糧倉。我想說的是，正如同現在硬碟已經買不到（沒幾個禮拜，DVD 應該也會漲價？），總有個預感未來幾年，甚至明、後年內恐怕就會出現想要吃飯、吃肉或某些蔬菜卻吃不到的情況。該投資這些期貨了？
 <div class="timeStamp">2011/10/23</div>
-
-
 <h2>妹がゾンビなんですけど！</h2>
 <iframe src="https://www.youtube.com/embed/ijq2jzzfydo" title="妹がゾンビなんですけど！ - YouTube"></iframe>
 簡單翻過<span class="proper_noun">伊東ちはや</span>的<a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/%E5%A6%B9%E3%81%8C%E3%82%BE%E3%83%B3%E3%83%93%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%91%E3%81%A9!" accessdate="2012/1/27" title="妹がゾンビなんですけど!">妹がゾンビなんですけど！</a>。這位小姐(??)竟然還<a rel="nofollow" href="http://www.youtube.com/watch?v=ijq2jzzfydo" accessdate="2012/1/31" title="妹がゾンビなんですけど！">親上火線作介紹</a>…小說於本地似乎還不怎麼出名，這標題也不怎麼好兼顧信達雅的完美翻出。直譯的話成「不過妹妹是喪屍」，我的話就用「妹已成喪屍」吧。原來以為是普通的<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%96%E3%82%B3%E3%83%A1%E3%83%87%E3%82%A3" accessdate="2011/1/16" title="戀愛歡喜劇, 愛情喜劇, ラブコメディ">ラブコメ</a>，但途中還滿驚悚的。對於歡樂向、消遣用之類沒啥內涵的作品，我向來不多費筆墨，畢竟已不符合我的年紀了。會想要特此一筆，主要是因為其背景設定。<br />
@@ -234,7 +197,6 @@ OK. 到這邊聽起來還滿沉重的。我想到的是，假如最親愛的人�
 【発売日】
 2011年11月30日">聽說月底要出續集</a>了…不過我想接下來應該是賣肉的吧？說不定還會有回復正常人的解決之道出來。這麼一轉，最起碼我的心得就不會同上面一樣了。
 <div class="timeStamp">2011/11/1</div>
-
 本周<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E6%96%87%E8%8C%9C%E7%9A%84%E4%B8%96%E7%95%8C%E5%91%A8%E5%A0%B1" accessdate="2020/7/23">文茜的世界周報</a>竟然到現在，費了一半的節目時段來介紹 <a rel="nofollow" class="proper_noun" href="http://en.wikipedia.org/wiki/Steve_Jobs" accessdate="2011/10/29" title="Steven Paul Jobs">Steve Jobs</a> 的喪禮，以及與其相關的人事物。雖然知道她非常欣賞 Jobs，但我更想看的其實是泰國水災所造成的影響，或者其他更重要、更新鮮的事（當然是以我個人的標準）。說來只要是持有與<a>深い河</a>中所述，「將行誼永存人世」相同理念的人、追求成功的人們、能夠誠心欣賞他人成就的好人等等，確實應該欽佩這號人物。以這個評價標準來說，他創造、達成了許多價值。但從我的角度來看，這些價值卻不見得真的具有價值。まあ、再多就不能說了。
 <div class="timeStamp">2011/10/29</div>
 這周末大概都在清東西。除了完結掉<a>ヨスガノソラ</a>，其他幾個遊戲都放棄、卸除掉了。算作個<span title="けじめ">了結</span>，不想在腦子角落還掛念著這些東西，順便清清硬碟。反正世上不缺好劇本，時間應該浪費在更有用的東西上。（まあ、搞動漫的這麼說實在沒啥說服力…）<span class="creation_title">FORTUNE ARTERIAL</span>、<span class="creation_title">祝福のカンパネラ</span>是因為看過動畫，不想再浪費時間。<span class="creation_title">キラリ☆南国小麦色</span>採用最小安裝，而且不過是實用級，懶得找原先的安裝磁片了。<span class="creation_title" title="セブンズ">77</span> 評價似乎<a rel="nofollow" href="http://erogamescape.dyndns.org/~ap2/ero/toukei_kaiseki/memo.php?game=12342&amp;uid=CGT" accessdate="2011/10/31" title="CGT さんの「77 ～And, two stars meet again～」の感想">沒原先預料的那麼好</a>，之前玩過也沒太大感覺，加上看起來也是冗長劇作。這作品改編成動畫大概還是 <a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/IS_%E3%80%88%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A3%E3%83%8B%E3%83%83%E3%83%88%E3%83%BB%E3%82%B9%E3%83%88%E3%83%A9%E3%83%88%E3%82%B9%E3%80%89" accessdate="2011/4/3" title="『IS 〈インフィニット・ストラトス〉』（インフィニット・ストラトス、Infinite Stratos）は、弓弦イズルによる日本のライトノベル。">IS 〈インフィニット・ストラトス〉</a>一般的<a rel="nofollow" href="http://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%BC%E3%83%AC%E3%83%A0%E3%82%82%E3%81%AE" accessdate="2012/5/17" title="後宮型作品">ハーレムもの</a>吧，我想；既然大致知道<a rel="nofollow" href="http://wiki.livedoor.jp/esosmw658/d/77%20%A1%C1And,%20two%20stars%20meet%20again%A1%C1" accessdate="2011/10/31" title="77 ～And, two stars meet again～ - エロゲのストーリーを教えてもらうスレまとめ wiki Ver.2.0 - livedoor Wiki（ウィキ）">劇情</a>，還是 give up 了。<br />
@@ -242,7 +204,6 @@ OK. 到這邊聽起來還滿沉重的。我想到的是，假如最親愛的人�
 <div class="timeStamp">2011/10/30</div>
 硬碟最近真是漲得無法無天，該囤積些 DVD 了。然後可能的話，應該預測一下，硬碟漲會不會造成其他零組件因為滯銷，被迫降價或者其他甚麼樣的影響。
 <div class="timeStamp">2011/10/30</div>
-
 <h2>3001童話狂想曲</h2>
 3001, 這是一個中繼的時代。人們解析出大腦的奧妙，卻離統合意識體還有一步之遙，無法下定決心脫去臭皮囊。人口稀少，所有不需要思考或創新的工作皆已交付機器處理。雖然還是有人致力於創新（非樣式設計）、探索宇宙等方面，但普羅大眾已經很少人為這些事煩心。
 <p>
@@ -256,7 +217,6 @@ OK. 到這邊聽起來還滿沉重的。我想到的是，假如最親愛的人�
 3001, 是一個無所事事的年代。人們雖然意識到自己的存在猶如死屍一般，卻又因為古老的生存慾望而欲罷不能。
 </p>
 <div class="timeStamp">2011/11/3</div>
-
 今天主要把時間耗在 web 物件 drag-and-drop 功能的撰寫，並結合 File API。搞了一整天只實現了點陽春的功能，由於標準尚未統一與被廣泛實作，甚至只有 Firefox 能順利運作。本來希望能用在 FSO operation，也因此證實是白搭。不說拖的文債，連程式也欠了一屁股。<br />
 Firefox 還沒鎖 local 拖曳檔案的功能，但 Chrome 比照 XMLHttpRequest，在本機測試都會出現 security error，只能在遠端執行。
 <div class="timeStamp">2011/11/5</div>
@@ -274,15 +234,11 @@ Google+ 對 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Textile_%28mark
 今天從一早出門，到現在都還在滴滴答答。雖然不是持續下著雨，整天還是陰陰濕濕的。
 <div class="timeStamp">2011/11/7</div>
 
-
 完成了 oreno.imouto 下載器。いや…ほんま、恥ずかしながら…簡單的說，我常常只搞對我自己來說實用的東西。而既然能夠「順便」download，就讓我找到了個理直氣壯合理化無恥行為的理由。まったく都這把年紀了還不知道恥是心部…
 <div class="timeStamp">2011/11/16</div>
-
 聽說關係相處專家 <a rel="nofollow" class="proper_noun" href="http://www.emilianasilvestri.com/" accessdate="2011/11/18" title="Emiliana Silvestri
 Relationship Expert &amp; Author">Emiliana Silvestri</a> 新書因為缺乏<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E6%80%A7%E5%88%A5%E5%B9%B3%E7%AD%89" accessdate="2018/11/24" title="gender equality, sexual equality">性別平等</a>的常識而<a rel="nofollow" href="http://tw.nextmedia.com/rnews/article/SecID/103/art_id/93189/IssueID/20111118" accessdate="2011/11/18" title="火辣兩性專家出書談如何留住男人引發批評 | 即時新聞 | 20111118 | 蘋果日報">被輿論撻伐</a>。我還想說，若他的書名取成「男人其實很單純」，<s>改作物化男性</s>…更正，使用他平常對男友撒嬌用的語氣，說不定爭議就會小些了；多數男性朋友們可能較不那麼在意（被這麼不平等）這回事，反而會很高興看過這書的女朋友似乎更稍稍風趣些了？不過換個角度，他或許是故意的？畢竟這是個出醜當出名的年代。另外看了報導，原來裸エプロン還是有點道理的，不全是胡謅啊。<span class="expletive">（汗）</span>
 <div class="timeStamp">2011/11/18</div>
-
-
 <h2>產品代言人與名人光環</h2>
 以現在流行的行銷手法，企業多會找知名度高的藝人或是政治人物當產品代言人。若被發現實際並沒有廣告予人認知的效果，常常會被批評誇大其詞、作假廣告損害消費者權益，以至惹出糾紛。因此現在大多規定推薦者必須有使用過。但我們卻常常發現有「我（那時候）真的有用過（一陣子）啊」之類言不由衷或「我用的時候確實有效果、沒這樣的問題啊」、「那些話是業主叫我說的」等支吾其詞的語句。對此或有個終極解法：若有研究能夠證明不勞而獲、甚至付錢才使用東西，能夠影響使用滿意度，哪麼我們可能就有足夠理由立法「代言不得支薪或接受任何形式的<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E5%88%A9%E7%9B%8A%E8%BC%B8%E9%80%81" accessdate="2017/3/5">利益輸送</a>」了。若再加上嚴格查緝的話，當代的明星代言想必會有另一番面貌。當然，更好的辦法是人人都有足夠的水平，了解愛屋及烏決不是真理。可恨就恨還是有很多人會受到「我喜歡的偶像也用這款吔！」影響。但若有人人不受此效應影響的那天到來，那動之以情的廣告大概也就不會存在了，畢竟屆時大伙都過於理性。很顯然這在當前還是不可能的任務。無論如何，有人想做做這樣子的研究嗎？我很懷疑若結論是拿錢講出的評論不實在，那麼成功發表並進一步變成規條的機率。
 <div class="timeStamp">2011/11/26</div>
@@ -290,56 +246,41 @@ Relationship Expert &amp; Author">Emiliana Silvestri</a> 新書因為缺乏<a re
 <div class="timeStamp">2011/11/27</div>
 不曉得怎麼回事，這兩天 PC 不太穩。剛剛掛掉甚至再起不能。安全模式無用，雖然硬碟燈沒有亮，鍵盤卻也沒回應。第一次碰到，不曉得是不是重要檔案損毀，或是系統碟死掉了。似乎不太好修。
 <div class="timeStamp">2011/11/27</div>
-
 怪事。因為 CDROM 外接盒已經掛掉，只好用 <a rel="nofollow" href="http://wintoflash.com/home/en/" accessdate="2011/11/27" title="WinToFlash - Install Windows from usb - Home page">WinToFlash</a> 0.7.0026 beta 做了個 Windows XP @ USB Flash 的安裝碟，看是不是真的因為系統檔案損毀。無論 GUI 或 text mode 都不能 setup，但這不打緊。測了一下，選擇原先的 partition 開機竟然成功了！顯然問題不再於需要修復還是啥的。但怪的是，重新復原，拔走 USB，竟然又 boot 失敗?!沒辦法，暫時看來只好每次都從這顆只剩下 loader 的 USB 開機吧，好歹能開起來。反正我現在主要工作都使用 laptop，對這臺 PC 的要求已經不高了。
 <div class="timeStamp">2011/11/27</div>
 順便把 <a rel="nofollow" href="http://code.google.com/p/jslibs/" accessdate="2011/11/27" title="jslibs - standalone JavaScript development runtime environment with general purpose native libraries - Google Project Hosting">jslibs</a> 與 <a rel="nofollow" href="http://www.jsdb.org/index.html" accessdate="2011/11/27" title="JSDB: JavaScript for databases">JSDB</a> 都納了進來，當然都還只是及初步的工作。第一印象是與 node.js 相較，這兩者 startup 都慢了些。此外 jslibs 還會吐出一大堆從 Gecko 出來的 strict warning，有些討厭。兩天來雖然想讀的說連第一步都沒踏出，まあ、也算有點產出，就罷了吧。
 <div class="timeStamp">2011/11/27</div>
-
 看起來需要拿 USB 才能開機也不過是暫時的現象。但開機幾小時就會無預警當機倒是真的。惟到現在還是查不出原因，僅猜測是硬體問題（又是電池？），而且我也不準備查。這代表的或許是，若是不趕快準備好換新一臺，那我就只好這麼跛腳過下去了。
 <div class="timeStamp">2011/11/29</div>
 桌面電腦，日常使用的 PC 主機果然沒辦法，買了 TWD89 勁量鹼性電池，這次是兩粒裝。結果搞了半小時（這臺非常敏感，稍微動一下就掛了。），最後還是照舊，好的時候出現開機畫面，卻怎的都沒法進桌面，掛在那。或許是 MB 或 CPU 的問題？開始考慮拿另一臺 laptop 出來擋。（注：後來確實轉換了。）話說以我到現在的主要使用機器，大約也是兩年換一臺了。
 <div class="timeStamp">2011/11/30</div>
-
-今天寒流來，溫度相當低。因為只穿一件長衣，感覺還不太夠。
-<div class="timeStamp">2011/12/2</div>
-
+今天寒流來，溫度相當低。因為只穿一件長衣，感覺還不太夠。<div class="timeStamp">2011/12/2</div>
 
 因為想讀點電子書，又作些點工作，寫了個繁簡體轉換工具。まあ、核心還是用新同文堂的，頂多算個 front-end，不過還能轉換 GBK/Big5→UTF8 罷了。
 <div class="timeStamp">2011/12/4</div>
-
 測試了一下，USB2.0 to SATA+IDE 雖然電源有些接觸不良，還算滿好用的。可惜明明是<span title="間に合わせ">應急用</span>，卻還是拿這價錢。
 
 <div class="timeStamp">2011/12/4</div>
-
 耗上大半天，做出了個偵測中日韓檔案編碼的 JavaScript tool…疲れた。不過覺得每次拿到的都是簡體字幕或簡體電子書，想說每次都要手工轉換，相當麻煩。まあ、總之，現在應該能簡便一點了。
 <div class="timeStamp">2011/12/11</div>
-
 <h2>陳文茜的主持風格</h2>
 陳文茜在中天新聞臺主持<span class="creation_title">2012倒數計時 特別報導</span>，今晚這小時的節目看來就直接消失了。近來不時有這種現象，未來三禮拜想必會更多。看了兩三次陳的主持；雖然我對他許多節目有所偏好，但說句難聽的，對其政論節目的主持風格以及固有立場（雖不一定是偏國民黨的意識形態與觀念，但起碼當為擔心蔡的主張具有缺陷甚至重大危害？），我不太欣賞；雖然比起其他口水戰，他還算是較為言之有物就是，較會針對蔡英文的政策，指出其問題而攻訐之。我覺得最不舒服的是其語氣太強硬，顯得有些咄咄逼人；有時甚至會造成火藥味太重。<br />
 另外他還會盡量從來賓的言談來驗證自己的論點，這可能因為他的立場太強。實際表現在他常常會在讓人發言前，先提出一些事實來為發言者鋪路引話頭，使人（不得不）順著講下去。為了取自己所需要的論點，還會頻頻打斷發言者，感覺上尤其在其發言與自己的意見相悖的時候。由於有時會有類似強迫發言者不得有但書（其他顧慮、因時制宜的條件式言論等）的動作，顯示出他過於強勢去引導話題的企圖。但很多事情不是黑白分明或是非此即彼的，更不能簡單一句話就定奪。簡單的說，若是能以更和緩的方式溝通，我想我就能接受了吧。
 <div class="timeStamp">2011/12/25</div>
-
-
 そうだ、雖然中午看的時候還在 99.94 的樣子，但剛剛發現已經榮登「Karma 100 俱樂部成員」，Karma: 100.00。或許這是以四捨五入判別？
 <div class="timeStamp">2012/1/5</div>
-
 年底比較忙，這個月僅增加了一萬三千字。前幾天 FreeBSD 9.0 release 了，聽說了包括 BSDInstall 的一些改變。現在量產環境使用 UFS，真要做，想改 ZFS。惟工程太大，加上臨近過年，提不起興致搞。還是等一下，探探風聲好了。
 <div class="timeStamp">2012/1/20</div>
-
 簡單瀏覽過<a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/%E9%AD%94%E6%B3%95%E4%BD%BF%E3%81%84%28%E2%99%82%29%E3%81%A8%E5%BC%9F%E5%AD%90%28%E2%99%80%29%E3%81%AE%E4%B8%8D%E9%81%A9%E5%88%87%E3%81%AA%E3%82%AB%E3%83%B3%E3%82%B1%E3%82%A4" accessdate="2012/1/24" title="『魔法使い(♂)と弟子(♀)の不適切なカンケイ』（まほうつかいとでしのふてきせつなかんけい、Loose Relation between Wizard & Apprentice）は、紺矢ユキオによる日本の漫画作品。全4巻。">魔法使い(♂)と弟子(♀)の不適切なカンケイ</a>。這部之前曾經看過第一冊的部分，當時還沒完結。題材部分頗吸引我，大概還是不脫主角<span class="proper_noun" title="さいおんじ いくまる">西園寺幾丸</span>那達觀的態度、<a>天地無用！</a>般強大的能力，以及自動送上門的豔遇；完全和深度啥的扯不上邊。這次看完，覺得主角似乎沒剩下啥能力了，變得主打投懷送抱。另外，總覺得作中充滿了小學生卡通會出現的壞人，那種要壞也下手下得軟趴趴的。沒有腳色真正生離死別的劇烈情感，連反派也具備溫情。這令我想到<a rel="nofollow" class="creation_title" href="http://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%8A%E3%83%BB%E3%83%80%E3%83%AB%E3%82%AF_%E3%80%9C%E9%BB%92%E3%81%8D%E6%9C%88%E3%81%AE%E7%8E%8B%E3%81%A8%E8%92%BC%E7%A2%A7%E3%81%AE%E6%9C%88%E3%81%AE%E5%A7%AB%E5%90%9B%E3%80%9C" accessdate="2012/1/25" title="シャイナ・ダルク 〜黒き月の王と蒼碧の月の姫君〜">シャイナ・ダルク</a>。<br />
 鋪陳方面差了點，不知是因為被要求趕快完結或是啥的，本來應該還有些伏筆，似乎並未完全發揮。後宮劇情的發展不說，起碼應該能將男女主角的過去交代一下才是，要不到底發生了什麼事、幾丸培植このは到底是為了甚麼，看到最後還是沒讀者明白。<br />
 此外能力的平衡度也有些怪異。数音明明號稱聚積了魔界所有的力量，但連單單一個魔術師<span class="proper_noun" title="さいおんじ　ゆみまる">西園寺弓丸</span>都令他感到棘手這點，或許還可用弓丸借用了クトゥルー的力量來解釋；但このは對抗クトゥルー時為何如此的強，我還是想不透。或許弓丸整個把クトゥルー的能力帶走了？<br />
 人物設計部分，類似<span class="creation_title">ベン・トー</span>；相較於正女主角このは，我倒覺得無論是百香、ミナミ、イシュタル、クトゥルー，每個都更來得吸引我。何故かな？
 <div class="timeStamp">2012/1/25</div>
-
 開啟 Plurk 的 Karma 假期模式。杜絕噗浪，不想再為需要時時更新而煩心了。這是早已計畫好的行動。
 <div class="timeStamp">2012/1/25</div>
-
 <h2>reader 是個人知識庫、學習紀錄</h2>
 由於 "All 165 subscriptions" 的龐大訂閱量，漸漸發現我的 reader 已經成為搜尋用的工具，真正勤奮閱讀的不多。Solidot、博客李淼、郭凯经济笔记與部分個人 blog 是其中的佼佼者；雖然這並不表示他們是品質最高的，而有可能僅是我積習難改因此沒去蕪存菁（指個人的部分），又沒啥時間拓展市場。而 PanSci 泛科學或科学松鼠会雖質量更高，但篇幅偏長；因此大多待有時間瀏覽一下標題，無法全部看過。既然只是拿來搜尋，何不直接用現有泛用的搜尋引擎即可？我想主要是因為我訂閱的對象都是「經我認可」的，已經<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%B6%93%E6%BF%9F" accessdate="2012/11/19" title="attention economics, 注意力經濟: 注意力/關注度為稀缺資源">浪費過一次注意力</a>：若不是具有相當的可信度，就是其內容與我的偏好具有類似的傾向。把這概念擴大，或許就能創出客製化的搜尋引擎。我相信 Google Reader 的人應該也注意到這點，<a rel="nofollow" href="http://googlereader.blogspot.com/2009/10/reading-gets-personal-with-popular.html" accessdate="2012/1/30" title="Official Google Reader Blog: Reading gets personal with Popular items and Personalized ranking">推出 Explore section</a> 就有助這方面進展。但還沒看到實際的大規模應用。事實上光看繁簡無法互通的 search 功能，就夠令我頭痛了。更甭提我夢想的 regular expression 搜尋。
 <div class="timeStamp">2012/1/30</div>
-
 倒是這十天就加了一萬五千字，但進度非常緩慢，近來的兩篇還沒完全結束。明天有機會的話，希望能完結掉 <a>SAO</a>。
 <div class="timeStamp">2012/1/31</div>
 在巴哈姆特的介面使用上，有些之前就已經覺得不便的。
@@ -362,25 +303,19 @@ Relationship Expert &amp; Author">Emiliana Silvestri</a> 新書因為缺乏<a re
 <div class="timeStamp">2012/1/31</div>
 …不，還是有問題的樣子。不過實在懶得改了啊，下次應該等大改版才對吧…<span class="expletive">（汗）</span>やはり寝ようかな。
 <div class="timeStamp">2012/1/31</div>
-
 這幾天的疲憊不知何時才能回填。昨天想了想，這違和感或許是因為我在巴哈姆特不太容易求得成長。現在的期望是能夠得到確實（正向：幫助<span title="成長">圓融</span>）的反饋。但一時間又找不到這樣的地方。圖書評論分享的豆瓣或 aNobii 嗎？或許可試試，或許。
 <div class="timeStamp">2012/2/1</div>
 發現現在的 <a>Wikipedia</a> 很缺一味啊：<a rel="nofollow" href="http://www.openfoundry.org/tw/worldwide-news/8567-wikipedia-unveils-the-prototype-version-of-its-visual-editor-for-testing" accessdate="2012/2/1" title="Wikipedia 公開視覺化編輯器原型版本供外界測試
 Visual Editing">視覺化編輯</a>。<a rel="nofollow" href="http://en.wikipedia.org/wiki/Wiki_markup" accessdate="2012/2/1" title="Wiki markup">wiki 語法</a>相較於 HTML 雖有改進，但在編輯表格之類複雜表現的時候，還是不夠直觀。能夠不離開頁面，直接完成更動當然是最好的。不過下一版 <a rel="nofollow" href="http://www.mediawiki.org/wiki/Visual_editor" accessdate="2012/2/1">Visual editor</a> 似乎還不具備此條件，也不知何時可以上場就是。或許我早該在一年前就領悟到這道理，現在就能看到成品了。
 <div class="timeStamp">2012/2/1</div>
-
 今天天氣頗冷。搞了整天到現在，也才弄出個 serial execution 的功能，該看的書還是沒讀完。まあ、這功能本身倒是從很早之前，起碼在 2008年初搞 MyMiniCity 的時候就有需求的東西。只是這麼長一段時間都沒真正寫出來，直到最近又因為工作上碰到的問題，加上想要做些需要長時間跑 loop 的工作；在 browser 上會詢問是否要停止 script，才心血來潮，還是寫了。
 <div class="timeStamp">2012/2/3</div>
-
 之前 Chrome 上無法多帳戶登入的問題，剛剛發現是自己裝了 <a rel="nofollow" href="https://chrome.google.com/webstore/detail/jeoacafpbcihiomhlakheieifhpjdfeo" accessdate="2012/2/5" title="Chrome Web Store - Disconnect">Disconnect</a> 造成的。由於最近 RAM 用量吃緊，想說從 Firefox 轉 Chrome 不知會不會好點。停用了些擴充功能，重新上路。
 <div class="timeStamp">2012/2/5</div>
-
 今天天氣溫暖多了。
 <div class="timeStamp">2012/2/12</div>
 本來想提早睡，還是勉強把 <a>SAO</a> 趕完了。沒留下啥精力，明天起又是場硬仗。
 <div class="timeStamp">2012/2/13</div>
-
-
 今天天氣相當溫暖，到現在只剩下一件長袖襯衫。
 <div class="timeStamp">2012/2/14</div>
 <h2>Richard Hammond's Invisible Worlds</h2>
@@ -396,7 +331,6 @@ Visual Editing">視覺化編輯</a>。<a rel="nofollow" href="http://en.wikipedi
 <div class="timeStamp">2012/2/16</div>
 昨天熱到像夏天，今天卻連中午都飄毛毛雨。
 <div class="timeStamp">2012/2/16</div>
-
 雖然新聞說周末天氣會很冷，不過現在感覺起來還沒之前那一陣子的寒勁。
 <div class="timeStamp">2012/2/18</div>
 <h2>Human Planet</h2>
@@ -407,70 +341,46 @@ Visual Editing">視覺化編輯</a>。<a rel="nofollow" href="http://en.wikipedi
 以我個人來說，接續上次提到的話題，與之類似的是因為我比較喜歡吸收科學類的知識，像這樣的片子無法融入我原先的知識體系，而多只能以獨立的片斷存在；看完不容易再利用，因此可能過個幾年就不記得看過這些東西了。以這角度來說，對我來說看這種片其實有些浪費時間。當然不能否認，這與我的能力不足可能也有關係。<br />
 看這種片順便可以練習我那還很破的英文。不過不知是不是年紀的關係，現在注意力不容易集中，想學也沒太大效果。
 <div class="timeStamp">2012/2/18</div>
-
 因為手賤，<a rel="nofollow" href="http://blog.basic-cms.net/c-webserver/freebsd-update-to-freebsd-9-0/" accessdate="2012/2/25" title="freebsd-update 升级 FreeBSD 到 9.0 - SweetRice 中文支持">明明有 freebsd-update</a>，卻還是下了個 make 的升級指令。結果 kernel 順利裝完開機，但 install world 後卻掛在那了。本來還想將 Apache 升級到 2.4，當然也只好緊急中止。不過 kernel 過，world 不過的，這還真是第一次。或許是此次 FreeBSD 9.0 將 GCC 改成 LLVM/Clang 之故？有預感明天起可能有場硬仗要打，總之只能怪自己明知山有虎，還偏向虎山行吧。
 <div class="timeStamp">2012/2/24</div>
-
-
 查了一下，幸好並非大問題。原來是 named 掛掉，<b>mkdir /var/named/var/log/named/</b> 之後就跑起來了。不過設定檔其實沿用恐怕是 7.0 或 8.0 那時的東西，到現在都沒多大改變。從使用那麼早的設定檔，還能幾近 <span title="無痛">painless</span> 升級這角度說來，FreeBSD 9 其實幹得不錯啊。說來應該把設定更新一下的，其實也不過就 mergemaster 加上重對照一下 kernel，再做 portupgrade -af 罷了，其他也不會多做什麼。但對於得過且過的我…現在的版本是 FreeBSD 9.0-STABLE。Apache httpd 2.4.1 看來還沒進 ports，只好等等了。
 <div class="timeStamp">2012/2/25</div>
-
 沒想到耗一早上 mergemaster 的結果，竟然是再起不能。猜測要不是 DNS 的問題，就是哪個設定檔沒過。但 reboot 前 rndc 都已經 "server reload successful" 了啊。看來又要被召回。真是太<span title="悲慘">悲劇</span>了。剛剛屏東屏東 10:35 規模6.1的地震嚇了一下，幸好無恙。
 <div class="timeStamp">2012/2/26</div>
-
-沒事先偵測準備好。到那邊才發現昨天已經好了。只好直接做 portupgrade -afv。查一下紀錄，看來昨天九點多上線的？這麼說該不會是 fsck 的問題？
-<div class="timeStamp">2012/2/27</div>
-
-
-電視新聞上看到有手機與遙控器合體的創意，感覺不錯啊。
-<div class="timeStamp">2012/2/27</div>
-
+沒事先偵測準備好。到那邊才發現昨天已經好了。只好直接做 portupgrade -afv。查一下紀錄，看來昨天九點多上線的？這麼說該不會是 fsck 的問題？<div class="timeStamp">2012/2/27</div>
+電視新聞上看到有手機與遙控器合體的創意，感覺不錯啊。<div class="timeStamp">2012/2/27</div>
 portupgrade 結束，重 make world 中。不想改 kernel，因此這批更新大約到此結束。
 <div class="timeStamp">2012/3/1</div>
 前天起右上顎側門齒不太舒服。這幾天看來保養不夠，剛剛發現腫起來了，雖然還沒劇痛。然後左上唇無緣無故破了個洞，還越來越大。這兩天天氣相當溫暖，都要開電扇了。
 <div class="timeStamp">2012/3/2</div>
 
-
 結果今個兒整天都耗在修改程式上了。還是工作，而非興趣用。即使這樣，本次的 peak 還是沒過。無残。
 <div class="timeStamp">2012/3/4</div>
-
-今天天氣相當熱，熱到我有點後悔穿長袖出門。
-<div class="timeStamp">2012/3/6</div>
+今天天氣相當熱，熱到我有點後悔穿長袖出門。<div class="timeStamp">2012/3/6</div>
 就算可能<a rel="nofollow" href="http://science.solidot.org/article.pl?sid=12/02/23/0757225" accessdate="2012/3/7" title="Solidot | 八小时睡眠神话">實行兩段式睡眠</a>，但在現代緊湊的都惠生活中，時間通常分配得沒多大微調空間；多只是一天到最後估計個剩餘時間，一次將其睡完。要優閒地分配兩次睡眠並不容易也是事實。
 <div class="timeStamp">2012/3/7</div>
-今天天氣還是頗熱，整天改穿短袖了。
-<div class="timeStamp">2012/3/7</div>
+今天天氣還是頗熱，整天改穿短袖了。<div class="timeStamp">2012/3/7</div>
 駄目だな。もう眠い。晚上根本還沒做到什麼…
 <div class="timeStamp">2012/3/7</div>
-
 近期敏感性牙齒常常出現問題，而今天右上排牙齒還痛了起來。急性牙髓炎？
 <div class="timeStamp">2012/3/16</div>
 搞了一整天才改進完判斷語系與字元編碼的功能。為了維持正確度，還變慢了許多。かなり疲れた。牙齒症狀再度加劇，還是先忍著吧。
 <div class="timeStamp">2012/3/17</div>
 因為現在資料結構比較好了點，順便加了初級的阿拉伯語、俄語判別支援。所費時間…又增加了。
 <div class="timeStamp">2012/3/17</div>
-
 今天都把時間用在格式化日期時間的功能上面了。其實這東西網路上一堆人做過，我只是想模組化、多點自訂功能罷了。對於程式設計我雖然費了不少時間，但不是聰明人；無法創出新演算法或架構，只能默默造一點大家都能做，但還沒有人告訴我已經做出來過的東西。加上一般性的功能（繪圖、UI 等輪子）大多有人造過了，因此也只好作一點針對本區域（中華、臺灣區）的補強。所以才有轉換中文數字等等的東西出來。就算如此，依舊成效不彰，在想說是不是找一些<a rel="nofollow" href="http://bbs.51js.com/" accessdate="2012/3/24" title="无忧脚本 - 体验编写 HTML 代码的乐趣">无忧脚本</a>之類的來分享，並打打廣告。
 <div class="timeStamp">2012/3/24</div>
-
-
 從上一次<a rel="nofollow" href="http://zh.wikipedia.org/wiki/2011%E5%B9%B4%E6%8C%AA%E5%A8%81%E7%88%86%E7%82%B8%E5%92%8C%E6%9E%AA%E5%87%BB%E4%BA%8B%E4%BB%B6" accessdate="2012/3/25" title="2011年挪威爆炸和槍擊事件是指2011年7月22日發生在挪威首都奧斯陸市的爆炸事件與數小時後發生在烏托亞島的槍擊事件。">挪威殺人事件</a>到最近法國槍擊案；連歐洲也開始有些<span title="不穏な雰囲気">怪異的氣氛</span>。因為連續殺人犯或<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E6%81%90%E6%80%96%E4%B8%BB%E4%B9%89" accessdate="2019/4/14" title="terrorism, 恐怖主義者">恐怖分子</a>以種族主義作為暴行理由，加上近來經濟上的困境（導致整體不滿情緒升高），這波瀾或許還將持續擴大。
 <div class="timeStamp">2012/3/25</div>
-
 才聽新聞說茶喝太多，茶漬沉積造成外因性色素牙，對牙齒也不好。我是不太介意牙齒黃黃的，但造成牙周病就不妙。只是還沒讀到會造成牙炎就是。
 <h2>星座運勢</h2>
 另外某些時段邊播新聞，下面還會出現各星座今日的運勢。我很早之前就對公開表白過，比起依靠生辰的星座與八字、紫微斗數，或者塔羅牌、水晶球等，我還寧可相信血型與生肖。這不只是我個人的迷信，還<a rel="nofollow" href="http://www.wretch.cc/blog/hanason/11475378" accessdate="2012/7/13" title="幸運草的溫度：四個維繫愛情的方法(All Proved!) - Hanason  's  Basket - 無名小站">有點根據</a>的。雖然我對這類東西的科學理據以及效力大小存疑——他們應該都比不上環境與基因組對個人的影響，而個體差異又更大——好歹血型還算從生物學的角度來說，可能影響個性的先天條件。而生肖，所謂「某某世代」、「幾年級生」，雖不是生理因素，總表現出人們依附大時代、隨波逐流身不由己。在統計上或許還有點兒依據。看到電視上那些運勢用語，我不禁要聯想起小學的中心德目這類東西：我們都知道做人要誠實，也知道應該努力抓住機會。星座運勢不過在提醒我們今天可以<span title="．">特別</span>注意這一項，不代表其他的就不重要。仔細比對，就算將兩個星座的建議互換，往往無關痛癢。他們大多像是那成堆勸人為善、<a rel="nofollow" href="http://zh.wikisource.org/wiki/%E5%A2%9E%E5%BB%A3%E6%98%94%E6%99%82%E8%B3%A2%E6%96%87" accessdate="2012/3/31">增廣昔時賢文</a>之類的座右銘或金科玉律。沒啥壞處，卻不容易隨時隨地完全遵守。換個角度，應用這種<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%86%B7%E8%AE%80%E6%B3%95" title="Cold reading">冷讀法</a>初階的步驟其實有點騙小孩：最後信的人覺得幸虧信了，不信的人認為不信才是合理的應對。而日子終究還是得過下去。
 <div class="timeStamp">2012/3/31</div>
-
-覺得 Free YouTube Download 與 Youtube Downloader HD 都不好用，又費了一整天搞自動下載 YouTube 影音檔的功能。現在能夠用拖曳 link 的方法下載影片檔案與播放清單。
-<div class="timeStamp">2012/4/1</div>
+覺得 Free YouTube Download 與 Youtube Downloader HD 都不好用，又費了一整天搞自動下載 YouTube 影音檔的功能。現在能夠用拖曳 link 的方法下載影片檔案與播放清單。<div class="timeStamp">2012/4/1</div>
 網友推薦 <a rel="nofollow" href="http://www.yourvideofile.com/" accessdate="2012/4/5" title="Easy YouTube Video Downloader - Simple And Fast Direct Video Downloads">Easy YouTube Video Downloader</a>，這東西依其介紹看起來滿好用的。可惜我最近用 Chrome/19.0.1084.9，安裝<a rel="nofollow" href="http://www.chromeextensions.org/other/easy-youtube-video-downloader/" accessdate="2012/4/5" title="Easy Youtube Video Downloader &amp;laquo;  Google Chrome Extensions">其 extension</a> 後似乎沒有作動。找時間再看看了。
 <div class="timeStamp">2012/4/5</div>
-
 雖然一開始曾經有一段很有感覺的時光，但在已經看過恐怕成千上百本成年コミック的現在，基本上現在都已經麻痺了。不過近幾天<a rel="nofollow" class="proper_noun" href="http://ja.wikipedia.org/wiki/%E3%81%B2%E3%81%92%E3%81%AA%E3%82%80%E3%81%A1" accessdate="2012/4/4">ひげなむち</a>的<span class="creation_title">ヒト♥カノ</span>卻讓我特別有感覺。分析一下，這本裡面有相較之下較高比例的寝取られモノ。我回想起<a>ミカエル計画</a>，看來我似乎還脫不了這些<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E7%95%B0%E5%B8%B8%E5%BF%83%E7%90%86%E5%AD%B8" accessdate="2012/4/4" title="異常心理學">異常</a>的東西啊。
 <div class="timeStamp">2012/4/4</div>
-
-
 </div><br />
 
 </body></html>
