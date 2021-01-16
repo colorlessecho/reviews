@@ -164,7 +164,7 @@ http://lyrics.meicho.com.tw/game/game.pl?seg=How_to_Discuss
 結果一早起來才解開 Problem 261。<img src="http://projecteuler.net/profile/kanashimi.png" alt="Profile Image" title="Profile Image" />主要問題是我發現 JavaScript 有小數乘以接近 Number.MAX_SAFE_INTEGER 之大數時，會回傳錯誤數值，直接得到整數。誤差不但大於 1，甚且可能成百上千。使用大數計算，卻會消耗極大時間。之前提到改採 Python，卻發現沒比 JavaScript 快多少。在沒使用大數計算的情況下，甚至還慢於 JavaScript code。這一方面是因為我 Python 的 coding 功力不足，另一方面我也不得不讚嘆 Google 的程設人員。<br />
 最後不得已又用上 gmp，結果又因為沒注意到 unsigned long 的界限，遲滯了兩三天。但令人沮喪的還不是耗了這麼多時間，只得到了個跑一次需耗上兩三小時的程式，而是解完才發現果然是我數論基礎知識不足的問題；我沒能好好地掌握數學工具。看來還有得學呢。可惜我總覺得自己已經不是那年紀了啊，不如法時間費在比較需要整合工作的評論領域上？
 <div class="timeStamp">2013/10/24</div>
-周末本想搶 <a rel="nofollow" href="https://projecteuler.net/problem=442" accessdate="2013/10/27" title="Problem 442 - Project Euler">Problem 442</a>。乍看之下是個排列組合的問題，沒想到不過再一次證明我思考的漏洞過多，現在準備放棄了。這讓我有些灰心，恐怕我其他的理則思考也多有疏漏。
+週末本想搶 <a rel="nofollow" href="https://projecteuler.net/problem=442" accessdate="2013/10/27" title="Problem 442 - Project Euler">Problem 442</a>。乍看之下是個排列組合的問題，沒想到不過再一次證明我思考的漏洞過多，現在準備放棄了。這讓我有些灰心，恐怕我其他的理則思考也多有疏漏。
 <div class="timeStamp">2013/10/27</div>
 Problem 442 是做出來了，不過再次暴露我數學與計算機科學的知識不夠。真糟糕。
 <div class="timeStamp">2013/10/29</div>
@@ -193,7 +193,7 @@ Problem 442 是做出來了，不過再次暴露我數學與計算機科學的�
 這幾天回來用 Firefox Nightly，發現竟然輕快多了。估計大概是因為 Chrome 記憶體用太多，我這臺數年前的 laptop 承受不起。事實上試了一下，發現工作用的電腦也有相同的情況，索性也一起換了。<br />
 <div class="timeStamp">2013/12/13</div>
 
-這周末本來要看<a label="Wij zijn ons brein">我即我腦</a>，但因為手中僅有簡體版，結果還是蹉跎了兩天。
+這週末本來要看<a label="Wij zijn ons brein">我即我腦</a>，但因為手中僅有簡體版，結果還是蹉跎了兩天。
 <div class="timeStamp">2013/12/15</div>
 <h2>ぼくらのよあけ</h2>
 昨晚略看了<a rel="nofollow" class="proper_noun" href="https://ja.wikipedia.org/wiki/%E4%BB%8A%E4%BA%95%E5%93%B2%E4%B9%9F" accessdate="2013/12/20">今井哲也</a>的<span class="creation_title">ぼくらのよあけ</span>，有些科幻味。劇情還滿引我的。雖然最後給出「生命需要變化」之結論，我以為並不是生命最終的答案。
@@ -275,7 +275,7 @@ cache 用，可排序。例如 JD、ISO 8601。至於輸出要使用公元日期
 <div class="timeStamp">2014/2/10</div>
 想裝 <a rel="nofollow" href="http://support.microsoft.com/kb/2817430" accessdate="2014/2/28" title="Description of Microsoft Office 2013 Service Pack 1 (SP1)">Microsoft Office 2013 SP1</a>，卻頻出現 <a rel="nofollow" href="http://windows.microsoft.com/zh-tw/windows/windows-update-error-80070643#1TC=windows-7" accessdate="2014/2/28" title="Windows Update 錯誤 80070643 - Microsoft Windows 說明">Windows Update 錯誤 80070643</a>。但這次不若之前 2012/8/25，將 .NET Framework「開啟或關閉」就能解決。搞了一下午，到現在還沒解決。反正也不是非裝不可，決定放棄了。
 <div class="timeStamp">2014/2/28</div>
-周末起都在重寫參照紀元的演算，這次的工作量頗大。之前的太過複雜難懂，致命的是還無法適應實際情況。雖然這樣寫下來還是很複雜，好歹較容易了解參照狀況了。<br />
+週末起都在重寫參照紀元的演算，這次的工作量頗大。之前的太過複雜難懂，致命的是還無法適應實際情況。雖然這樣寫下來還是很複雜，好歹較容易了解參照狀況了。<br />
 <div class="timeStamp">2014/3/11</div>
 因為發現日期有誤，又耗了兩天在傣曆上。發現計算公式中最準確，而值得信賴的確實就只有<b>元旦紀元積日數</b>。另一項核心計算，<b>元旦之當月日序基數</b>；排曆譜排了幾天，卻終究找不出一個通適的規則。勉強能用的只得到個與 <b>6/1 紀元積日數</b>相差一日內的式子，並以此判斷該如何調整<b>元旦之當月日序基數</b>。然後，直到剛剛才發現，即使把傣曆1162年6月月出2日至 2400 CE 的傣曆排完；只要沒能確認傣曆初期的置閏規則，那麼要以當前的置閏去排初期六百年的曆譜，勢必將會遇到某些年之元旦位在五月的問題。即便又花時間，調出了個符合初期的置閏法，那到底該在什麼時候換回現用的置閏去呢？我手上有的資料與實曆曆譜太少了。結果，最好的方法還是把已知的零、一年留著，其他直到最後一個元旦可能出現在五月的年分，全部隱藏，算是最便利的做法。加上發現部分人為缺失造成實曆與規則不足的部分，如1190年未閏（八月滿月），而1191年閏；看來這傣曆恐怕還是採用查表法最佳啊！
 <div class="timeStamp">2014/4/20</div>
