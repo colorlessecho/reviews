@@ -868,6 +868,7 @@ C('806	Die Kunst des klugen Handelns	行為的藝術：52個非受迫性行為�
 C('809	Risk Savvy	機率陷阱	2020/6/1–2020/6/12	打破掌握資料夠多，就能準確預測的幻想');
 C('819	Pre-Suasion	Pre-Suasion: A Revolutionary Way to Influence and Persuade	2020/8/6–2020/8/26	透過事前鋪陳引導，改變人判斷、決定的方法');
 C('823	Biased	Biased: Uncovering the Hidden Prejudice That Shapes What We See, Think, and Do	2020/10/11–2020/11/26	內隱偏見、種族歧視肇因與各種影響');
+C('824	Why We Act	Why We Act: Turning Bystanders into Moral Rebels	2020/12/31–2021/2/1	為何旁觀者默不作聲');
 
 G('book:economics	泛經濟學書籍');
 C('739	Capital in the Twenty-First Century	Le Capital au XXIe siècle	2015/2/21 19:0	掀開「經濟成長重於貧富不均」假面具之新引子	{"original language":"fr-FR"}');
