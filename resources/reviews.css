@@ -1014,7 +1014,7 @@ iframe[src*=".youtube-nocookie."],
 iframe[src*="player.vimeo."],
 iframe[src*=".ted."],
 iframe[src*="player.youku."]
-{float:right;width:640px;height:360px;max-width:99%;border:0;overflow:hidden;}
+{float:right;width:640px;height:360px;max-width:99%;border:0;overflow:hidden;margin-left:1em;}
 
 /*
 生物分類學學名

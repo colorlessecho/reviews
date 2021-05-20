@@ -277,6 +277,28 @@ http://sa.ylib.com/MagArticle.aspx?Unit=featurearticles&id=3026
 
 常見的繁簡轉換演算，如新同文堂、OpenCC 總還有些缺陷。看了看，除了 Google 翻譯那種語句為主、甚至讓機器讀懂文章的方式外，只能靠<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%96%87%E8%87%AA%E5%8A%A8%E5%88%86%E8%AF%8D" accessdate="2020/7/1" title="中文自動分詞">中文分詞</a>再依語詞轉換了。但想找個好的中文分詞演算法，再建構高效率與高準確性、可隨時代更新辭典與詞性組合模式、基於分詞的繁簡轉換系統，卻發現中文分詞系統雖然比幾年前好很多，要採 node.js 而方便使用的倒沒有幾個。<a rel="nofollow" href="https://github.com/yanyiwu/nodejieba" accessdate="2020/7/1" title="GitHub - yanyiwu/nodejieba: &quot;结巴&quot;中文分词的 Node.js 版本">nodejieba</a>、<a rel="nofollow" href="https://github.com/beyai/node-hanlp" accessdate="2020/7/1" title="GitHub - beyai/node-hanlp: HanLP for nodejs">hanlp</a> 安裝失敗，<a rel="nofollow" href="https://github.com/yanyiwu/cppjieba" accessdate="2020/7/1" title="GitHub - yanyiwu/cppjieba: &quot;结巴&quot;中文分词的 C++版本">cppjieba</a>、<a rel="nofollow" href="https://github.com/deepcs233/jieba_fast" accessdate="2020/7/1" title="GitHub - deepcs233/jieba_fast: Use C Api and Swig to Speed up jieba 高效的中文分词库">jieba_fast</a>、<a rel="nofollow" href="https://github.com/mayabot/mynlp" accessdate="2020/7/1" title="GitHub - mayabot/mynlp: 一个高性能、模块化、可扩展的中文 NLP 工具包 https://mynlp.mayabot.com/">mynlp</a> 必須自行編譯（未提供可執行包，不好自動化。）。只好再等等？要不就只好用 <a rel="nofollow" href="https://github.com/leizongmin/node-segment" accessdate="2020/7/1" title="GitHub - leizongmin/node-segment: 基于 Node.js 的中文分词模块">node-segment</a> 了。
 <div class="timeStamp">2020/7/1</div>
+這次安裝完 Windows 10 2004，又回到正常的快速開機狀態，重新開機不用等10分鐘了。昨天裝了 <a rel="nofollow" href="https://en.wikipedia.org/wiki/Docker_(software)" lang="en-US" accessdate="2021/2/28">Docker</a>，卻發現一執行 bluestacks，Windows 就掛掉了。這可是三年來我第一次（或第二次）看到 <a rel="nofollow" href="http://en.wikipedia.org/wiki/Blue_Screen_of_Death" accessdate="2012/7/29" title="Blue Screen of Death, 藍白當機畫面, 蓝屏死机">BSoD</a>。聽說和 <a rel="nofollow" href="https://en.wikipedia.org/wiki/Hyper-V" lang="en-US" accessdate="2020/8/7">Hyper-V</a> 或 <a rel="nofollow" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux" lang="en-US" accessdate="2020/8/7" title="Windows Subsystem for Linux">WSL</a> 2 有關係，而且移除也沒用。現在暫時看來也沒什麼辦法。幸好 LINE 還是能用，過幾天準備裝新機。
+<div class="timeStamp">2020/8/7</div>
+兩三點間(?)跟昨天一樣，天空悶雷一直打不停，但是沒下雨。
+<div class="timeStamp">2020/8/7</div>
+果然，移除 docker，關掉 Hyper-V, WSL 2 這兩個依然會導致淡藍色 BSoD。
+<div class="timeStamp">2020/8/8</div>
+發現關閉 Windows 虛擬機器平臺，就能正常使用 bluestacks 了。不過太久沒開，看來 LINE 似乎需要重裝、重新設定（現在我都是用 Facebook 登入）。這樣的話乾脆開虛擬機來用試試看。這樣就不擔心機器轉移的問題了。
+<div class="timeStamp">2020/8/8</div>
+
+最近更新 Windows 10 2004 之後，輸入法調了幾次還是不習慣，主要是因為中文與日文的英數模式在切換視窗回來後，常常會隨機不預期的改成輸入模式。<br />
+隨著輸入法的更動，UEStudio 19 出現選擇一個範圍後輸入文字覆蓋，按 <kbd class="key">Ctrl-Z</kbd> 復原時不會恢復原先輸入字的狀況，選擇的範圍似乎消失在回復履歷中了。因此在復原與重做間切換時，文字會漏失。更新到 UEStudio 20 也沒變好，一不做二不休，這次就換成看來正常、又免費的 Notepad++ 7.8.9。做了些個人化，例如自動完成結束標記、自動背景重新讀取變更文字。換成 twilight theme；把選擇的文字，背景改成醒目的偏亮的綠色。有些常用的功能，快速鍵需要重新學，如 <kbd class="key">Ctrl-F3</kbd>、<kbd class="key">Ctrl-Shift-F3</kbd> 即刻搜尋，<kbd class="key">Ctrl-U</kbd>、<kbd class="key">Ctrl-Shift-U</kbd> 轉換大小寫，<kbd class="key">Ctrl-W</kbd> 關閉當前檔案（這一項還是改成了更順手的 <kbd class="key">Ctrl-F4</kbd>）。有些習慣改不過來，像按 <kbd class="key">F7</kbd> 輸入完整時間日期。之前那臺電腦的時代，搞了個腳本也不知丟哪去。這次發現安裝 Python Script plugin 之後就自動裝上了，只是想去掉開頭的 "0"，還須自己改腳本成 <code>editor.addText(time.strftime("%Y/%#m/%#d %#H:%#M:%#S"))</code>。雖然有時手速較快，按完 <kbd class="key">F7</kbd> 馬上輸入其他文字會來不及（不按輸入順序顯示文字），但總比沒有好。
+<div class="timeStamp">2020/8/10</div>
+現在使用的這支滑鼠雖然又沒多久，卻又出現點一下左鍵回應兩下的狀況。
+<div class="timeStamp">2020/8/10</div>
+
+最近一禮拜左右，南邊數十公尺外早上下午，不斷傳來大支電動鎚敲碎水泥的敲擊聲，感覺頗吵。
+<div class="timeStamp">2020/8/18</div>
+一早起來時，電腦竟然直接當機了。應該是這臺電腦第一次發生這情況。長按住電源鍵也無法關掉，只好直接關延長線開關。過10秒鐘，主機板上的燈光也暗掉後重開機。幸好重開過程一切正常。這種事情不常發生，特別記錄一下。
+<div class="timeStamp">2020/8/20</div>
+今天下午又是雷聲隆隆。
+<div class="timeStamp">2020/8/21</div>
+
 不曉得是不是像前幾次一樣受到 DNS 攻擊，中午請假回家後發覺<code>meicho.com.tw</code> 那臺伺服器連不太上。用 ssh 進去可以，DNS 卻全掛了，連 SFTP 都進不去。
 <div class="timeStamp">2020/9/9</div>
 昨天重開機，發現開機程序好幾分鐘後還沒結束，不曉得會不會是硬體問題。剛剛重新執行 <code>/usr/sbin/named</code>，總算看來比較正常了。話說這臺停留在 FreeBSD 9.1-STABLE，一直在勉強撐著，也升級不上去了，實在有夠舊。
@@ -326,6 +348,22 @@ http://sa.ylib.com/MagArticle.aspx?Unit=featurearticles&id=3026
 <div class="timeStamp">2021/1/25</div>
 又回復了。看一下，上次開機是在5天前，2021/1/20 16:02。
 <div class="timeStamp">2021/1/26</div>
+
+<h2>VirtualBox 與 Docker 不相容之解決辦法</h2>
+前兩天又裝了 <a rel="nofollow" href="https://en.wikipedia.org/wiki/Docker_(software)" lang="en-US" accessdate="2021/2/28">Docker</a> 想測試，但工作繁忙，雜事多，一直找不到時間。昨天需要先開 <a rel="nofollow" href="https://en.wikipedia.org/wiki/VirtualBox" accessdate="2018/4/7" title="Oracle VM VirtualBox, Sun VirtualBox, Sun xVM VirtualBox, Innotek VirtualBox">VirtualBox</a> 做事，卻發現 Windows 10 虛擬機執行速度異常緩慢，幾乎不動了。Linux Mint 虛擬機雖然也怪怪的，尚沒那麼嚴重。查了一下資源，發現硬碟幾乎不會跑，估計是 CPU （或 RAM）的設定環境在安裝 Docker 期間被改掉了。記得之前上一台機器也遇過 VirtualBox 與 Docker 不相容的問題，癥結在這兩個根本水火不容。先把 Docker 卸載了再說。遺憾的是問題依舊沒消失。記得上次也遇到相同問題，可惜沒紀錄下怎麼解決的。只好上網找資料了。<br />
+依照 <a rel="nofollow" href="https://stackoverflow.com/questions/41128258/docker-virtual-box-vt-x-is-not-available-verr-vmx-no-vmx" accessdate="2021/2/28" title="Docker + Virtual Box = VT-x is not available (VERR_VMX_NO_VMX) - Stack Overflow">Docker + Virtual Box = VT-x is not available</a> 所說，想從 <q lang="en-US">Turn Windows features on or off</q> 關掉 <a rel="nofollow" href="https://en.wikipedia.org/wiki/Hyper-V" lang="en-US" accessdate="2020/8/7">Hyper-V</a>，卻發現本來就沒開。或許是移除 Docker 時，也順便回復了這項設定？依然按照指示執行了 <code>DISM.exe /Online /Disable-Feature:Microsoft-Hyper-V</code>，重開機，沒變好。照<a rel="nofollow" href="https://hackmd.io/@DIuvbu1vRU2C5FwWIMzZ_w/BJ8efXXWI" accessdate="2021/2/28" title="虛擬機設定 - HackMD">虛擬機設定</a>，手動執行 <code>.\VBoxManage.exe modifyvm %VM_NAME% --nested-hw-virt on</code> 嘗試開啟 <q lang="en-US">Enable Nested VT-x/AMD-V</q> 也無效。<br />
+又找了一下，才發現<a rel="nofollow" href="https://nullrend.com/11909/verr_cpum_invalid_hwvirt_config/" accessdate="2021/2/28" title="VERR_CPUM_INVALID_HWVIRT_CONFIG – nullrend blarghs">還需要從 <q lang="en-US">Turn Windows features on or off</q> 把 <q lang="en-US">Virtual Machine Platform</q> 關起來</a>。記得上次也做過一樣的事，為了預防再次白做工，只好筆記一下。
+<div class="timeStamp">2021/2/28</div>
+
+<h2>大理寺日志</h2>
+看的是改編動畫版。本座嚴肅和搞笑腳色共存。日常搞笑，不過劇情主線倒滿嚴肅的。
+<div class="timeStamp">2021/3/9</div>
+
+我現在更新 work_crawler 還是沒辦法自動化，只能依靠自己手動開啟一個個虛擬系統來建構程式。上一次更新已是 2020/12/27 的事了，想說距離現在已經 4個多月，為這個軟體至今最長的紀錄，是該更新一下了。早上到現在，雖然 Windows 與 Linux 版本正常更新，但是想要開啟 macOS 時卻失敗了，回報是記憶體問題。我想到前一陣子才嘗試安裝過 docker，也更新過 WSL 2，大概改過什麼設定吧？開啟 Windows 功能，Hyper-V 已關閉，看來看去竟找不到什麼問題。只好死馬當活馬醫，先把 WSL 關掉。重新開機卻問題依舊，只好調整各個參數試試看。沒想到把 <q>啟用 Nested VT-x/AMD-V</q> 關掉，就成功跑起來了。Hyper-V 要關閉這我知道，但是 AMD-V 也不能用，感覺沒什麼道理啊。無論如何，既然現在可以用，沒壞的東西就不想修了，給他這麼擺著吧。
+<div class="timeStamp">2021/4/11</div>
+
+這兩天全副心神都放在把 <code>function for_each_token()</code> 改成 Promise 版本。感覺寫這種 Promise 的程式就和寫 <code>dependency_chain.js</code> 的時候一樣耗費心力。很難偵錯，遇到特殊情況又很容易有疏漏。
+<div class="timeStamp">2021/4/16</div>
 
 </div><br />
 
