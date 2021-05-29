@@ -870,7 +870,8 @@ C('819	Pre-Suasion	Pre-Suasion: A Revolutionary Way to Influence and Persuade	20
 C('823	Biased	Biased: Uncovering the Hidden Prejudice That Shapes What We See, Think, and Do	2020/10/11–2020/11/26	內隱偏見、種族歧視肇因與各種影響');
 C('824	Why We Act	Why We Act: Turning Bystanders into Moral Rebels	2020/12/31–2021/2/1	闡述為何旁觀者默不作聲');
 C('825	Prius or Pickup?	極端政治的誕生	2020/11/26–2021/2/17	政治派系與價值觀結合，將引爆民眾激情。當熱血澎湃、淹沒理性時就要小心了。');
-C('826	Not Born Yesterday	為什麼這麼荒謬還有人信？	2021/2/20–2021/5/20	從演化的角度解釋人們容易受騙大多並非因為缺乏理性');
+C('826	Not Born Yesterday	為什麼這麼荒謬還有人信？	2021/2/20–2021/5/20	從演化的角度解釋人們容易受騙，大多並非因為缺乏理性。');
+C('828	Factfulness	真確：扭轉十大直覺偏誤，發現事情比你想的美好	2021/4/25–2021/5/29	提醒我們要真憑實據就事論事，多批判性思考以避免直覺偏誤。');
 
 G('book:economics	泛經濟學書籍');
 C('739	Capital in the Twenty-First Century	Le Capital au XXIe siècle	2015/2/21 19:0	掀開「經濟成長重於貧富不均」假面具之新引子	{"original language":"fr-FR"}');
@@ -1027,6 +1028,7 @@ C('710	KuangTaHsing28	廣大興28號事件	2013/5/17–18	時事風涼話');
 C('717	HungChungChiu	洪仲丘事件	2013/7/12–22	軍中文化有感而發');
 C('729	2011_Tohoku_earthquake	東日本大震災	2011/3/11–27	嚴重天災檢討彙整');
 C('730	Eurozone_crisis	歐債危機	2010/5/16–2012/6/24	經濟災難');
+C('827	COVID-19 pandemic	新冠病毒疫情	2020/1/28–	COVID-19 疫情札記');
 
 G('creation	文藝作品 / literary creation');//679-
 C('365	kegarenaki	穢れ無き世界	2003/10	原創草草稿');//679
