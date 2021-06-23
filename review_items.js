@@ -872,6 +872,7 @@ C('824	Why We Act	Why We Act: Turning Bystanders into Moral Rebels	2020/12/31–
 C('825	Prius or Pickup?	極端政治的誕生	2020/11/26–2021/2/17	政治派系與價值觀結合，將引爆民眾激情。當熱血澎湃、淹沒理性時就要小心了。');
 C('826	Not Born Yesterday	為什麼這麼荒謬還有人信？	2021/2/20–2021/5/20	從演化的角度解釋人們容易受騙，大多並非因為缺乏理性。');
 C('828	Factfulness	真確：扭轉十大直覺偏誤，發現事情比你想的美好	2021/4/25–2021/5/29	提醒我們要真憑實據就事論事，多批判性思考以避免直覺偏誤。');
+C('829	Political Animals	為何我們總是選錯人？人類政治行為的迷思	2021/5/31–2021/6/23	從演化的角度，探討政黨政治抱團文化，以及相關認知偏誤成因');
 
 G('book:economics	泛經濟學書籍');
 C('739	Capital in the Twenty-First Century	Le Capital au XXIe siècle	2015/2/21 19:0	掀開「經濟成長重於貧富不均」假面具之新引子	{"original language":"fr-FR"}');
@@ -908,6 +909,7 @@ C('814	World Without Mind	被壟斷的心智	2020/6/28–2020/7/7	新聞編輯�
 C('816	On Tyranny	暴政	2020/7/20–2020/7/25	呼籲每個人親力親為、以真相抵抗暴政');
 C('817	Truth: How the Many Sides to Every Story Shape Our Reality	後真相時代：當真相被操弄、利用，我們該如何看？如何聽？如何思考？	2020/7/26–2020/7/30	真相包含許多面事實，抓住片面事實說事只是話術');
 C('Prius or Pickup?');
+C('Political Animals');
 
 G('book:parenting	育兒教養+學習法書籍');
 C('410	TheEssential55	The Essential 55	2005/2–3/16	教學法');//607

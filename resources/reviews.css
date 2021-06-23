@@ -269,9 +269,14 @@ blockquote,.imgBox { *zoom: 1; }
 blockquote.no_clear:after{clear: none;}
 
 
+b{
+	font-family:"Arial", "標楷體",DFKai-SB,\006a19\006977\009ad4;
+	font-size: 1.05em;
+}
 blockquote{
 	display: table;
-	border:double 3px #9c3;border-radius:.5em;margin-left:1em;padding:.5em;border-top:1px solid #80ff00;border-left:1px solid #80ff00;font-family:"Arial", "標楷體",DFKai-SB,\006a19\006977\009ad4;
+	font-family:"Arial", "標楷體",DFKai-SB,\006a19\006977\009ad4;
+	border:double 3px #9c3;border-radius:.5em;margin-left:1em;padding:.5em;border-top:1px solid #80ff00;border-left:1px solid #80ff00;
 }
 :lang(en){
 	font-family:"sans-serif";
