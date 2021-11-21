@@ -178,7 +178,10 @@ http://b-oo-k.net/blog/blog.php/2006/8
 .bgn ol,.bgn ul{color:#400080;}
 .bgb ol,.bgb ul{color:#FCC6FD;}
 
-dt{font-weight:bold;margin-top:.5em;}
+dt{
+	font-weight:bold;
+	margin-top:.5em;
+}
 
 .bgb dt{color:#80ffff;}
 .bgb dd{color:#dcc9a3;}
@@ -402,8 +405,10 @@ p:first-letter{font-size:1.2em;}/* 首字縮排並稍微放大 */
 ol,ul{text-indent:0;}/* can't use when ul, or list-style-position:outside looks like it won't work */
 h2,h3,h4,h5,h6{margin-bottom:0;margin-top:1em;}
 /* 最起碼應不比本文小 */
+h4{
+	font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;font-size:1.2em;font-weight:500;color:#2b5;
+}
 h5,h6{font-size:1em;}
-h4{color:#2c4;}
 h5{margin-left:1em;}
 h6{margin-left:2em;}
 h5:before,h6:before {color:#fbb;content: "❅ ";}
@@ -666,7 +671,7 @@ span.creation_title,
 	French (separated by non-breaking spaces « like this »), except in Switzerland
 */
 .creation_title:lang(fr),.creation_title:lang(ru){quotes:"« " " »";}
-.creation_title:lang(en),.creation_title:lang(de){quotes:none; font-style: italic;}
+.creation_title:lang(en),.creation_title:lang(de),.creation_title:lang(cs){quotes:none; font-style: italic;}
 
 /*
 	bug: Adjacent sibling selectors '+' 會 ignoring non-element nodes(such as text nodes and comments).
