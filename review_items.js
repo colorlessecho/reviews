@@ -912,6 +912,7 @@ C('816	On Tyranny	暴政	2020/7/20–2020/7/25	呼籲每個人親力親為、以
 C('817	Truth: How the Many Sides to Every Story Shape Our Reality	後真相時代：當真相被操弄、利用，我們該如何看？如何聽？如何思考？	2020/7/26–2020/7/30	真相包含許多面事實，抓住片面事實說事只是話術');
 C('Prius or Pickup?');
 C('Political Animals');
+C('833	Winners Take All	贏家全拿	2021/11/23–2022/1/4	揭露慈善如何是為富人的緩兵之計');
 
 G('book:parenting	育兒教養+學習法書籍');
 C('410	TheEssential55	The Essential 55	2005/2–3/16	教學法');//607
