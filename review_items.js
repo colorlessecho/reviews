@@ -854,7 +854,7 @@ C('755	Misbehaving	不當行為：行為經濟學之父教你更聰明的思考�
 C('757	The Righteous Mind	好人總是自以為是：政治與宗教如何將我們四分五裂	2017/4/29–6/11 21:11	認知偏誤系列: 理智是為了辯解，道德與宗教是為了凝聚人心');
 C('758	Unfair	不平等的審判：心理學與神經科學告訴你，為何司法判決還是這麼不公平	2017/7/1–2017/7/26 19:12	認知偏誤系列: 當前司法體系因人性弱點而生弊病');
 C('764	The Myth of the Rational Voter	理性選民的神話：我們為什麼選出笨蛋？民主的悖論與瘋狂	2018/3/18–4/5 1:40	認知偏誤系列: 人類本性如何戕害民主');
-C('769	NeuroTribes	自閉群像：我們如何從治療異數，走到接納多元。	2018/5/6–2018/5/19 21:11	自閉者的故事與自閉症研究歷史');
+C('769	NeuroTribes	自閉群像：我們如何從治療異數，走到接納多元。	2018/5/6–2018/5/19 21:11	ASD 患者的故事與自閉症研究歷史');
 C('770	Blindspot	Blindspot: Hidden Biases of Good People	2018/5/20–2018/5/27 14:27	認知偏誤系列: 解釋人們對自己人的偏好無意識間造成歧視');
 C('779	Freakonomics	蘋果橘子經濟學	2019/1/11–2/6 9:24	認知偏誤系列: 以經濟學破除成見的實例');
 C('781	The Why Axis	一切都是誘因的問題	2019/3/12–2019/3/25 10:21	認知偏誤系列: 抓住誘因、時時作現場實驗以造福社會');
@@ -913,6 +913,7 @@ C('817	Truth: How the Many Sides to Every Story Shape Our Reality	後真相時�
 C('Prius or Pickup?');
 C('Political Animals');
 C('833	Winners Take All	贏家全拿	2021/11/23–2022/1/4	揭露慈善如何是為富人的緩兵之計');
+C('835	Explaining Humans	Explaining Humans: What Science Can Teach Us about Life, Love and Relationships	2022/1/7–2022/2/2	ASD 患者對人際相處之道的論述');
 
 G('book:parenting	育兒教養+學習法書籍');
 C('410	TheEssential55	The Essential 55	2005/2–3/16	教學法');//607
@@ -1084,3 +1085,4 @@ C('750	commodity1	購物評論#1	2007–	購物商品服務的使用心得、評
 
 G('misc	其他');//476-
 C('751		健康	2007–	健康及醫療保健合輯');
+C('834		健康	2021–	健康及醫療保健合輯');
