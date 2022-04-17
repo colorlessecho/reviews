@@ -337,8 +337,13 @@ http://sa.ylib.com/MagArticle.aspx?Unit=featurearticles&id=3026
 書也還了，今天還沒打算閱讀什麼做什麼。想說<code>meicho.com.tw</code> 那臺伺服器掛掉到現在還沒好，也該認真打算一下接下來怎麼維持發聲管道了。於是禮拜五又測試 <a rel="nofollow" href="https://www.heliohost.org/" accessdate="2020/12/26" title="HelioHost | Free Hosting">HelioHost</a>。卻發現不曉得設置是哪裡出錯（我倒是沒有亂調整），普通 .html 網頁檔案卻被當成 CGI，<q>500 Internal Server Error</q> 執行錯誤。問題是 perl 的 .pl 檔案也都會出現 500。於是只好又回到之前以 github-pages 為個人網頁的嘗試。這次改成盡量應用原有架構，能不改變就不改變。
 <div class="timeStamp">2020/12/26</div>
 <h2>凶與兇</h2>
-最近檢核繁簡轉換，發現一些字詞用法很難判定正俗，現在大概都通用了。「凶」與「兇」為其一。查了一下源流，發現「凶」是不吉利、惡、災禍。例如元凶代表禍亂的源頭，幫凶代表幫助災禍、促進為非作歹。引申為厲害、激烈。「兇」則有恐懼害怕之義<span class="explanatory">（<q>曹人兇懼</q>：曹國人被搞到怕了）</span>，假借了「凶」之殘忍粗暴意涵。未來可能會依此為準，除了詞典中幾個特別指出的詞彙，如「真兇」、「緝兇」外，基本上都用「凶」。
+最近檢核繁簡轉換，發現一些字詞用法很難判定正俗，現在大概都通用了。「凶」與「兇」為其一。查了一下源流，發現「凶」是不吉利、惡、災禍。例如元兇代表禍亂的源頭，幫兇代表幫助災禍、促進為非作歹。引申為厲害、激烈。「兇」則有恐懼害怕之義<span class="explanatory">（<q>曹人兇懼</q>：曹國人被搞到怕了）</span>，假借了「凶」之殘忍粗暴意涵。未來可能會依此為準。現在除了詞典中幾個特別指出的詞彙，如「真兇」、「緝兇」外，基本上都用「凶」。
 <div class="timeStamp">2021/1/9</div>
+這次校訂把大部分詞彙都改成「兇」了：
+<ul><li>凶：不吉利、厄運。激烈。如：「雨勢很凶」(cf. 洶洶)
+</li><li>兇：殘忍粗暴、令人恐懼害怕、恐怖。
+</li></ul>
+<div class="timeStamp">2022/4/6</div>
 
 昨天看民視國際新聞時，發現 YouTube 頻道又回到了無法向前回溯的狀況。今天依舊沒辦法。
 <div class="timeStamp">2021/1/14</div>
@@ -396,6 +401,39 @@ http://sa.ylib.com/MagArticle.aspx?Unit=featurearticles&id=3026
 聽說有<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95" accessdate="2022/1/30" title="訊飛輸入法">讯飞输入法</a>可以自動輸入標點符號，下載下來嘗試了一下。發現使用習慣上雖然和Google 與微軟的語音輸入法有所不同，但對中文輸入來說，似乎還滿方便的。除了會自動輸入標點符號，手動輸入常用標點符號時還不用組合鍵。這應該能加快我輸入文字的速度。也推薦給了媽媽使用。不過<a rel="nofollow" href="https://www.chinatimes.com/realtimenews/20210611005241-260410?chdtv" accessdate="2022/1/30" title="科大訊飛輸入法App 遭下架 股價收跌6％ - 財經 - 工商">這家公司之前有侵犯用戶隱私的疑慮</a>，衹能希望現在已經改過了。<br />
 另外我還找到了Google 文件中相當於標點符號列的東西，打開中文手寫會出現常見標點符號。
 <div class="timeStamp">2022/1/30</div>
+由於將 CeJS 加入了 translatewiki，終於得開始學習解決衝突的方法。發現<a rel="nofollow" href="https://cythilya.github.io/2018/06/19/git-merge-branch-into-master/" accessdate="2022/2/11" title="Git: 四種將分支與主線同步的方法 | Summer。桑莫。夏天">四種將分支與主線同步的方法</a>與<a rel="nofollow" href="https://ihower.tw/blog/archives/3843" accessdate="2022/2/11" title="使用 git rebase 避免無謂的 merge – ihower { blogging }">使用 git rebase 避免無謂的 merge</a> 提到了幾個合併分支與解決原始碼衝突的方法，嘗試了一下應該得採用 <code>git pull --rebase</code>。這次由於 GitHub 上已有新的 commit，而本地也 commit 過，因此採用的是 git fetch + rebase。由於我習慣採用 TortoiseGit GUI，實際操作是用滑鼠右鍵選單中的 Git Sync。
+<div class="timeStamp">2022/2/11</div>
+昨天才大幅修改了 CeL.data.Convert_Pairs，採用原生 Map。並且放棄用 RegExp 來替換文字的機制，改成把文字切成小段，由長至短判別 Map 中是否有符合者來 replace，此舉加快了速度。接下來幾天的工作是合併幾大繁簡轉換軟體的字典表格，以及寫個小工具處理訊息翻譯問題。原因是我採用了自己的翻譯方法，因此市面上沒有其他方便的工具，只能自己寫了。
+<div class="timeStamp">2022/2/11</div>
+由於改換 <code>CeL.zh_conversion</code> 的演算法，並將 LTP 4.1.3 Small(v3) 升級到 LTP 4.1.5.post2 Base(v3)；費了快兩禮拜來重新檢核所有字典規則。由於缺乏經驗，有些部分還重複檢核，所以事實上工作量超過1倍的分量，可說傷筋動骨。現在差不多告一段落，準備和以前看過、算是稍微校訂過的舊存檔比對一下，看有多少差異。
+<div class="timeStamp">2022/2/26</div>
+接續昨天的計畫，比對新舊版本字典檔產生的文檔有何不同。想到可以利用 git，舊版本 commit 之後拿新版本覆蓋，diff 一下來簡單的找出新舊版本的差異。不過 TortoiseGitMerge 不太突顯新舊版本差異，<code>git diff</code> 又以行差異為準。參考 <a rel="nofollow" href="https://blog.darkthread.net/blog/git-diff-options/" accessdate="2022/2/27" title="Git 筆記 - git diff 顯示選項-黑暗執行緒">Git 筆記 - git diff 顯示選項</a>，發現可以利用這指令來比對當前版本和上一個版本之間，每個字的差異：
+<code class="block">
+export LANG=C.UTF-8
+# 避免 "warning: LF will be replaced by CRLF"
+git config --local core.autocrlf input
+git diff --unified=0 --color-words=
+
+</body></html>
+[^\x80-\xBF][\x80-\xBF]*'
+</code>
+想要產生文檔，可以用：
+<code class="block">
+git diff --unified=0 --word-diff=plain --word-diff-regex=
+
+</body></html>
+[^\x80-\xBF][\x80-\xBF]*' > ../diff.txt
+</code>
+不過這些都還要一個一個檢查。不比不知道，一比嚇一跳。平均看來，每一章節大概都有兩三個差異，而且往往是舊版的正確。看來前路迢迢啊。想說是不是乾脆寫個小程式來直接比對，產生整個句子會更省力。不過一個個比對修改，量大時重新生成文件以避免重複檢核相同的錯誤，似乎又更有效率。
+<div class="timeStamp">2022/2/27</div>
+費了兩天才完成一本<span class="creation_title">随波逐流之一代军师</span>。雖然感覺許多模式已處理完畢，未來一天應該能處理超過一本，但是這起頭還是令人有些擔憂。這兩天在電腦面前坐太久，脖子右後方一直酸痛不停。
+<div class="timeStamp">2022/2/28</div>
+又檢查完一本<span class="creation_title">无敌大佬要出世</span>。果然第二本開始快很多。感覺用 git 來檢核變更還滿方便的。
+<div class="timeStamp">2022/2/28</div>
+這次與舊版本的對照，基本上只針對明確錯誤的字詞，放過通同字。許多字詞查了一下，發現兩者通用，沒有明確的對錯。
+<div class="timeStamp">2022/3/2</div>
+最近幾天處理的大多是地區習慣用詞。花那麼久時間，還是停留在一兩萬字出一處錯誤的程度。而且這些辭典規則極為依賴分詞軟體。換一版軟體又要重新來一次，這讓我不得不思考值不值得。
+<div class="timeStamp">2022/4/7</div>
 </div><br />
 
 </body></html>
