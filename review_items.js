@@ -810,8 +810,8 @@ C('763	Parallel Worlds	平行宇宙：穿越創世、高維空間和宇宙未來
 
 G('book:biology	生物+生態+遺傳+演化書籍');
 C('679	TheGrandDesign	The Grand Design	2012/2/3 0:8–2012/2/6	科普書籍');//636
-C('702	gunsgermssteel	Guns, Germs, and Steel	2012/8–10/27	大歷史原則論:1書+3影片');
-C('723	The_Man_Who_Mistook_His_Wife_for_a_Hat	The Man Who Mistook His Wife for a Hat	2013/12/21–22,28	腦神經科普');
+C('702	gunsgermssteel	Guns, Germs, and Steel	2012/8–2012/10/27	大歷史原則論:1書+3影片');
+C('723	The_Man_Who_Mistook_His_Wife_for_a_Hat	The Man Who Mistook His Wife for a Hat	2013/12/21–2013/12/22,28	腦神經科普');
 C('724	Wij_zijn_ons_brein	Wij zijn ons brein	2014/3/23–2014/5/4	腦神經科普	{"original language":"nl-NL"}');
 C('731	River Out of Eden	伊甸園外的生命長河	2014/8/2–8	生命演化概說');
 C('736	The Greatest Show on Earth	地球上最偉大的表演：進化的證據	2014/9/27–10/19	演化論啟蒙');
@@ -901,6 +901,7 @@ C('524	Unspoken_rules	潜规则	2007/2/1–2	吴思歷史系列: 官場陋規評
 C('529	The_rule_of_blood_and_gains	血酬定律	2007/2/20–22 17:53	吴思歷史系列: 歷史通論: 論革命的起因	{"original language":"cmn-Hans-CN"}');//624
 C("663	Justice	JUSTICE: What's the Right Thing to Do?	影片2011/5/17–7/26;書2011/7/26–27,2014/9/3–15	Sandel 系列: 課程影片12集,通俗哲學書籍1");//634
 C('676	AllBooksHadBeenRead	书读完了	2011/11/15 晚–2012/1/15 16:38:46	隨筆選輯	{"original language":"cmn-Hans-CN"}');//635
+C('gunsgermssteel');
 C('711	UglyChinese	醜陋的中國人	2013/5/25–6/9	憤世嫉俗集	{"original language":"cmn-Hant-TW"}');
 C('771	Why Nations Fail	國家為什麼會失敗：權力、富裕與貧困的根源	2018/5/27–2018/7/13 21:53	闡述壓榨百姓不利創新與對國家的危害');
 C('772	Why the West Rules	西方憑什麼：五萬年人類大歷史，破解中國落後之謎	2018/7/14–2018/7/22 22:42	東方西方簡史');
@@ -996,8 +997,6 @@ C('ErementarGerad');//649
 C('GunslingerGirl');//650
 C('DNAngel');//651
 C('hagaren');//652
-C('loki');//653
-C('OpenSesame');//654
 C('yugo');//655
 //C('TrinityBlood');
 C('Pastel');//656
