@@ -991,7 +991,6 @@ C('735	lusuwei	盧蘇偉有聲書	2014/10/15 23:9	養兒經+成長秘訣');
 
 G('unfinished	進行中評論	（未完待續）');//644-
 C('TenjhoTenge');//645
-C('narue');//646
 C('BLEACH');//647
 C('ErementarGerad');//649
 C('DNAngel');//651
