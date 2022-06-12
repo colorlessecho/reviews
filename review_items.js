@@ -915,6 +915,7 @@ C('Prius or Pickup?');
 C('Political Animals');
 C('833	Winners Take All	贏家全拿	2021/11/23–2022/1/4	揭露慈善如何是為富人的緩兵之計');
 C('835	Explaining Humans	Explaining Humans: What Science Can Teach Us about Life, Love and Relationships	2022/1/7–2022/2/2	ASD 患者對人際相處之道的論述');
+C("836	The Tyranny of Merit	The Tyranny of Merit: What's Become of the Common Good?	2022/2/6–2022/6/13	才德至上思想如何使社會分化及損害民主");
 
 G('book:parenting	育兒教養+學習法書籍');
 C('410	TheEssential55	The Essential 55	2005/2–3/16	教學法');//607
