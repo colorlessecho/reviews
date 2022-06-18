@@ -724,7 +724,7 @@ C('418	AMG	ああっ女神さまっ	1997?–2005/4/29TV1–15話	漫畫1–30/31
 C('596	aitomakoto	愛と誠	2009/1/14	漫畫3/10');//550
 C('393	EDENs BOwY	ヱデンズボゥイ	2004/12/3晚漫畫1–13/14,2013/8/14漫畫1–20/20	26話動畫,漫畫20');//551
 C('692	ANGEL_FOYSON	ANGEL FOYSON	2012/7/13–14	漫畫4');
-C('419	OpenSesame	OPEN SESAME	2005/5/9漫畫1–9	漫畫1–9/13+?');//552
+C('419	OpenSesame	OPEN SESAME	2005/5/9漫畫1–9,2022/4/30漫畫1–20	漫畫1–20/20');//552
 C('447	omaegasekaiwokowasitainara	おまえが世界をこわしたいなら	2005/7/31	漫畫3/3');//553
 C('436	omelette_rice	オムライス	2005/7/9	漫畫5/5');//554
 C('540	DangerIsWalking	危険がウォーキング	2007/7/1–2	漫畫4/4');//555
@@ -889,7 +889,7 @@ C('791	The Great Divide	大鴻溝：從貿易協定到伊波拉病毒，撕裂�
 C('796	The Inner Level	收入不平等：為何他人過得越好，我們越焦慮？	2020/1/11–2020/1/21	貧富差距如何損害個人身心健康與社會秩序，又該如何改善');
 C('815	A Little History of Economics	經濟學的40堂公開課	2020/7/8–2020/7/20	經濟學小史');
 C('830	Reading Minds	讀心：我們因此理解或誤判他人意圖的心智理論	2021/6/24–2021/7/8	探討人如何發展出推測他人意向的能力，以及與之相關的議題。');
-C('832	The Future of Capitalism	The Future of Capitalism	2021/9/2–2021/11/21	重拾道德責任以解決資本主義問題');
+C('832	The Future of Capitalism	The Future of Capitalism: Facing the New Anxieties	2021/9/2–2021/11/21	重拾道德責任以解決資本主義問題');
 
 G('book:politics	政治制度+社會經濟制度+意識形態+人生觀書籍');
 // also see book:philosophy
