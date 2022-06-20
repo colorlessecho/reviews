@@ -970,6 +970,7 @@ C('802	Partners and Enemies	敵我之間：一場歷史的思辨之旅3	2020/3/1
 C('21 Lessons for the 21st Century');
 C('805	Dream of Hegemony	霸王之夢：一場歷史的思辨之旅4	2020/4/8–2020/4/12	吳國的故事：興起與滅亡	{"original language":"cmn-Hant-TW"}');
 C('807	The punch line in the history of Taiwan	臺灣史上最有梗的臺灣史	2020/4/25–2020/5/3	嘗試以風趣筆法介紹臺灣史	{"original language":"cmn-Hant-TW"}');
+C('837	A Different Kind of Chinese History 1	不一樣的中國史1	2022/4/20–2022/6/21	從近百年考古與揉合近代理論的角度重新審視中國史');
 
 G('book:misc	其他雜文論文等，文學創作外之書籍心得、讀書筆記	「三小時讀懂這本書」系列');
 
