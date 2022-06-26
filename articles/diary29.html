@@ -434,6 +434,16 @@ git diff --unified=0 --word-diff=plain --word-diff-regex=
 <div class="timeStamp">2022/3/2</div>
 最近幾天處理的大多是地區習慣用詞。花那麼久時間，還是停留在一兩萬字出一處錯誤的程度。而且這些辭典規則極為依賴分詞軟體。換一版軟體又要重新來一次，這讓我不得不思考值不值得。
 <div class="timeStamp">2022/4/7</div>
+之前 macOS 10.15.3 Catalina 升級到 macOS 12 Monterey 後，幾乎無法進入系統，算是廢了。這次 macOS 13 Ventura 出來，想說是不是能試試看。結果無論嘗試哪一版都會出現<a rel="nofollow" href="https://www.tonymacx86.com/threads/big-sur-installer-error-in-opening-usr-standalone-os-dmg-root_hash.306845/" accessdate="2022/6/23" title="Big Sur Installer error in opening &lt;&quot;usr\\standalone\\OS.dmg.root_hash&quot;&gt; | tonymacx86.com">看似 OpenCore 的問題</a>。恐怕只能回頭看看有沒有現成的 macOS 12 Monterey vmdk 能用？
+<code class="block">
+#[EB|RH:PF] usr\standalone\OS.dmg.root_hash
+#[EB|RH:MF] <"usr\\standalone\\OS.dmg.root_hash.x86legacyap.im4m">
+#[EB.LD.LF|IN] 0 1 <"usr\\standalone\\OS.dmg.root_hash"> <"0">
+#[EB.LD.OFS|OPEN!] Err(0xE) <"usr\\standalone\\OS.dmg.root_hash">
+#[EB.RH.LRH|P!] Err(0xE) <- EB.LD.LF
+#[EB.BST.FBS|!] Err(0xE) <- EB.RH.LRH
+</code>
+<div class="timeStamp">2022/6/23</div>
 </div><br />
 <div id="reference_list_layer"></div><br class="clear" /><table id="surveyT"><tr><td id="survey"></td></tr></table><hr /><div id="linkback"></div><span id="footer"></span>
 </body></html>
