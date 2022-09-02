@@ -101,7 +101,7 @@ CGI 的輸入參數不光只用固定的欄位，可加入 session, cookie 等�
 若要達成這個目的，我們除了得更動程式撰寫的語法標準，還有必要將現有需要用到的 SQL 功能全部轉換為原生碼，制定初始化機制，並且建立起跨程式平臺的標準交換格式。這部分或許可以使用 XML，或者建立具運算效率的 binary 形式 data。<br />
 <br />
 下面我們做一個簡單的概念示例，先是定義性別部分：<br />
-<pre class="noWCount">
+<pre class="no_word_count">
 StaticPool sex = new StaticPool(int autoincrease id, String sexType);
 
 //      alternative method:
@@ -113,7 +113,7 @@ sex.push([,'female']);
 </pre>
 <br />
 而後是工作的定義：<br />
-<pre class="noWCount">
+<pre class="no_word_count">
 // work 被定義後除了可以作為一種資料形態，還可以如同一個 object 一般，具有 method 以及 property。
 StaticPool work = new StaticPool(int id, String workType);
 
@@ -123,7 +123,7 @@ work.push(["student", "manager", "nurse", "singer"]);
 </pre>
 <br />
 以及 staff 的定義：<br />
-<pre class="noWCount">
+<pre class="no_word_count">
 StaticPool staff = new StaticPool(String name, sex.id, int age, work.id);
 staff.push(
 	["John",	0 /* sex */,	22 /* age */,	0 /* work: student */],
@@ -132,7 +132,7 @@ staff.push(
 </pre>
 <br />
 最後是簡單的功能示範：<br />
-<pre class="noWCount">
+<pre class="no_word_count">
 int listStaff(staff person){
  cout &lt;&lt; person.name &lt;&lt; " is a " &lt;&lt; person.work &lt;&lt; endl;
 }

@@ -151,7 +151,7 @@ CeL.set_run(
 本函數會先嘗試使用 XMLHttpRequest <span title="synchronously">同步</span>的方式依序取得、載入 module。
 無法以 XMLHttpRequest 循序載入時，則插入 node，以<span title="asynchronously">非同步</span>的方式載入 resource。<br />
 
-特別需要注意的是，本函數亦具有 jQuery.ready() 一般的功能，會在 DOM 準備好之後才觸發。其原理為本函數會在 DOM 尚未準備好前，先把序列存入 queue 中。待準備好後再執行。但為了效率考量，本函數會在 DOM 準備之後置換 .set_run 自身，因此建議若要作 alias of .set_run，請在 DOM 準備之後再作 alias：
+特別需要注意的是，本函數亦具有 jQuery.ready() 一般的功能，會在 DOM 準備好之後才觸發。其原理為本函數會在 DOM 準備好前，先把序列存入 queue 中。待準備好後再執行。但為了效率考量，本函數會在 DOM 準備之後置換 .set_run 自身，因此建議若要作 alias of .set_run，請在 DOM 準備之後再作 alias：
 <code>
 //	alias of CeL.set_run
 var sr;

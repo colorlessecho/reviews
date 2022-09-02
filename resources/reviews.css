@@ -564,7 +564,7 @@ wbr:after { content: "\00200B"; }
 .sup,.up{top:-.6em;/*vertical-align:super;*/}/* <sup> */
 .sub,.down{top:.4em;/*vertical-align:sub;*/}/* <sub> */
 .ion{top:-.6em;left:-.6em;}
-.s/* <s> */{font-weight:100;color:gray;text-decoration:line-through;text-decoration-style:double;text-decoration-color:red;}
+.s/* <s> <del> */{font-weight:100;color:gray;text-decoration:line-through;text-decoration-style:double;text-decoration-color:red;}
 .stamp{text-align:right;color:#4B9EB6;}
 
 
