@@ -388,9 +388,9 @@ q:lang(ja),.quote:lang(ja){quotes:"「" "」";}
 /* 俄語的引號是 «» */
 q:lang(fr),.quote:lang(fr), q:lang(ru),.quote:lang(ru){quotes:"« " " »";}
 .quote+.author:before{content:"―";}
-.noWC{}
-.noWCount{display:inline;padding:0;margin:0;}
-
+/*
+.no_word_count{display:inline;padding:0;margin:0;}
+*/
 
 /*<style type="text/css">a:link{color:#87ceeb;background-color:brown}</style>	brown,indigo*/
 input{color:#26822b;/*border:none;background-color:#d2ffff;*/}
