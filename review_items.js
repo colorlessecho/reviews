@@ -875,6 +875,7 @@ C('826	Not Born Yesterday	為什麼這麼荒謬還有人信？	2021/2/20–2021/
 C('828	Factfulness	真確：扭轉十大直覺偏誤，發現事情比你想的美好	2021/4/25–2021/5/29	提醒我們要真憑實據就事論事，多批判性思考以避免直覺偏誤。');
 C('829	Political Animals	為何我們總是選錯人？人類政治行為的迷思	2021/5/31–2021/6/23	從演化的角度，探討政黨政治抱團文化，以及相關認知偏誤成因');
 C("839	You're About to Make a Terrible Mistake	不當決策：行為經濟學大師教你避開人性偏誤	2022/9/3–2022/10/31	認知偏誤系列: 高瞻遠見的領袖不可信，須靠眾人來補足決策遺缺。");
+C('840	Noise: A Flaw in Human Judgment	雜訊：人類判斷的缺陷	2022/11/1–2023/4/17	比起認知偏誤更嚴重的人類決策缺陷');
 
 G('book:economics	泛經濟學書籍');
 C('739	Capital in the Twenty-First Century	Le Capital au XXIe siècle	2015/2/21 19:0	掀開「經濟成長重於貧富不均」假面具之新引子	{"original language":"fr-FR"}');
