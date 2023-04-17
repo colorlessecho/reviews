@@ -779,8 +779,10 @@ C('698	Kenshin no Succeed	剣神の継承者	2012/8/11–12	ライトノベル 2
 
 G('otaku misc	其他動漫畫相關');//598-
 C('765	anime1	日本動畫雜談1	2001/5/13–2018/4/7	日本動畫雜談合輯');
-C('841	game1	遊戲雜談1	2011/1/15–	日本遊戲雜談合輯');
-C('842	RTS	即時戰略遊戲雜談	2023/2/2–	即時戰略遊戲雜談合輯');
+C('841	comic1	日本漫畫雜談1	2007/2/14–	日本漫畫雜談合輯');
+C('842	light novel 1	ライトノベル雜談1	2011/11/1–	ライトノベル雜談合輯');
+C('843	game1	遊戲雜談1	2011/1/15–	日本遊戲雜談合輯');
+C('844	RTS	即時戰略遊戲雜談	2023/2/2–	即時戰略遊戲雜談合輯');
 
 G('literature	文學小說、文集之心得');//598-
 C('39	DeepRiver	深い河	2000.12	novel	{"original language":"ja-JP"}');//598
@@ -978,6 +980,7 @@ C('807	The punch line in the history of Taiwan	臺灣史上最有梗的臺灣史
 C('837	A Different Kind of Chinese History 1	不一樣的中國史1	2022/4/20–2022/6/21	從近百年考古與揉合近代理論的角度重新審視中國史');
 
 G('book:misc	其他雜文論文等，文學創作外之書籍心得、讀書筆記	「三小時讀懂這本書」系列');
+C('845	book1	一般書籍、文章雜談1	2003/5/9–	一般書籍、文章雜談合輯');
 
 
 G('movie	電影');//637-
@@ -995,6 +998,7 @@ C('687	CriticalReasoningForBeginners	Critical Reasoning for Beginners	2012/5/20�
 C('TheGrandDesign');
 C('704	2012_Sandel_tour	2012 Michael Sandel 講座	2012/12/30	Sandel 系列: 千人講座');
 C('735	lusuwei	盧蘇偉有聲書	2014/10/15 23:9	養兒經+成長秘訣');
+C('846	video1	一般影視雜談1	2004/6/6–	一般影視雜談合輯');
 
 G('unfinished	進行中評論	（未完待續）');//644-
 C('TenjhoTenge');//645
