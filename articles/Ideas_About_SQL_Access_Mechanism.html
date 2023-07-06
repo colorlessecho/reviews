@@ -74,7 +74,7 @@ CGI 的輸入參數不光只用固定的欄位，可加入 session, cookie 等�
 因為攻擊者可以利用系統的錯誤訊息找出可以侵入的漏洞，所以除了 debug 外，應該自訂錯誤顯示頁面，而防止詳細的錯誤訊息被顯示出來。<br />
 可能的話設置<span title="honeypot">蜜罐</span>。但無論是否有蜜罐，都應提高警覺，隨時檢查網站伺服器與資料庫伺服器的記錄。即使在記錄過於冗長或無法常常檢查時，也應由程式篩選重要的部分經 Email 等再作檢驗。
 </dd><dt>賦予最小權限</dt><dd>
-就算不幸遭到攻擊，也應該限制被破壞的範圍；所以應當盡可能限制連線資料庫帳號存取的權限。實際應用上，對每個系統設置新的資料庫帳號，並僅僅賦予其有必要的存取權（<a rel="nofollow" href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete" lang="en-US" accessdate="2023/1/28" title="Create, read, update and delete 增刪查改">CRUD</a>）。此外，使用特殊帳號，而非以系統管理員來執行資料庫伺服程式。<br />
+就算不幸遭到攻擊，也應該限制被破壞的範圍；所以應當採<a rel="nofollow" href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E6%9D%83%E9%99%90%E5%8E%9F%E5%88%99" accessdate="2020/7/25" title="principle of least privilege, PoLP">最小權限原則</a>，盡可能限制連線資料庫帳號存取的權限。實際應用上，對每個系統設置新的資料庫帳號，並僅僅賦予其有必要的存取權（<a rel="nofollow" href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete" lang="en-US" accessdate="2023/1/28" title="Create, read, update and delete 增刪查改">CRUD</a>）。此外，使用特殊帳號，而非以系統管理員來執行資料庫伺服程式。<br />
 為了加大攻擊的難度，我們可以分前後端來建構網站，例如網頁伺服器與資料庫伺服器建在不同的機器上，而紀錄檔又另外放在一臺只允許增添而不允許修改資料（如磁帶機或是一次性 DVD 燒錄）的機器上。
 </dd><dt>減少需要用到資料庫查詢的可能性</dt><dd>
 將資料正規化。假如某欄位的值僅有少數幾種可能性，且我們只會用到判別是否相等的運算，那麼可以將之當作程式中 hash 等資料形態之鍵值。例如，性別只分兩種的話，就可以用兩個數字或是 bool 的型態代表。即便非以文字表示不可，也可以用例如 <b>defined( sex[ _query_key_ ] )</b> 或是 <b>~.sex == _query_key_</b> 這樣的方法進行判別是否符合查詢條件之類的運算，而盡量少用組合查詢。
