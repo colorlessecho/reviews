@@ -152,7 +152,7 @@ staff.select( /^s/i.test(name) ).run(listStaff);
 
 <h3>結論與討論</h3>
 SQL Injection 的防範如今幾乎可說是寫程式，尤其是需存取資料庫 CGI 時的常識。但因為程式員或系統管理者的疏忽，很多時候以為萬全的系統還是可能被入侵。更不用說由於寫程式時的惰性，導致程式漏洞百出的情況。過去就曾經有過大考中心被入侵的例子。在文中我們提出了一些建議，希望能提供給資料庫程式設計人員一點參考，使得被攻陷的機會減低。畢竟預防勝於治療，很多事情等到東窗事發已經覆水難收。<br />
-最後對資料庫存儲功能建議的部分，雖然以當下的環境來說不太可能完全實現，但或許有朝一日會有類似的機制出現也說不定。<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93" title="relational database">關聯式資料庫</a>發展至今，雖然未能被<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93" title="object database">物件資料庫</a>取代，不過現在卻有 <span title="微軟公司">Microsoft Corporation</span> 於 .NET Framework 中引入 LINQ，即可謂例證之一。或許真是因為程式設計人員常常沒注意到，所以才需要這種改變整個環境的技術，來一勞永逸的解決掉困擾吧。另外，一個可能的方法是改變 database server，使 SQL 指令具有不同的執行模式。例如只允許基礎功能，而複雜的部分則需要特殊的環境下（例如程式本身寫死的）才允許執行。
+最後對資料庫存儲功能建議的部分，雖然以當下的環境來說不太可能完全實現，但或許有朝一日會有類似的機制出現也說不定。<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93" title="relational database">關聯式資料庫</a>發展至今，雖然未能被<a rel="nofollow" href="http://zh.wikipedia.org/wiki/%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93" title="object database">物件資料庫</a>取代，不過現在卻有 <span title="微軟公司">Microsoft Corporation</span> 於 .NET Framework 中引入 LINQ，即可謂例證。或許真是因為程式設計人員常常沒注意到，所以才需要這種改變整個環境的技術，來一勞永逸的解決掉困擾吧。另外，一個可能的方法是改變 database server，使 SQL 指令具有不同的執行模式。例如只允許基礎功能，而複雜的部分則需要特殊的環境下（例如程式本身寫死的）才允許執行。
 <div class="timeStamp">2008‎/12‎/30‎</div>
 
 <hr />
