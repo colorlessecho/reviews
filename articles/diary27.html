@@ -519,7 +519,7 @@ duplicate finder.log:
 今天回家則是把這幾天來一點一滴加增的 dependency 與 module 機制做到接近可用但尚未能用的地步。
 <p>
 最大感觸或發現是，現在我寫東西常常得倚賴前期預先設計。當設計架構完整、所謂胸有成竹的狀態下，有些時候代碼寫完，甚至不必 debug 就能直接上線了。像是在重構以 SVG 描繪直式加減乘運算當時即是如此，可說是連在寫的時候都沒怎麼前後修改，就像寫作文一樣一口氣就能寫下來。因此，即便時間稍嫌急迫，長久之計還是在已有整體規劃、確認前期投入能成為後期助益的基礎上，先求有、再求好。而非倉卒成事後再打掉重練。<br />
-相對說來，有時寫完還需要縫縫補補，丟三落四的情況；事後想來則是因設計不良、抑或草稿沒打好、藍圖畫得還未臻至境，甚至心裡根本沒個譜，邊寫才邊想該怎麼實作而造成。像是以 SVG 描繪直式除法那一段，對我來說就有點吃力了；因為四則運算不是一個難度，加、減、乘較簡單；而我卻沒下功夫鑽研該怎麼有一套周延的解決法。
+相對說來，有時寫完還需要縫縫補補，丟三落四的情況；事後想來則是因設計不良、抑或草稿沒打好、藍圖畫得還未臻至境，甚至心裡根本沒個譜，邊寫才邊想該怎麼實作而造成。像是以 SVG 描繪直式除法那一段，對我來說就有點吃力了；因為四則運算不是一個難度，加、減、乘較簡單；而我卻沒下工夫鑽研該怎麼有一套周延的解決法。
 </p>
 這次重構相依機制，其實已經構思兩三個月了。上次快兩年前著手模組機制，現在想來使用的就是一套有缺陷的方法，才造成後來註解都已經寫一堆，又肥又大。像是  sub module 之類的方法，說是 feature，更像是累贅。發現在概念上就有問題後，終究還是落得個蔑棄的下場。<br />
 雖然在計畫時拖拖拉拉，思索良久。想了半天，又看了點東西，才發現其基底結構正是下一代 ECMAScript <a rel="nofollow" href="http://www.cnblogs.com/ziyunfei/archive/2012/11/25/2784392.html" accessdate="2012/12/15" title="[译]ES6:JavaScript 中将会有的几个新东西 - 紫云飞 - 博客园">會出來</a>的 <a rel="nofollow" href="http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets" accessdate="2012/12/13" title="harmony:simple_maps_and_sets [ES Wiki]">Maps and Sets</a>。由於<a rel="nofollow" href="http://kangax.github.com/es5-compat-table/es6/" accessdate="2012/12/15" title="ECMAScript compatibility table">當下僅有 Firefox 實作出來</a>，因此只好自己埋頭苦幹。又由於我所用到的功能 Firefox 尚未實作得很好，因此我甚至還得幫 Firefox 也做點<span title="shim">補強</span>工作。<br />
