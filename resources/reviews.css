@@ -385,6 +385,7 @@ q,.quote{
 }
 q:lang(cmn-Hant),.quote:lang(cmn-Hant),
 q:lang(ja),.quote:lang(ja){quotes:"「" "」";}
+q:lang(cmn-Hant)>q:lang(cmn-Hant),.quote:lang(cmn-Hant)>.quote:lang(cmn-Hant){quotes:"『" "』";}
 /* 俄語的引號是 «» */
 q:lang(fr),.quote:lang(fr), q:lang(ru),.quote:lang(ru){quotes:"« " " »";}
 .quote+.author:before{content:"―";}

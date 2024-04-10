@@ -1009,6 +1009,7 @@ C('yugo');//655
 //C('TrinityBlood');
 C('Pastel');//656
 C('DGrayMan');//657
+//ぷちはうんど
 
 G('article	雜文/專文論述');//660-
 C('334	SocialPhychology	社會心理學	2002/12/18	認知偏誤系列: 筆記');//660
