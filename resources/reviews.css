@@ -1,6 +1,9 @@
 ﻿/* 舊NS第一行不能放東西 */
-@charset "UTF-8";/* "big5" */
-@import url("../../css.css");/* @import應包含在一開始時，這是相對於此.css檔而言的位置 */
+@charset "UTF-8";
+/* "big5" */
+@import url("../../css.css");
+
+/* @import應包含在一開始時，這是相對於此.css檔而言的位置 */
 /* @import url("bluish.css") print, projection, tv; */
 /*
 
@@ -142,9 +145,9 @@ border-radius: http://webdesign.html.it/articoli/leggi/528/more-nifty-corners/1/
 
 */
 /*base style*/
-body{
- /*color:indigo;background-color:linen;*/
- /*	IE6 的背景閃爍 IE6 flicker http://old9.blogsome.com/2008/01/04/ie6-background-flicker-expression-override/
+body {
+	/*color:indigo;background-color:linen;*/
+	/*	IE6 的背景閃爍 IE6 flicker http://old9.blogsome.com/2008/01/04/ie6-background-flicker-expression-override/
  zoom:expression(function(ele){document.execCommand('BackgroundImageCache',false,true);ele.style.zoom=1;}(this));*/
 }
 
@@ -159,7 +162,11 @@ http://b-oo-k.net/blog/blog.php/2006/8
 	background-color: black;
 	background-image: url("../../Colorless.png");
 }
-.bgb a{color:#19f7f4;}
+
+.bgb a {
+	color: #19f7f4;
+}
+
 .bgn {
 	overflow-x: hidden;
 	max-width: 100%;
@@ -167,61 +174,142 @@ http://b-oo-k.net/blog/blog.php/2006/8
 	background-color: #EEE;
 	background-image: url("../../ColorlessB.png");
 }
+
 /* base list set	TODO:圖形改inline	http://www.skrenta.com/2007/05/14_rules_for_fast_web_pages_by_1.html */
-	.bgn ul li {
-		list-style-image: url("images/li1.gif");
-	}
+.bgn ul li {
+	list-style-image: url("images/li1.gif");
+}
+
 .bgb ul li {
 	list-style-image: url("images/li2.gif");
 }
 
-.bgn ol,.bgn ul{color:#400080;}
-.bgb ol,.bgb ul{color:#FCC6FD;}
-
-dt{
-	font-weight:bold;
-	margin-top:.5em;
+.bgn ol,
+.bgn ul {
+	color: #400080;
 }
 
-.bgb dt{color:#80ffff;}
-.bgb dd{color:#dcc9a3;}
-.bgb dd dt{color:#d2d2ff;}
-.bgb dd dd{color:#d6f3db;}
-.bgb a:hover{color:#d22;}
+.bgb ol,
+.bgb ul {
+	color: #FCC6FD;
+}
 
-.bgn dt{color:#804000;}
-.bgn dd{color:#2c8966;}
-.bgn dd dt{color:#379;}
-.bgn dd dd{color:#571;}
-.bgn a:hover{color:#e38;}
+dt {
+	font-weight: bold;
+	margin-top: .5em;
+}
+
+.bgb dt {
+	color: #80ffff;
+}
+
+.bgb dd {
+	color: #dcc9a3;
+}
+
+.bgb dd dt {
+	color: #d2d2ff;
+}
+
+.bgb dd dd {
+	color: #d6f3db;
+}
+
+.bgb a:hover {
+	color: #d22;
+}
+
+.bgn dt {
+	color: #804000;
+}
+
+.bgn dd {
+	color: #2c8966;
+}
+
+.bgn dd dt {
+	color: #379;
+}
+
+.bgn dd dd {
+	color: #571;
+}
+
+.bgn a:hover {
+	color: #e38;
+}
 
 caption {
 	/* for APA */
-	text-align:inherit;
+	text-align: inherit;
 }
-.bgb caption, .bgn caption {
-	text-align:center;
-	font-weight:bold;
+
+.bgb caption,
+.bgn caption {
+	text-align: center;
+	font-weight: bold;
 }
-table{
+
+table {
 	border-radius: .2em;
 }
-.bgb table{color:#fae;border:1px solid #58a;padding:0;/*background-color:#344;*/}
-.bgb caption{color:#ff7;}
-.bgb th{color:#aaf;border-right:1px solid #888;border-bottom:1pt solid #a8f;}
-.bgb td{border-right:1px solid #888;border-bottom:1px solid #888;}
 
-.bgn table{color:#137;border:1px solid #58b;padding:0;}
-.bgn caption{color:#f67;}
+.bgb table {
+	color: #fae;
+	border: 1px solid #58a;
+	padding: 0;
+	/*background-color:#344;*/
+}
+
+.bgb caption {
+	color: #ff7;
+}
+
+.bgb th {
+	color: #aaf;
+	border-right: 1px solid #888;
+	border-bottom: 1pt solid #a8f;
+}
+
+.bgb td {
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+}
+
+.bgn table {
+	color: #137;
+	border: 1px solid #58b;
+	padding: 0;
+}
+
+.bgn caption {
+	color: #f67;
+}
+
 /* .bgn table tr:first-of-type th{} */
-.bgn th{color:#74b;background-color:#eef;border-right:1px solid #888;border-bottom:1pt solid #42b;}
-.bgn th:first-child{color:#832;background-color:#fee;}
-.bgn td{border-right:1px solid #888;border-bottom:1px solid #888;}
+.bgn th {
+	color: #74b;
+	background-color: #eef;
+	border-right: 1px solid #888;
+	border-bottom: 1pt solid #42b;
+}
+
+.bgn th:first-child {
+	color: #832;
+	background-color: #fee;
+}
+
+.bgn td {
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+}
 
 
-.clear,.clearAll{
+.clear,
+.clearAll {
 	clear: both;
 }
+
 /*
 h1: 網站標題
 h2: 文章標題
@@ -229,8 +317,12 @@ h3: 章節標題
 h4: 議題標題, 主題標題
 h5: 小議題, 次要議題
 */
-.co>h1,.co>h2,.co>h3,
-.c2>h1,.c2>h2,.c2>h3{
+.co>h1,
+.co>h2,
+.co>h3,
+.c2>h1,
+.c2>h2,
+.c2>h3 {
 	clear: both;
 
 	position: -webkit-sticky;
@@ -242,62 +334,94 @@ h5: 小議題, 次要議題
 	border: #dde solid 1px;
 	border-radius: .2em;
 }
-.c2>h1,.c2>h2,.c2>h3{
+
+.c2>h1,
+.c2>h2,
+.c2>h3 {
 	background-color: #eef;
 }
+
 /*
 http://nicolasgallagher.com/micro-clearfix-hack/
 CSS2 workaround for clear-after
 http://www.cs.hmc.edu/~mbrubeck/clear-after/
 http://www.positioniseverything.net/easyclearing.html/
 */
-.clear:before,.clear:after,
-.clearAll:before,.clearAll:after{
+.clear:before,
+.clear:after,
+.clearAll:before,
+.clearAll:after {
 	clear: both;
 }
-blockquote:after
-{
-	content: " "; display: table;
+
+blockquote:after {
+	content: " ";
+	display: table;
 	/* 需考量 <cite>, <img> */
 	clear: left;
 	clear: both;
 	/* height: 0; overflow:hidden; */
 }
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-blockquote,.imgBox { *zoom: 1; }
+blockquote,
+.imgBox {
+	*zoom: 1;
+}
 
-blockquote.no_clear:after{clear: none;}
+blockquote.no_clear:after {
+	clear: none;
+}
 
 
-b{
-	font-family:"Arial", "標楷體",DFKai-SB,\006a19\006977\009ad4;
+b {
+	font-family: "Arial", "標楷體", DFKai-SB, \006a19\006977\009ad4;
 	font-size: 1.05em;
 }
-blockquote{
+
+blockquote {
 	display: table;
-	font-family:"Arial", "標楷體",DFKai-SB,\006a19\006977\009ad4;
-	border:double 3px #9c3;border-radius:.5em;margin-left:1em;padding:.5em;border-top:1px solid #80ff00;border-left:1px solid #80ff00;
+	font-family: "Arial", "標楷體", DFKai-SB, \006a19\006977\009ad4;
+	border: double 3px #9c3;
+	border-radius: .5em;
+	margin-left: 1em;
+	padding: .5em;
+	border-top: 1px solid #80ff00;
+	border-left: 1px solid #80ff00;
 }
-:lang(en){
-	font-family:"sans-serif";
+
+:lang(en) {
+	font-family: "sans-serif";
 }
-.bgb blockquote{
-	color:#faece2;background-color:#31112d;opacity:.95;
+
+.bgb blockquote {
+	color: #faece2;
+	background-color: #31112d;
+	opacity: .95;
 	/* 修正 display 問題 @ Firefox/36.0，使 imgBox 在 blockquote 上：設定 opacity 與 background-color 時，會覆蓋在其他 layer 上。 */
-	opacity:1;
+	opacity: 1;
 }
-.bgn blockquote{
-	color:#004040;background-color:#f5feda;opacity:.9;
+
+.bgn blockquote {
+	color: #004040;
+	background-color: #f5feda;
+	opacity: .9;
 	/* 修正 display 問題 @ Firefox/36.0，使 imgBox 在 blockquote 上：設定 opacity 與 background-color 時，會覆蓋在其他 layer 上。 */
-	opacity:1;
+	opacity: 1;
 }
-blockquote p{margin-top:1em !important;}
-blockquote h4, blockquote h4{
+
+blockquote p {
+	margin-top: 1em !important;
+}
+
+blockquote h4,
+blockquote h4 {
 	margin-top: 0;
 }
+
 /* citation
 
 <blockquote>
@@ -313,170 +437,503 @@ quote contents
 
 blockquote{height: 100%;}
 */
-blockquote cite{
-	float:right;
-	margin-right:1em;
+blockquote cite {
+	float: right;
+	margin-right: 1em;
 	/* For IE 6/7 (trigger hasLayout) */
-	zoom:1;
+	zoom: 1;
 }
+
 /* U+2015 ― horizontal bar, also known as a quotation dash, is used to introduce quoted text. */
-blockquote cite:before{content:"― ";}
+blockquote cite:before {
+	content: "― ";
+}
+
 /*
 http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
 http://nicolasgallagher.com/micro-clearfix-hack/
 */
-blockquote cite:after{
+blockquote cite:after {
 	/* useless!! */
 	clear: both;
 }
-blockquote cite:lang(en),blockquote cite a:lang(en){font-style:italic;}
-blockquote cite:lang(cmn),blockquote cite a:lang(cmn){font-weight:bold;}
-blockquote img{
-	float:left;max-width:10%;margin-right:1em;
+
+blockquote cite:lang(en),
+blockquote cite a:lang(en) {
+	font-style: italic;
+}
+
+blockquote cite:lang(cmn),
+blockquote cite a:lang(cmn) {
+	font-weight: bold;
+}
+
+blockquote img {
+	float: left;
+	max-width: 10%;
+	margin-right: 1em;
 	box-shadow: 1px 1px .5em #aaa;
 	border-radius: .5em;
 }
-blockquote br.clear{clear:right;}
 
-blockquote.dialogue{
-	white-space:pre-line;width:auto;
-	/* word */
-	color:#497;background-color:#eef;line-height:1.2em;
+blockquote br.clear {
+	clear: right;
 }
+
+blockquote.dialogue {
+	white-space: pre-line;
+	width: auto;
+	/* word */
+	color: #497;
+	background-color: #eef;
+	line-height: 1.2em;
+}
+
 /* character / speaker */
-blockquote.dialogue .proper_noun{color:#f81;line-height:2.5em;}
-blockquote.dialogue .proper_noun:after{text-decoration:none;content:": ";}
-blockquote.dialogue .action{}
-blockquote.dialogue p{border-bottom:1pt solid #eee;}
+blockquote.dialogue .proper_noun {
+	color: #f81;
+	line-height: 2.5em;
+}
+
+blockquote.dialogue .proper_noun:after {
+	text-decoration: none;
+	content: ": ";
+}
+
+blockquote.dialogue .action {}
+
+blockquote.dialogue p {
+	border-bottom: 1pt solid #eee;
+}
 
 
 /* 註解 */
-rp,rt{font-size:.7em;vertical-align:text-bottom;}
-.popupedTxt,.popupedTxt_bgb,.popupedTxt_bgn{font-weight:normal;cursor:default;border-bottom:1px dotted #3a8b46;}
+rp,
+rt {
+	font-size: .7em;
+	vertical-align: text-bottom;
+}
+
+.popupedTxt,
+.popupedTxt_bgb,
+.popupedTxt_bgn {
+	font-weight: normal;
+	cursor: default;
+	border-bottom: 1px dotted #3a8b46;
+}
+
 /*	列印網頁時，自動地把頭文字展開成全稱
 abbr:after{content:" (" attr(title) ")";}
 */
-.popupedTxt{color:lime;background-color:navy;}
+.popupedTxt {
+	color: lime;
+	background-color: navy;
+}
+
 /* 下面的部分登記同時需要更改sPop() */
-.popupedTxt_bgb{color:lime;}
-.popupedTxt_bgn{color:brown;}
-.popupedTxt_ruby_bgb{color:#eef96c;}
-.popupedTxt_ruby_bgn{color:#ec0fc6;}
-.popupedTxt_ruby_bgb,.popupedTxt_ruby_bgn{font-weight:normal;}
+.popupedTxt_bgb {
+	color: lime;
+}
+
+.popupedTxt_bgn {
+	color: brown;
+}
+
+.popupedTxt_ruby_bgb {
+	color: #eef96c;
+}
+
+.popupedTxt_ruby_bgn {
+	color: #ec0fc6;
+}
+
+.popupedTxt_ruby_bgb,
+.popupedTxt_ruby_bgn {
+	font-weight: normal;
+}
 
 
 /*
 .hid:after{content:'（請用滑鼠選取反轉）';}
 */
-hid,hid p,hid dl{color:#a22;background-color:#0dd;font-weight:900;}
+hid,
+hid p,
+hid dl {
+	color: #a22;
+	background-color: #0dd;
+	font-weight: 900;
+}
+
 /* 指定 !important 優先度會高於使用者自訂之style，但若使用者也用了!important，則使用者之優先度仍是較高 */
 /* ネタばれ */
-.spoiler,.hid{
-	color:gray !important;background-color:gray !important;
+.spoiler,
+.hid {
+	color: gray !important;
+	background-color: gray !important;
 }
-.spoiler .popupedTxt_bgn,.spoiler .popupedTxt_bgb,.spoiler .popupedTxt_ruby_bgn,.spoiler .popupedTxt_ruby_bgb,.hid .popupedTxt_bgn,.hid .popupedTxt_bgb,.hid .popupedTxt_ruby_bgn,.hid .popupedTxt_ruby_bgb{color:gray;}
-.hide{display:none;}
-.a,.popup{cursor:pointer;}/*	 class="popup" onclick="sPop(this)" title="	*/
 
-q,.quote{
-	/* 直接引用、截選或摘要 */
-	quotes:"“" "”";
-	color:#935;
+.spoiler .popupedTxt_bgn,
+.spoiler .popupedTxt_bgb,
+.spoiler .popupedTxt_ruby_bgn,
+.spoiler .popupedTxt_ruby_bgb,
+.hid .popupedTxt_bgn,
+.hid .popupedTxt_bgb,
+.hid .popupedTxt_ruby_bgn,
+.hid .popupedTxt_ruby_bgb {
+	color: gray;
 }
-q:lang(cmn-Hant),.quote:lang(cmn-Hant),
-q:lang(ja),.quote:lang(ja){quotes:"「" "」";}
-q:lang(cmn-Hant)>q:lang(cmn-Hant),.quote:lang(cmn-Hant)>.quote:lang(cmn-Hant){quotes:"『" "』";}
+
+.hide {
+	display: none;
+}
+
+.a,
+.popup {
+	cursor: pointer;
+}
+
+/*	 class="popup" onclick="sPop(this)" title="	*/
+
+q,
+.quote {
+	/* 直接引用、截選或摘要 */
+	quotes: "“" "”";
+	color: #935;
+}
+
+q:lang(cmn-Hant),
+.quote:lang(cmn-Hant),
+q:lang(ja),
+.quote:lang(ja) {
+	quotes: "「" "」";
+}
+
+q:lang(cmn-Hant)>q:lang(cmn-Hant),
+.quote:lang(cmn-Hant)>.quote:lang(cmn-Hant) {
+	quotes: "『" "』";
+}
+
 /* 俄語的引號是 «» */
-q:lang(fr),.quote:lang(fr), q:lang(ru),.quote:lang(ru){quotes:"« " " »";}
-.quote+.author:before{content:"―";}
+q:lang(fr),
+.quote:lang(fr),
+q:lang(ru),
+.quote:lang(ru) {
+	quotes: "« " " »";
+}
+
+.quote+.author:before {
+	content: "―";
+}
+
 /*
 .no_word_count{display:inline;padding:0;margin:0;}
 */
 
 /*<style type="text/css">a:link{color:#87ceeb;background-color:brown}</style>	brown,indigo*/
-input{color:#26822b;/*border:none;background-color:#d2ffff;*/}
-.bgn input{color:#6200a4;background-color:#e4caff;}
-p,.co,.c2{text-indent:1em;line-height:1.7em;}
-th,td{text-indent:0;}
-/* .noLineHeight{line-height:1.2em;} */
-.co p,.c2 p{margin-top:1em;}
-p:first-letter{font-size:1.2em;}/* 首字縮排並稍微放大 */
-.co{color:#cee8ff;}.bgn .co{color:#1020a4;}/* comment */
-.co,.c2,#edit{border:double 4px green;border-radius:1em;padding:.5em;padding-bottom:0em;}/* comment */
-ol,ul{text-indent:0;}/* can't use when ul, or list-style-position:outside looks like it won't work */
-h2,h3,h4,h5,h6{margin-bottom:0;margin-top:1em;}
-/* 最起碼應不比本文小 */
-h4{
-	font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;font-size:1.2em;font-weight:500;color:#2b5;
+input {
+	color: #26822b;
+	/*border:none;background-color:#d2ffff;*/
 }
-h5,h6{font-size:1em;}
-h5{margin-left:1em;}
-h6{margin-left:2em;}
-h5:before,h6:before {color:#fbb;content: "❅ ";}
+
+.bgn input {
+	color: #6200a4;
+	background-color: #e4caff;
+}
+
+p,
+.co,
+.c2 {
+	text-indent: 1em;
+	line-height: 1.7em;
+}
+
+th,
+td {
+	text-indent: 0;
+}
+
+/* .noLineHeight{line-height:1.2em;} */
+.co p,
+.c2 p {
+	margin-top: 1em;
+}
+
+p:first-letter {
+	font-size: 1.2em;
+}
+
+/* 首字縮排並稍微放大 */
+.co {
+	color: #cee8ff;
+}
+
+.bgn .co {
+	color: #1020a4;
+}
+
+/* comment */
+.co,
+.c2,
+#edit {
+	border: double 4px green;
+	border-radius: 1em;
+	padding: .5em;
+	padding-bottom: 0em;
+}
+
+/* comment */
+ol,
+ul {
+	text-indent: 0;
+}
+
+/* can't use when ul, or list-style-position:outside looks like it won't work */
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+/* 最起碼應不比本文小 */
+h4 {
+	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: #2b5;
+}
+
+h5,
+h6 {
+	font-size: 1em;
+}
+
+h5 {
+	margin-left: 1em;
+}
+
+h6 {
+	margin-left: 2em;
+}
+
+h5:before,
+h6:before {
+	color: #fbb;
+	content: "❅ ";
+}
+
 .co ol.jb {
 	list-style-image: url('images/ball.gif');
-}/* ol/ul */
-.c2{border-color:#ccfabb;}.bgb .c2{border-color:#37829d;}/* comment 2 */
-.c2 h2,.c2 h3{quotes:"《" "》";color:peru;font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;text-shadow:.05em .05em .1em #ecd, .1em .1em .1em #aaa;}
-.co h2:before,.c2 h2:before{content:open-quote;}
-.co h2:after,.c2 h2:after{content:close-quote;}
-.c2 h3{color:#d62D75;/*letter-spacing:.1em;*/}
-.c2 .subTitle{color:olive;border-right:2px solid orange;border-bottom:2px solid orange;width:4em;white-space:nowrap;}
-.co h2,.co h3{color:#8F5;font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;}
-.he{}/* head */
-.ti{color:#f4e1a6;font-weight:800;font-size:2em;font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;}.bgn .ti{color:#0080FF;}/* title */
-.tr{color:#e680c0;font-size:.8em;margin-left:1em}.bgn .tr{color:#800040;}/* translation */
+}
+
+/* ol/ul */
+.c2 {
+	border-color: #ccfabb;
+}
+
+.bgb .c2 {
+	border-color: #37829d;
+}
+
+/* comment 2 */
+.c2 h2,
+.c2 h3 {
+	quotes: "《" "》";
+	color: peru;
+	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
+	text-shadow: .05em .05em .1em #ecd, .1em .1em .1em #aaa;
+}
+
+.co h2:before,
+.c2 h2:before {
+	content: open-quote;
+}
+
+.co h2:after,
+.c2 h2:after {
+	content: close-quote;
+}
+
+.c2 h3 {
+	color: #d62D75;
+	/*letter-spacing:.1em;*/
+}
+
+.c2 .subTitle {
+	color: olive;
+	border-right: 2px solid orange;
+	border-bottom: 2px solid orange;
+	width: 4em;
+	white-space: nowrap;
+}
+
+.co h2,
+.co h3 {
+	color: #8F5;
+	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
+}
+
+.he {}
+
+/* head */
+.ti {
+	color: #f4e1a6;
+	font-weight: 800;
+	font-size: 2em;
+	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
+}
+
+.bgn .ti {
+	color: #0080FF;
+}
+
+/* title */
+.tr {
+	color: #e680c0;
+	font-size: .8em;
+	margin-left: 1em
+}
+
+.bgn .tr {
+	color: #800040;
+}
+
+/* translation */
 
 /*
 http://www1.chapman.edu/~jipsen/mathml/asciimatheditor/
 http://www.w3.org/TR/MathML/
 http://www-archive.mozilla.org/projects/mathml/demo/tester.html
 */
-.bgn math{
-	color:#373;border:#cea dotted 1px;padding:.5em;border-radius: .5em;font-family: serif;
+.bgn math {
+	color: #373;
+	border: #cea dotted 1px;
+	padding: .5em;
+	border-radius: .5em;
+	font-family: serif;
 }
+
 .bgn math [href] {
-	color:#d56;
+	color: #d56;
 }
+
 /* 定理,法則 */
 .bgn math.theorem {
-	display:block;
-	margin-left:1em;
-	margin-right:1em;
-	text-align:center;
-	background-color:#fef;
-	border:1em solid #b2c;
-	border-top:none;
-	border-bottom:none;
+	display: block;
+	margin-left: 1em;
+	margin-right: 1em;
+	text-align: center;
+	background-color: #fef;
+	border: 1em solid #b2c;
+	border-top: none;
+	border-bottom: none;
 }
 
 /* menu */
-.Menu{font-family:'細明體',sans-serif,FixedSys;line-height:1.2em;}
-.Menu p{text-indent:0;margin:0;margin-top:.5em;line-height:1.2em;}
-.Menu p:first-letter{font-size:1em;}
-#sM{font-size:.9em;}
-.sMF{color:lime !important;text-decoration:underline overline !important;}	/* focus */
-.sMB{color:coral !important;text-decoration:none !important;}	/* blur */
+.Menu {
+	font-family: '細明體', sans-serif, FixedSys;
+	line-height: 1.2em;
+}
+
+.Menu p {
+	text-indent: 0;
+	margin: 0;
+	margin-top: .5em;
+	line-height: 1.2em;
+}
+
+.Menu p:first-letter {
+	font-size: 1em;
+}
+
+#sM {
+	font-size: .9em;
+}
+
+.sMF {
+	color: lime !important;
+	text-decoration: underline overline !important;
+}
+
+/* focus */
+.sMB {
+	color: coral !important;
+	text-decoration: none !important;
+}
+
+/* blur */
 
 /* use setImage() */
-.pImg{float:right;clear:left;}
+.pImg {
+	float: right;
+	clear: left;
+}
+
 /* http://www.qianduan.net/responsive-web-design.html */
-img{border:none;max-width:100%;}
+img {
+	border: none;
+	max-width: 100%;
+}
+
 /* image box */
-.imgBox img{max-width:90%;max-height:50%;border-radius:9px;}	/* moz only 沒加.imgBox，套用至所有img的話，moz中initReview()無法作用！ */
+.imgBox img {
+	max-width: 90%;
+	max-height: 50%;
+	border-radius: 9px;
+}
+
+/* moz only 沒加.imgBox，套用至所有img的話，moz中initReview()無法作用！ */
 /* a img{color:white} The only way to hide the border in NS 4.x */
 
 /* use setImgBox() */
-.imgBox{
-	float:right;clear:right;text-align:right;margin-bottom:.5em;margin-left:.5em;
+.imgBox {
+	float: right;
+	clear: right;
+	text-align: right;
+	margin-bottom: .5em;
+	margin-left: .5em;
 }
-.imgBox.inline{float:none;width:30%;clear:inherit;}
-/* 用.imgBox.box直接連起來Mozilla不接受 */
-.imgBox .box{text-align:center;padding:.5em;color:green;background-color:#ece8fd;border:1px solid gray;border-right:3px double gray;border-bottom:3px double gray;width:450px;border-radius:1em;}
-.imgBox .img{max-width:90%;border:2px solid #dad2fd;display:none;}
-.imgBox .text{width:80%;/*white-space:nowrap;*/background-color:#f7f3fe;border:2px solid #f0edfe;padding:.2em;text-align:left;margin-top:.5em;text-indent:0;border-radius:.5em;}
 
-.video_box{
+.imgBox.inline {
+	float: none;
+	width: 30%;
+	clear: inherit;
+}
+
+/* 用.imgBox.box直接連起來Mozilla不接受 */
+.imgBox .box {
+	text-align: center;
+	padding: .5em;
+	color: green;
+	background-color: #ece8fd;
+	border: 1px solid gray;
+	border-right: 3px double gray;
+	border-bottom: 3px double gray;
+	width: 450px;
+	border-radius: 1em;
+}
+
+.imgBox .img {
+	max-width: 90%;
+	border: 2px solid #dad2fd;
+	display: none;
+}
+
+.imgBox .text {
+	width: 80%;
+	/*white-space:nowrap;*/
+	background-color: #f7f3fe;
+	border: 2px solid #f0edfe;
+	padding: .2em;
+	text-align: left;
+	margin-top: .5em;
+	text-indent: 0;
+	border-radius: .5em;
+}
+
+.video_box {
 	float: right;
 	border: #ccf double 3px;
 	padding: .2em;
@@ -486,31 +943,73 @@ img{border:none;max-width:100%;}
 
 
 /* 內文 */
-.red,.bigred{color:red;}
-em,.em{color:#f24071;font-weight:900;}
+.red,
+.bigred {
+	color: red;
+}
+
+em,
+.em {
+	color: #f24071;
+	font-weight: 900;
+}
+
 /*
 http://www.w3.org/International/questions/qa-css-lang.en.php
 */
-em:lang(ja), .em:lang(ja) {
+em:lang(ja),
+.em:lang(ja) {
 	text-emphasis: dot;
 	text-emphasis-position: over right;
 }
+
 /* announcement, 宣告, 通知 */
-.notice{display:block;color:#b00;background-color:#fe8;padding:.5em;margin-bottom:.5em;border:1px solid #f00;border-radius:.3em;}
-.notice p:first-letter{font-size:1em;}
-.notice h3{color:#800040;quotes:"«" "»";margin-top:0;}
-.notice h3:before{content:open-quote;}
-.notice h3:after{content:close-quote;}
+.notice {
+	display: block;
+	color: #b00;
+	background-color: #fe8;
+	padding: .5em;
+	margin-bottom: .5em;
+	border: 1px solid #f00;
+	border-radius: .3em;
+}
+
+.notice p:first-letter {
+	font-size: 1em;
+}
+
+.notice h3 {
+	color: #800040;
+	quotes: "«" "»";
+	margin-top: 0;
+}
+
+.notice h3:before {
+	content: open-quote;
+}
+
+.notice h3:after {
+	content: close-quote;
+}
+
 /* 附注, 評注 */
-.annotation{display:block;color:#A57C29;background-color:#F0E9E6;padding:.2em;border:dotted 1px #616161;font-size:10pt;margin-top:1pt;width:95%;}
+.annotation {
+	display: block;
+	color: #A57C29;
+	background-color: #F0E9E6;
+	padding: .2em;
+	border: dotted 1px #616161;
+	font-size: 10pt;
+	margin-top: 1pt;
+	width: 95%;
+}
 
 /*
-<span class="explanatory">（文中冗長的附加說明）</span>
+<span class="explanatory">（文中冗長的附加說明 / note）</span>
 為了保持文章結構完整，不以格式更動其義，還是手動自己加 "（）"。並且此結構不應重複套用，造成說明中有說明。
 */
-.bgn span.explanatory {
-	/* quotes:"（" "）"; */
-	color: #2b8;
+span.explanatory {
+	/* quotes: "（" "）"; */
 	font-size: .9em;
 	/*
 	display: inline-block;
@@ -519,6 +1018,39 @@ em:lang(ja), .em:lang(ja) {
 	text-indent: 0;
 	vertical-align: sub;
 }
+
+.bgn span.explanatory {
+	color: #2b8;
+}
+
+/*
+<span class="reference">參考文獻 / 出處</span>
+*/
+span.reference {
+	quotes: "[" "]";
+	font-size: .8em;
+	display: none;
+	white-space: normal;
+	text-indent: 0;
+	vertical-align: .6em;
+	margin-left: .2em;
+}
+span.reference:before {
+	content: open-quote;
+}
+
+span.reference:after {
+	content: close-quote;
+}
+
+
+.bgn span.reference {
+	color: #48d;
+}
+.bgn span.reference:hover {
+	background-color: #fdd;
+}
+
 /*
 page numbers in the source
 <span class="page_note">p.20</span>
@@ -528,45 +1060,127 @@ span.page {
 	vertical-align: sub;
 	font-size: small;
 }
-span.page:before{content:"(";}
-span.page:after{content:")";}
+
+span.page:before {
+	content: "(";
+}
+
+span.page:after {
+	content: ")";
+}
+
 span.intext_page {
 	color: #26c;
 }
 
 
-.green{color:green;}
-.orange{color:orange;}
-.big,.bigred{font-size:2em;}
-.small{font-size:.8em;}
-.blue1{color:#267edf;}
+.green {
+	color: green;
+}
+
+.orange {
+	color: orange;
+}
+
+.big,
+.bigred {
+	font-size: 2em;
+}
+
+.small {
+	font-size: .8em;
+}
+
+.blue1 {
+	color: #267edf;
+}
+
 /*
 http://www.qianduan.net/responsive-web-design.html
 http://www.jx828.com/mb/divcssjiaocheng/16639.html
 */
-pre{
-	line-height:1.2em;white-space:pre-wrap;word-wrap:break-word;
+pre {
+	line-height: 1.2em;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 	/* 兼容IE */
-	word-break:break-all;
+	word-break: break-all;
 	/* 中文英數對齊字型 fixed width */
-	font-family:"細明體";
+	font-family: "細明體";
 }
+
 /*
 ZERO WIDTH SPACE, U+200B, &#8203;
 <a href="http://en.wikipedia.org/wiki/Zero-width_space" accessdate="2012/11/3 22:6">Zero-width space</a>
 */
-wbr:after { content: "\00200B"; }
-.bgn pre{color:#aa5080;}
-.bgb pre{color:pink;}
-.nC{color:#9B9B9B}/* never claer */
-.fadeout/*,.secret*/{color:gray;}
+wbr:after {
+	content: "\00200B";
+}
+
+.bgn pre {
+	color: #aa5080;
+}
+
+.bgb pre {
+	color: pink;
+}
+
+.nC {
+	color: #9B9B9B
+}
+
+/* never claer */
+.fadeout
+
+/*,.secret*/
+	{
+	color: gray;
+}
+
 /* http://www.w-frontier.com/stylesheet/subsup.html */
-.sup,.up,.sub,.down,.ion{font-size:.8em;position:relative;}
-.sup,.up{top:-.6em;/*vertical-align:super;*/}/* <sup> */
-.sub,.down{top:.4em;/*vertical-align:sub;*/}/* <sub> */
-.ion{top:-.6em;left:-.6em;}
-.s/* <s> <del> */{font-weight:100;color:gray;text-decoration:line-through;text-decoration-style:double;text-decoration-color:red;}
-.stamp{text-align:right;color:#4B9EB6;}
+.sup,
+.up,
+.sub,
+.down,
+.ion {
+	font-size: .8em;
+	position: relative;
+}
+
+.sup,
+.up {
+	top: -.6em;
+	/*vertical-align:super;*/
+}
+
+/* <sup> */
+.sub,
+.down {
+	top: .4em;
+	/*vertical-align:sub;*/
+}
+
+/* <sub> */
+.ion {
+	top: -.6em;
+	left: -.6em;
+}
+
+.s
+
+/* <s> <del> */
+	{
+	font-weight: 100;
+	color: gray;
+	text-decoration: line-through;
+	text-decoration-style: double;
+	text-decoration-color: red;
+}
+
+.stamp {
+	text-align: right;
+	color: #4B9EB6;
+}
 
 
 /*
@@ -574,10 +1188,11 @@ wbr:after { content: "\00200B"; }
 	專名號 proper noun mark
 	http://zh.wikipedia.org/wiki/%E4%B8%93%E5%90%8D%E5%8F%B7
 */
-.proper_noun{
+.proper_noun {
 	/* 預設 :lang(cmn-Hant) */
-	text-decoration:underline;
+	text-decoration: underline;
 }
+
 /*
 http://www.w3.org/TR/2009/CR-CSS2-20090908/selector.html#matching-attrs
 [att|=val]
@@ -587,40 +1202,67 @@ http://www.w3.org/TR/2009/CR-CSS2-20090908/selector.html#matching-attrs
 /*
 	真正有設定 lang 時之定義
 */
-[lang] .proper_noun,.proper_noun[lang]{text-decoration:none;}
+[lang] .proper_noun,
+.proper_noun[lang] {
+	text-decoration: none;
+}
+
 /*
 	重新定義 cmn-Hant (zh-TW) 之行為
 	http://www.w3.org/International/questions/qa-lang-2or3.en.php
 	The current IETF specification describing how to create language tags is referred to as BCP 47. This no longer refers you to the ISO code lists. Instead you should look for the appropriate subtags in the new IANA Language Subtag Registry. This registry contains only one subtag per language, so there is no longer any ambiguity.
 	http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 */
-:lang(cmn-Hant) .proper_noun,.proper_noun:lang(cmn-Hant){text-decoration:underline;}
-:lang(nan-Hant){}
+:lang(cmn-Hant) .proper_noun,
+.proper_noun:lang(cmn-Hant) {
+	text-decoration: underline;
+}
+
+:lang(nan-Hant) {}
 
 /* 滿語 xml:lang="mnc" from wiki */
-:lang(mnc){
-	text-indent:0; font-size: 1.5em;
-	display:inline-block; font-family:'Mongolian Baiti', 'Mongol Usug', 'MongolianScript', 'Code2000', 'Menksoft Qagan', 'STFangsong', 'SimSun-18030';
-	vertical-align:top;
+:lang(mnc) {
+	text-indent: 0;
+	font-size: 1.5em;
+	display: inline-block;
+	font-family: 'Mongolian Baiti', 'Mongol Usug', 'MongolianScript', 'Code2000', 'Menksoft Qagan', 'STFangsong', 'SimSun-18030';
+	vertical-align: top;
 	/* IE only */
-	layout-flow:vertical-ideographic;writing-mode:tb-lr;-webkit-writing-mode: vertical-lr;
+	layout-flow: vertical-ideographic;
+	writing-mode: tb-lr;
+	-webkit-writing-mode: vertical-lr;
 }
+
 /*
 http://en.wikipedia.org/wiki/Hebrew_language
 http://www.i18nguy.com/markup/right-to-left.html
 */
-:lang(heb){font-family:Verdana, Arial, sans-serif;direction:rtl;unicode-bidi:embed;}
+:lang(heb) {
+	font-family: Verdana, Arial, sans-serif;
+	direction: rtl;
+	unicode-bidi: embed;
+}
 
 
 
-span.proper_noun{font-weight:normal;}
+span.proper_noun {
+	font-weight: normal;
+}
+
 /*
 	中國北京：正確的專名號在「中國」和「北京」之間應有少許空隙。
 .proper_noun:before,.proper_noun:after{content:" ";}
 */
-.proper_noun+.proper_noun:before{content:" ";text-decoration:none;}
+.proper_noun+.proper_noun:before {
+	content: " ";
+	text-decoration: none;
+}
+
 /* 註解 */
-.proper_noun rp,.proper_noun rt{text-decoration:none;}
+.proper_noun rp,
+.proper_noun rt {
+	text-decoration: none;
+}
 
 
 /*
@@ -637,42 +1279,81 @@ span.proper_noun{font-weight:normal;}
 */
 [lang] .creation_title,
 .creation_title[lang],
-span.creation_title[lang]{
-  font-style:italic;
-  /*text-decoration: underline;*/
-  text-underline-style:wave;
+span.creation_title[lang] {
+	font-style: italic;
+	/*text-decoration: underline;*/
+	text-underline-style: wave;
 }
 
 /* for <b title=""> */
 span.creation_title,
-:lang(cmn)>.creation_title,.creation_title:lang(cmn),
-:lang(ja)>.creation_title,.creation_title:lang(ja){font-style: normal;}
+:lang(cmn)>.creation_title,
+.creation_title:lang(cmn),
+:lang(ja)>.creation_title,
+.creation_title:lang(ja) {
+	font-style: normal;
+}
 
-.creation_title:before,.creation_title:after,.creation_title .creation_title:before,.creation_title .creation_title:after,.creation_title>.creation_title:before{color:#f82;font-weight:bold;}
+.creation_title:before,
+.creation_title:after,
+.creation_title .creation_title:before,
+.creation_title .creation_title:after,
+.creation_title>.creation_title:before {
+	color: #f82;
+	font-weight: bold;
+}
+
 /*
 	http://www.w3.org/TR/2009/CR-CSS2-20090908/generate.html#propdef-quotes
 	預設 :lang(cmn)
 */
-.creation_title{quotes:"《" "》" "〈" "〉";}
-.creation_title:before{content:open-quote;}
-.creation_title:after{content:close-quote;}
+.creation_title {
+	quotes: "《" "》" "〈" "〉";
+}
+
+.creation_title:before {
+	content: open-quote;
+}
+
+.creation_title:after {
+	content: close-quote;
+}
+
 /*
 	真正有設定 lang 時之定義
 */
-.creation_title[lang]{quotes:inherit;}
+.creation_title[lang] {
+	quotes: inherit;
+}
+
 /*
 	override / 重新定義 cmn 之行為
 */
-.creation_title:lang(cmn){quotes:"《" "》" "〈" "〉";}
+.creation_title:lang(cmn) {
+	quotes: "《" "》" "〈" "〉";
+}
+
 /*
 	日文的書名號為雙引號『』，並不使用雙角號《》。篇名則使用單引號「」表示。
 */
-.creation_title:lang(ja){quotes:"『" "』" "「" "」";}
+.creation_title:lang(ja) {
+	quotes: "『" "』" "「" "」";
+}
+
 /*
 	French (separated by non-breaking spaces « like this »), except in Switzerland
 */
-.creation_title:lang(fr),.creation_title:lang(ru){quotes:"« " " »";}
-.creation_title:lang(en),.creation_title:lang(de),.creation_title:lang(cs){quotes:none; font-style: italic;}
+.creation_title:lang(fr),
+.creation_title:lang(ru) {
+	quotes: "« " " »";
+}
+
+.creation_title:lang(en),
+.creation_title:lang(de),
+.creation_title:lang(cs) {
+	quotes: none;
+	font-style: italic;
+}
 
 /*
 	bug: Adjacent sibling selectors '+' 會 ignoring non-element nodes(such as text nodes and comments).
@@ -685,7 +1366,9 @@ for links <a>~</a><a>~</a>
 下面無效
 a+a:before{text-decoration:none;content:" ";}
 */
-a+a{margin-left:1.5pt;}
+a+a {
+	margin-left: 1.5pt;
+}
 
 /*
 for test:
@@ -721,75 +1404,323 @@ fullstop:lang(cmn) { content:'。' }
 /*	文章(or心得)，請用<div class="archive">，不能用<p>
 	會用<div class="archive">而不用<div class="archive">，以及data用兩次<div>都是因為IE的bug(?)
 */
-.archive{font-size:.9em;padding:.5em;color:green;background-color:#ddddff;border:dashed 1px brown}
-.archive h3,.archive .title{display:block;color:peru;font-size:1.8em;margin-bottom:0;font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;}/* 文章的標題 */
-.archive .data,.archive .data_{display:block;text-align:right;}
-.archive .data{color:brown;width:40%;background-color:#ffffc1;border:green 2px solid;margin-bottom:.5em;}/* 書的資訊 */
-.archive .stamp{color:orange;margin-top:0;margin-bottom:0;}/* 時間及文章本身的戳記 */
+.archive {
+	font-size: .9em;
+	padding: .5em;
+	color: green;
+	background-color: #ddddff;
+	border: dashed 1px brown
+}
+
+.archive h3,
+.archive .title {
+	display: block;
+	color: peru;
+	font-size: 1.8em;
+	margin-bottom: 0;
+	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
+}
+
+/* 文章的標題 */
+.archive .data,
+.archive .data_ {
+	display: block;
+	text-align: right;
+}
+
+.archive .data {
+	color: brown;
+	width: 40%;
+	background-color: #ffffc1;
+	border: green 2px solid;
+	margin-bottom: .5em;
+}
+
+/* 書的資訊 */
+.archive .stamp {
+	color: orange;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* 時間及文章本身的戳記 */
 
 /* search function */
-#dselD{display:none;position:absolute;font-size:.8em;color:brown;background-color:#e4ef1b;border:1px solid red;opacity:.8;filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=100,finishopacity=80);}
-.dselT{color:blue}
-.dselS{color:pink}
-.site{color:green}/* website */
-.site_h{color:red;background-color:#ccffcc;cursor:pointer;}
+#dselD {
+	display: none;
+	position: absolute;
+	font-size: .8em;
+	color: brown;
+	background-color: #e4ef1b;
+	border: 1px solid red;
+	opacity: .8;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=3, opacity=100, finishopacity=80);
+}
+
+.dselT {
+	color: blue
+}
+
+.dselS {
+	color: pink
+}
+
+.site {
+	color: green
+}
+
+/* website */
+.site_h {
+	color: red;
+	background-color: #ccffcc;
+	cursor: pointer;
+}
 
 /* 評價 */
-div.aDiv{text-align:right;margin-top:.5em;float:right;}/* appreciation div ;margin:2em:無效,改用<br/> */
-table.aTab{text-align:right;/*float:right;*/color:beige;font-size:.9em;padding:0;border:none;}/* appreciation Table background-color:indigo; */
-.bgn table.aTab{background-color:#354F24;}
-tr.aTr{cursor:pointer;color:plum;display:block;text-align:right;}
-td.aTd{border:solid 1px black;border-top-color:white;border-left-color:white;}/* appreciation tr */
-.aScore{color:pink;font-weight:100;}
-.aComment{color:khaki;}
-.aDate{color:gold;}
-.aWC{color:yellow;}
+div.aDiv {
+	text-align: right;
+	margin-top: .5em;
+	float: right;
+}
 
-.surveyT{font-size:.9em;padding:0;color:#0fa840;float:right;}
-.bgb .surveyT{color:#faf7af;}.co .surveyT{float:left;margin-right:4em;}
-.surveyT caption{text-align:right;font-weight:bold;border-bottom:red 1px solid;color:#00bbaa;}
-.bgb .surveyT caption{color:#ececff;border-bottom:red 1px solid;margin-right:3.5em;}
-.surveyT td{border-bottom:gray 1px solid;border-left:#00a 1px solid;}
-.bgb .surveyT td{border-left:snow 1px solid;}
-.surveyT th{border-bottom:#001 1px solid;border-left:snow 1px solid;color:#004080;}
-.bgb .surveyT th{color:#d7ffff;border-bottom:#ddddff 1px solid;}
-.surveyT th.h{color:#ff8040;}
-.bgb .surveyT th.h{color:#fcdbc7;}
-.surveyT .h,.bgb .surveyT .h{border-left:none;}
+/* appreciation div ;margin:2em:無效,改用<br/> */
+table.aTab {
+	text-align: right;
+	/*float:right;*/
+	color: beige;
+	font-size: .9em;
+	padding: 0;
+	border: none;
+}
+
+/* appreciation Table background-color:indigo; */
+.bgn table.aTab {
+	background-color: #354F24;
+}
+
+tr.aTr {
+	cursor: pointer;
+	color: plum;
+	display: block;
+	text-align: right;
+}
+
+td.aTd {
+	border: solid 1px black;
+	border-top-color: white;
+	border-left-color: white;
+}
+
+/* appreciation tr */
+.aScore {
+	color: pink;
+	font-weight: 100;
+}
+
+.aComment {
+	color: khaki;
+}
+
+.aDate {
+	color: gold;
+}
+
+.aWC {
+	color: yellow;
+}
+
+.surveyT {
+	font-size: .9em;
+	padding: 0;
+	color: #0fa840;
+	float: right;
+}
+
+.bgb .surveyT {
+	color: #faf7af;
+}
+
+.co .surveyT {
+	float: left;
+	margin-right: 4em;
+}
+
+.surveyT caption {
+	text-align: right;
+	font-weight: bold;
+	border-bottom: red 1px solid;
+	color: #00bbaa;
+}
+
+.bgb .surveyT caption {
+	color: #ececff;
+	border-bottom: red 1px solid;
+	margin-right: 3.5em;
+}
+
+.surveyT td {
+	border-bottom: gray 1px solid;
+	border-left: #00a 1px solid;
+}
+
+.bgb .surveyT td {
+	border-left: snow 1px solid;
+}
+
+.surveyT th {
+	border-bottom: #001 1px solid;
+	border-left: snow 1px solid;
+	color: #004080;
+}
+
+.bgb .surveyT th {
+	color: #d7ffff;
+	border-bottom: #ddddff 1px solid;
+}
+
+.surveyT th.h {
+	color: #ff8040;
+}
+
+.bgb .surveyT th.h {
+	color: #fcdbc7;
+}
+
+.surveyT .h,
+.bgb .surveyT .h {
+	border-left: none;
+}
 
 
-#linkback{clear:both;margin:1em;padding:.5em;border:dotted thin #EDFBEC;}
-#linkback .warning_line{border-left:.5em solid #BBC4FF;border-bottom:1px solid #BBC4FF;padding-left:.5em;}
-#linkback .linkback_article{width:80%;border:1px dotted #BBC4FF;padding:.5em;color:#563;background-color:#ffe;margin-bottom:1em;}
-#linkback .linkback_article h3{color:#4ae;}
-#linkback input{width:35em;background-color:#FFE8FF;}
+#linkback {
+	clear: both;
+	margin: 1em;
+	padding: .5em;
+	border: dotted thin #EDFBEC;
+}
+
+#linkback .warning_line {
+	border-left: .5em solid #BBC4FF;
+	border-bottom: 1px solid #BBC4FF;
+	padding-left: .5em;
+}
+
+#linkback .linkback_article {
+	width: 80%;
+	border: 1px dotted #BBC4FF;
+	padding: .5em;
+	color: #563;
+	background-color: #ffe;
+	margin-bottom: 1em;
+}
+
+#linkback .linkback_article h3 {
+	color: #4ae;
+}
+
+#linkback input {
+	width: 35em;
+	background-color: #FFE8FF;
+}
 
 /* 列表 */
-.Lhead,.Lhead_{cursor:pointer;color:brown}.Lhead{border-bottom:solid 2px gray;border-left:solid 1px blue}
-.LTab{border:4px orange double;background-color:cyan;color:teal;font-size:.8em}/* white-space:nowrap don't work here */
+.Lhead,
+.Lhead_ {
+	cursor: pointer;
+	color: brown
+}
+
+.Lhead {
+	border-bottom: solid 2px gray;
+	border-left: solid 1px blue
+}
+
+.LTab {
+	border: 4px orange double;
+	background-color: cyan;
+	color: teal;
+	font-size: .8em
+}
+
+/* white-space:nowrap don't work here */
 /* .LTab TD{white-space:nowrap} white-space:nowrap work here,but not good. */
-.Lsort{color:teal}
-.LSel{color:brown;background-color:plum}
+.Lsort {
+	color: teal
+}
 
-#ana{display:block;color:#d0cef9}/* analysis */
-.anar{color:#aae8ba}
-.anaa{color:#fbc6d5}
+.LSel {
+	color: brown;
+	background-color: plum
+}
 
-#viewList th{color:#FFFF80;}
-#viewList td{color:#FF9DFF;}
-#viewList .h th{color:#B9FFFF;background-color:#6B2812;}
-#viewList .t td{color:#D5006A;background-color:#FFAAFF;}
-#viewListError{display:none;color:#EAAABA;background-color:#522C4F;border:3px double #DAB5FF;}
-#viewListError th{background-color:#A55E16;}
-#viewListError td{background-color:#8B912B;}
+#ana {
+	display: block;
+	color: #d0cef9
+}
 
-#surveyCountDiv th{color:#400080;}
-#surveyCountDiv td{color:#FF6868;}
-#surveyCountDiv .h th{color:#2B51D7;background-color:#F8DBD1;}
-#surveyCountDiv .anon th,#surveyCountDiv .anon td{color:gray;background-color:#C0C0C0;}
+/* analysis */
+.anar {
+	color: #aae8ba
+}
+
+.anaa {
+	color: #fbc6d5
+}
+
+#viewList th {
+	color: #FFFF80;
+}
+
+#viewList td {
+	color: #FF9DFF;
+}
+
+#viewList .h th {
+	color: #B9FFFF;
+	background-color: #6B2812;
+}
+
+#viewList .t td {
+	color: #D5006A;
+	background-color: #FFAAFF;
+}
+
+#viewListError {
+	display: none;
+	color: #EAAABA;
+	background-color: #522C4F;
+	border: 3px double #DAB5FF;
+}
+
+#viewListError th {
+	background-color: #A55E16;
+}
+
+#viewListError td {
+	background-color: #8B912B;
+}
+
+#surveyCountDiv th {
+	color: #400080;
+}
+
+#surveyCountDiv td {
+	color: #FF6868;
+}
+
+#surveyCountDiv .h th {
+	color: #2B51D7;
+	background-color: #F8DBD1;
+}
+
+#surveyCountDiv .anon th,
+#surveyCountDiv .anon td {
+	color: gray;
+	background-color: #C0C0C0;
+}
 
 /* 系列書籍/相關主題 文章列表 */
-.series_panel{
+.series_panel {
 	float: right;
 	background-color: #ffc;
 	border-radius: .5em;
@@ -799,46 +1730,194 @@ td.aTd{border:solid 1px black;border-top-color:white;border-left-color:white;}/*
 
 
 /* for trigger() */
-.pm{color:orange;cursor:pointer;font-size:.9em;white-space:nowrap;}
-.cm,.cm2{display:none;margin-left:.3em;margin-bottom:.5em;padding-left:1em;border-left:#BFC5FF thin dotted;font-size:.8em;}
-.cm{white-space:nowrap;}
+.pm {
+	color: orange;
+	cursor: pointer;
+	font-size: .9em;
+	white-space: nowrap;
+}
+
+.cm,
+.cm2 {
+	display: none;
+	margin-left: .3em;
+	margin-bottom: .5em;
+	padding-left: 1em;
+	border-left: #BFC5FF thin dotted;
+	font-size: .8em;
+}
+
+.cm {
+	white-space: nowrap;
+}
 
 /* private */
-.TE,#p_gcTE,.p_gcTE{width:98%;height:10em;}	/* ,#p_s */
-#p_s{color:gold;margin:1em;}
-	/* alpha:ms-help://MS.VSCC/MS.MSDNVS.1028/Filters/workshop/samples/author/filter/Alpha.htm
+.TE,
+#p_gcTE,
+.p_gcTE {
+	width: 98%;
+	height: 10em;
+}
+
+/* ,#p_s */
+#p_s {
+	color: gold;
+	margin: 1em;
+}
+
+/* alpha:ms-help://MS.VSCC/MS.MSDNVS.1028/Filters/workshop/samples/author/filter/Alpha.htm
 	ms-help://MS.MSDNQTR.2003FEB.1028/filters/workshop/author/filter/reference/filters/randomdissolve.htm */
-#p_l{opacity:.85;filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=85);color:#68ff60;background-color:#2f3f6a;border:2px solid yellow;margin:1em;padding:.5em;width:60%;white-space:nowrap;}
-#p_l li{color:#b1efee}#p_l li a{color:#c1c1f7;background-color:#2b3962;}
-.TE,#p_gcTE,.p_gcTE{color:#2463ae;background-color:#dbfde0;}
+#p_l {
+	opacity: .85;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0, opacity=85);
+	color: #68ff60;
+	background-color: #2f3f6a;
+	border: 2px solid yellow;
+	margin: 1em;
+	padding: .5em;
+	width: 60%;
+	white-space: nowrap;
+}
+
+#p_l li {
+	color: #b1efee
+}
+
+#p_l li a {
+	color: #c1c1f7;
+	background-color: #2b3962;
+}
+
+.TE,
+#p_gcTE,
+.p_gcTE {
+	color: #2463ae;
+	background-color: #dbfde0;
+}
 
 /* generateAllCode */
-.gACsT{color:#263eac;background-color:#f7fdfd;border-color:blue;}
-.gACsT th{color:purple;}
-#gFilelistT{color:#472cb8;background-color:#f1f5fe;margin-left:1em;width:25em;}
-#s_end{color:#ca59ab;}
+.gACsT {
+	color: #263eac;
+	background-color: #f7fdfd;
+	border-color: blue;
+}
+
+.gACsT th {
+	color: purple;
+}
+
+#gFilelistT {
+	color: #472cb8;
+	background-color: #f1f5fe;
+	margin-left: 1em;
+	width: 25em;
+}
+
+#s_end {
+	color: #ca59ab;
+}
 
 /* edit id不分大小寫！ */
-#EditA{display:none;}
-#edit{color:khaki;border:none;padding:0;}
-#edit select,#edit input{font-size:.75em;color:#263eac;background-color:#e3c8ff;border-right:1px solid coral;}
-#edit #e_dF{font-size:.8em;font-family:'Arial';}
-#edit input[type="text"]{}/* 亦可用[type=text]，<input type="text">only moz */
-#edit select{font-size:.7em;}
-#edit b{color:plum;cursor:pointer;}
-#edit .pm{color:#def5d3;}/* 這裡要留空白，不能用"#edit.pm"！需要用"#edit [tagName|*].pm" */
-#edit .cm{border-left:none;margin:0;margin-right:5pt;}
+#EditA {
+	display: none;
+}
+
+#edit {
+	color: khaki;
+	border: none;
+	padding: 0;
+}
+
+#edit select,
+#edit input {
+	font-size: .75em;
+	color: #263eac;
+	background-color: #e3c8ff;
+	border-right: 1px solid coral;
+}
+
+#edit #e_dF {
+	font-size: .8em;
+	font-family: 'Arial';
+}
+
+#edit input[type="text"] {}
+
+/* 亦可用[type=text]，<input type="text">only moz */
+#edit select {
+	font-size: .7em;
+}
+
+#edit b {
+	color: plum;
+	cursor: pointer;
+}
+
+#edit .pm {
+	color: #def5d3;
+}
+
+/* 這裡要留空白，不能用"#edit.pm"！需要用"#edit [tagName|*].pm" */
+#edit .cm {
+	border-left: none;
+	margin: 0;
+	margin-right: 5pt;
+}
 
 /*	kousi用	加上filter:alpha(opacity=10);：因為IE5.5不吃DXImageTransform.Microsoft.Alpha，這樣用不能以.filters.alpha.opacity控制。	*/
-.kousi{display:none;color:blue;background-color:#e2e0f8;border:double 3px red;padding:.5em;opacity:.8;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80,Style=0);filter:Alpha(Opacity=80,Style=0);z-index:3;overflow:auto;/*overflow：scrollbar*/}
-.kousiBg{
-	/*	position:absolute;	*/
-	background-color:blue;opacity:.3;filter:Alpha(Opacity=30,Style=0);filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30,Style=0);z-index:2;height:100%;width:100%;background-repeat:repeat;top:0;left:0;
+.kousi {
+	display: none;
+	color: blue;
+	background-color: #e2e0f8;
+	border: double 3px red;
+	padding: .5em;
+	opacity: .8;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80, Style=0);
+	filter: Alpha(Opacity=80, Style=0);
+	z-index: 3;
+	overflow: auto;
+	/*overflow：scrollbar*/
 }
-.kousiI{color:brown;background-color:#e6e6ff;cursor:pointer;border:1px solid red;white-space:nowrap;padding:2px;margin:2px;opacity:.8;/*CSS2*//*-moz-opacity:.8; Firefox 1.0*/filter:Alpha(Style=0,Opacity=80);/*IE*/}
 
-.kousi h2{color:brown;margin-left:2em;}
-.kousi input{color:#114f12;background-color:#fddbfb;border:1px brown solid;}
+.kousiBg {
+	/*	position:absolute;	*/
+	background-color: blue;
+	opacity: .3;
+	filter: Alpha(Opacity=30, Style=0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30, Style=0);
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	background-repeat: repeat;
+	top: 0;
+	left: 0;
+}
+
+.kousiI {
+	color: brown;
+	background-color: #e6e6ff;
+	cursor: pointer;
+	border: 1px solid red;
+	white-space: nowrap;
+	padding: 2px;
+	margin: 2px;
+	opacity: .8;
+	/*CSS2*/
+	/*-moz-opacity:.8; Firefox 1.0*/
+	filter: Alpha(Style=0, Opacity=80);
+	/*IE*/
+}
+
+.kousi h2 {
+	color: brown;
+	margin-left: 2em;
+}
+
+.kousi input {
+	color: #114f12;
+	background-color: #fddbfb;
+	border: 1px brown solid;
+}
 
 .waiting {
 	color: #f33;
@@ -847,16 +1926,21 @@ td.aTd{border:solid 1px black;border-top-color:white;border-left-color:white;}/*
 
 
 /* 將印表機用的擺這:IE4不支援? */
-@media print{
+@media print {
 
-#kousiTopP,#survey,#linkback,#dselD{display:none !important;}
+	#kousiTopP,
+	#survey,
+	#linkback,
+	#dselD {
+		display: none !important;
+	}
 
 }
 
 /*
 <span class="read_status">閱畢</span>
 */
-.read_status{
+.read_status {
 	color: #284;
 	background-color: #ffe;
 	white-space: nowrap;
@@ -865,34 +1949,101 @@ td.aTd{border:solid 1px black;border-top-color:white;border-left-color:white;}/*
 	border: solid 1px #aef;
 	border-radius: .5em;
 }
-.read_status.read_done{
+
+.read_status.read_done {
 	background-color: #def;
 }
-.read_status:before{
-	content:"作品閱覽進度：";
+
+.read_status:before {
+	content: "作品閱覽進度：";
 }
 
 
-#valid{border:none;background:none;text-align:right;}
-#valid img{border:none;}
+#valid {
+	border: none;
+	background: none;
+	text-align: right;
+}
 
-#sign{color:gray;display:inline;}
+#valid img {
+	border: none;
+}
 
-#reference{display:none;}
-#surveyT{float:left;width:18em;}
-#surveyForm{color:#7979ff;background-color:#f1e0fc;margin:0;border:dotted 1px #008040;padding:.5em;border-radius:1em;}
-#surveyForm input,#surveyForm select{color:#887c26;background-color:#eafdee;}
-#surveyForm input{border-bottom:solid 1px #400040;border-right:solid 1px #400040;color:#db6800;}
-#surveyForm #id,#surveyForm #comment{color:#308b23;width:9em;border:solid 1px #ff8000;}
-#surveyForm #comment{width:99%;}
-#surveyForm select{color:#3970ee;font-size:.7em;}
-#surveyForm .sImg{width:12px;height:15px;}
+#sign {
+	color: gray;
+	display: inline;
+}
+
+#reference {
+	display: none;
+}
+
+#surveyT {
+	float: left;
+	width: 18em;
+}
+
+#surveyForm {
+	color: #7979ff;
+	background-color: #f1e0fc;
+	margin: 0;
+	border: dotted 1px #008040;
+	padding: .5em;
+	border-radius: 1em;
+}
+
+#surveyForm input,
+#surveyForm select {
+	color: #887c26;
+	background-color: #eafdee;
+}
+
+#surveyForm input {
+	border-bottom: solid 1px #400040;
+	border-right: solid 1px #400040;
+	color: #db6800;
+}
+
+#surveyForm #id,
+#surveyForm #comment {
+	color: #308b23;
+	width: 9em;
+	border: solid 1px #ff8000;
+}
+
+#surveyForm #comment {
+	width: 99%;
+}
+
+#surveyForm select {
+	color: #3970ee;
+	font-size: .7em;
+}
+
+#surveyForm .sImg {
+	width: 12px;
+	height: 15px;
+}
 
 
 /* 參考資料 */
-#reference_list_layer>h3{color:#e73;cursor:pointer;}
-#reference_list_contents dl,#reference_list_contents ul,#reference_list_contents ol{background-color:#DFE;margin-left:2em;padding:.5em;border-radius:.1em;}
-#reference_list_contents li{border-bottom:1px dotted #cde;}
+#reference_list_layer>h3 {
+	color: #e73;
+	cursor: pointer;
+}
+
+#reference_list_contents dl,
+#reference_list_contents ul,
+#reference_list_contents ol {
+	background-color: #DFE;
+	margin-left: 2em;
+	padding: .5em;
+	border-radius: .1em;
+}
+
+#reference_list_contents li {
+	border-bottom: 1px dotted #cde;
+}
 
 /*
 APA6 參考資料
@@ -906,98 +2057,262 @@ http://www2.yk.psu.edu/learncenter/apa-july-09.pdf
 Center the title References one inch from the top. All sources used in your paper are listed in alphabetical order and are double-spaced with hanging indentation.
 
 */
-.APA.reference_list{display:none;list-style-position:inside;}
-.APA.reference_list li{margin-left:2em;text-indent:-2em;}
+.APA.reference_list {
+	display: none;
+	list-style-position: inside;
+}
 
-@media print{
-.APA.reference_list{list-style-type:none;}
-.APA.reference_list li{margin-left:.5in;text-indent:-.5in;}
+.APA.reference_list li {
+	margin-left: 2em;
+	text-indent: -2em;
+}
+
+@media print {
+	.APA.reference_list {
+		list-style-type: none;
+	}
+
+	.APA.reference_list li {
+		margin-left: .5in;
+		text-indent: -.5in;
+	}
 }
 
 
 /* time stamp 用於小說中每段落的作成時間 */
-.tS{display:none;color:#80ff00;}
+.tS {
+	display: none;
+	color: #80ff00;
+}
 
 
 /* 優秀作品box */
-.exBox{color:#ffdbca;background-color:#320550;border:1px solid gold;padding:.5em;}
+.exBox {
+	color: #ffdbca;
+	background-color: #320550;
+	border: 1px solid gold;
+	padding: .5em;
+}
 
 /* out link */
-.linkBox,.linkBox2{display:block;position:absolute;
+.linkBox,
+.linkBox2 {
+	display: block;
+	position: absolute;
 	/* 在標題之上 */
-	z-index:3;padding:.3em;border-radius:.5em;opacity:.9;filter:Alpha(Opacity=90);font-size:.8em;
+	z-index: 3;
+	padding: .3em;
+	border-radius: .5em;
+	opacity: .9;
+	filter: Alpha(Opacity=90);
+	font-size: .8em;
 }
-.linkBox{color:#20209F;background-color:#C8C8FF;border:3px double #F8F;min-width:13em;}
-.linkBox a{color:#FF5A0B;}
-.linkBox img{max-width:200px;max-height:80%;}
-.linkBox .g{color:#935A06;font-size:1.2em;}
-.linkBox .g b{color:#800000;}
-.linkBox .n{color:#FF0080;font-weight:bold;font-size:1.2em;}
-.linkBox .g{color:#008040;} /* good(OK) link */
-.linkBox .t{color:#FF8040;font-weight:bold;} /* trouble link */
-.linkBox .d{color:#E80000;font-weight:bold;} /* dead link */
-.linkBox2{color:#800000;background-color:#DBFFD0;border:1px dotted #FF8000;}
+
+.linkBox {
+	color: #20209F;
+	background-color: #C8C8FF;
+	border: 3px double #F8F;
+	min-width: 13em;
+}
+
+.linkBox a {
+	color: #FF5A0B;
+}
+
+.linkBox img {
+	max-width: 200px;
+	max-height: 80%;
+}
+
+.linkBox .g {
+	color: #935A06;
+	font-size: 1.2em;
+}
+
+.linkBox .g b {
+	color: #800000;
+}
+
+.linkBox .n {
+	color: #FF0080;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.linkBox .g {
+	color: #008040;
+}
+
+/* good(OK) link */
+.linkBox .t {
+	color: #FF8040;
+	font-weight: bold;
+}
+
+/* trouble link */
+.linkBox .d {
+	color: #E80000;
+	font-weight: bold;
+}
+
+/* dead link */
+.linkBox2 {
+	color: #800000;
+	background-color: #DBFFD0;
+	border: 1px dotted #FF8000;
+}
 
 
-.mapB{color:#17c;cursor:pointer;}
-.mapD{margin:0;padding:.2em;background-color:#cff;border-radius:.5em;font-size:.9em;}
-.mapLink{color:#824;cursor:pointer;}
-.mapD span{color:#e93;}
+.mapB {
+	color: #17c;
+	cursor: pointer;
+}
+
+.mapD {
+	margin: 0;
+	padding: .2em;
+	background-color: #cff;
+	border-radius: .5em;
+	font-size: .9em;
+}
+
+.mapLink {
+	color: #824;
+	cursor: pointer;
+}
+
+.mapD span {
+	color: #e93;
+}
 
 
 /* regulateImage */
-.noZoomImg{color:#8383C2;font-size:.7em;}
-.noZoomImg b{color:#FF8686;cursor:pointer;text-align:right;}
+.noZoomImg {
+	color: #8383C2;
+	font-size: .7em;
+}
+
+.noZoomImg b {
+	color: #FF8686;
+	cursor: pointer;
+	text-align: right;
+}
 
 /* 日記數位化計畫 */
-.c3{
- /*background-color:#E7EAF8;*/
- display:block;color:#135920;border:double 3px #090;padding:1.5em;text-indent:1em;line-height:1.4em;
+.c3 {
+	/*background-color:#E7EAF8;*/
+	display: block;
+	color: #135920;
+	border: double 3px #090;
+	padding: 1.5em;
+	text-indent: 1em;
+	line-height: 1.4em;
 }
+
 /* 日期時間戳記 */
-.c3 .dateStamp{display:block;clear:both;color:#DD2264;background-color:#FFFFC9;font-size:1.2em;border-bottom:#3DD150 1px solid;border-right:#3DD150 1px solid;margin:-1em;margin-top:.5em;margin-bottom:.1em;font-family:"標楷體",DFKai-SB,\006a19\006977\009ad4;}
-.co .timeStamp,.c2 .timeStamp,.c3 .timeStamp{/*display:block;*/text-align:right;color:#9D9D9D;font-size:.8em;}
-span.timeStamp{margin-left:.2em;margin-right:.5em;position:relative;top:.6em;}
-.imgBox .timeStamp{display:inline;}
+.c3 .dateStamp {
+	display: block;
+	clear: both;
+	color: #DD2264;
+	background-color: #FFFFC9;
+	font-size: 1.2em;
+	border-bottom: #3DD150 1px solid;
+	border-right: #3DD150 1px solid;
+	margin: -1em;
+	margin-top: .5em;
+	margin-bottom: .1em;
+	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
+}
+
+.co .timeStamp,
+.c2 .timeStamp,
+.c3 .timeStamp {
+	/*display:block;*/
+	text-align: right;
+	color: #9D9D9D;
+	font-size: .8em;
+}
+
+span.timeStamp {
+	margin-left: .2em;
+	margin-right: .5em;
+	position: relative;
+	top: .6em;
+}
+
+.imgBox .timeStamp {
+	display: inline;
+}
 
 
-table.record{margin-left:2em;min-width:40%;}
+table.record {
+	margin-left: 2em;
+	min-width: 40%;
+}
+
 /* 正文用 */
-table.record span.text{color:#55f;top:0em;}
+table.record span.text {
+	color: #55f;
+	top: 0em;
+}
 
 
-.functionSection{float:right;color:#FF0080;background-color:#D7FFFF;border:dashed 1px #FF8000;cursor:pointer;padding:1pt;}
+.functionSection {
+	float: right;
+	color: #FF0080;
+	background-color: #D7FFFF;
+	border: dashed 1px #FF8000;
+	cursor: pointer;
+	padding: 1pt;
+}
 
 /* 語助詞、顔文字 ╮(╯_╰)╭ */
-.expletive{font-weight:100;color:#C0E;white-space:nowrap;}
+.expletive {
+	font-weight: 100;
+	color: #C0E;
+	white-space: nowrap;
+}
 
 
 /* 機器輸出/原始碼用 */
-code, samp {
+code,
+samp {
 	/* http://stackoverflow.com/questions/407129/alternate-fonts-for-console-windows */
 	font-family: 'Consolas', 'Lucida Console', 'Courier New', 'Fixedsys';
 }
+
 code {
-	color:#64f;
-	background-color:#eef;
+	color: #64f;
+	background-color: #eef;
 }
-code.block, samp.block {
+
+code.block,
+samp.block {
 	/* 自動調節寬度 */
 	display: table;
-	white-space: pre /* pre-wrap */;
+	white-space: pre
+		/* pre-wrap */
+	;
 	overflow-x: auto;
 	max-width: 100%;
 
 	display: block;
-	padding: 1em; padding-top: 0; margin: 1em; margin-top: 0; line-height: 1.2em;
+	padding: 1em;
+	padding-top: 0;
+	margin: 1em;
+	margin-top: 0;
+	line-height: 1.2em;
 	border: solid 1px #ad3;
 	border-top-color: #de9;
 	border-left-color: #de9;
 	border-radius: 2pt;
 }
+
 /* file name, file path, registry path, XML path, HDD drive */
 code.path {
-	white-space: pre /* pre-wrap */;
+	white-space: pre
+		/* pre-wrap */
+	;
 	border-bottom: 1px dotted #a6e;
 	padding-left: .2em;
 	padding-right: .2em;
@@ -1009,11 +2324,21 @@ e.g., <kbd class="key">Ctrl</kbd>+<kbd class="key">Alt</kbd>+<kbd class="key">De
 @see http://www.w3.org/TR/html5/the-kbd-element.html#the-kbd-element
 */
 kbd.key {
-	color: #333; border: 1px solid #aaa; border-radius: 3pt; box-shadow: 1px 2px 2px #ddd; background-color: #eee; padding: 1px 3px; font-size: 0.85em; white-space: nowrap;
+	color: #333;
+	border: 1px solid #aaa;
+	border-radius: 3pt;
+	box-shadow: 1px 2px 2px #ddd;
+	background-color: #eee;
+	padding: 1px 3px;
+	font-size: 0.85em;
+	white-space: nowrap;
 }
+
 samp {
-	color: #762; background-color: #eff;
+	color: #762;
+	background-color: #eff;
 }
+
 samp.block {
 	border: .2em dotted #ae6;
 }
@@ -1024,14 +2349,21 @@ iframe[src*=".youtube."],
 iframe[src*=".youtube-nocookie."],
 iframe[src*="player.vimeo."],
 iframe[src*=".ted."],
-iframe[src*="player.youku."]
-{float:right;width:640px;height:360px;max-width:99%;border:0;overflow:hidden;margin-left:1em;}
+iframe[src*="player.youku."] {
+	float: right;
+	width: 640px;
+	height: 360px;
+	max-width: 99%;
+	border: 0;
+	overflow: hidden;
+	margin-left: 1em;
+}
 
 /*
 生物分類學學名
 二名法 三名法 binomial nomenclature
 三名法 trinomial nomenclature
 */
-.nomenclature{
-	font-style:italic;
+.nomenclature {
+	font-style: italic;
 }
