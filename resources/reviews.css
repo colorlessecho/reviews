@@ -1,4 +1,4 @@
-﻿/* 舊NS第一行不能放東西 */
+﻿/* 舊 Netscape Navigator 第一行不能放東西 */
 @charset "UTF-8";
 /* "big5" */
 @import url("../../css.css");
@@ -311,37 +311,6 @@ table {
 }
 
 /*
-h1: 網站標題
-h2: 文章標題
-h3: 章節標題
-h4: 議題標題, 主題標題
-h5: 小議題, 次要議題
-*/
-.co>h1,
-.co>h2,
-.co>h3,
-.c2>h1,
-.c2>h2,
-.c2>h3 {
-	clear: both;
-
-	position: -webkit-sticky;
-	position: sticky;
-	top: -2px;
-	z-index: 2;
-
-	background-color: #112;
-	border: #dde solid 1px;
-	border-radius: .2em;
-}
-
-.c2>h1,
-.c2>h2,
-.c2>h3 {
-	background-color: #eef;
-}
-
-/*
 http://nicolasgallagher.com/micro-clearfix-hack/
 CSS2 workaround for clear-after
 http://www.cs.hmc.edu/~mbrubeck/clear-after/
@@ -605,20 +574,21 @@ q:lang(cmn-Hant),
 .quote:lang(cmn-Hant),
 q:lang(ja),
 .quote:lang(ja) {
-	quotes: "「" "」";
+	quotes: "「" "」" "『" "』";
 }
-
+/*
 q:lang(cmn-Hant)>q:lang(cmn-Hant),
 .quote:lang(cmn-Hant)>.quote:lang(cmn-Hant) {
 	quotes: "『" "』";
 }
+*/
 
-/* 俄語的引號是 «» */
+/* [[w:fr:Guillemet#Double ou triple niveau de citation]] 俄語的引號是 «» */
 q:lang(fr),
 .quote:lang(fr),
 q:lang(ru),
 .quote:lang(ru) {
-	quotes: "« " " »";
+	quotes: "« " " »" "“" "”";
 }
 
 .quote+.author:before {
@@ -702,7 +672,8 @@ h4 {
 	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
 	font-size: 1.2em;
 	font-weight: 500;
-	color: #2b5;
+	color: #295;
+	background-color: #111;
 }
 
 h5,
@@ -724,6 +695,52 @@ h6:before {
 	content: "❅ ";
 }
 
+/*
+h1: 網站標題
+h2: 文章標題
+h3: 章節標題
+h4: 議題標題, 主題標題
+h5: 小議題, 次要議題
+*/
+.co>h1,
+.co>h2,
+.co>h3,
+.co>h4,
+.c2>h1,
+.c2>h2,
+.c2>h3,
+.c2>h4 {
+	clear: both;
+
+	position: -webkit-sticky;
+	position: sticky;
+	top: -2px;
+	z-index: 2;
+
+	background-color: #112;
+	border: #dde solid 1px;
+	border-radius: .2em;
+}
+
+.c2>h1,
+.c2>h2,
+.c2>h3 {
+	background-color: #eef;
+}
+
+.c2>h1 a,
+.c2>h2 a,
+.c2>h3 a,
+.c2>h4 a {
+	color: #23f;
+}
+
+.c2>h4 {
+	background-color: #eff;
+	border: #eef solid 1px;
+}
+
+
 .co ol.jb {
 	list-style-image: url('images/ball.gif');
 }
@@ -738,6 +755,7 @@ h6:before {
 }
 
 /* comment 2 */
+.c2 h1,
 .c2 h2,
 .c2 h3 {
 	quotes: "《" "》";
@@ -769,8 +787,10 @@ h6:before {
 	white-space: nowrap;
 }
 
+.co h1,
 .co h2,
-.co h3 {
+.co h3,
+.co h4 {
 	color: #8F5;
 	font-family: "標楷體", DFKai-SB, \006a19\006977\009ad4;
 }
@@ -992,6 +1012,42 @@ em:lang(ja),
 	content: close-quote;
 }
 
+/*
+abstract
+論文摘要 概要 提要
+introduction
+ja:要旨
+*/
+.summary {
+	display: block;
+	background-color: #efd;
+	/* 淡綠色 */
+	border: 2px solid #6c6;
+	/* 鮮綠色邊框 */
+	color: #160;
+	/* 黑色文字 */
+	padding: .5em;
+	margin: 1em;
+	border-radius: .5em;
+	/* 圓框 */
+}
+
+.panel_label {
+	float: right;
+	font-size: .9em;
+	font-family: 'Comic Sans MS';
+	color: #898;
+	background-color: #eff;
+	border-left: solid #7e5 1px;
+	border-bottom: solid #7e5 1px;
+	padding: .5em;
+	/* match .summary{padding} */
+	margin-top: -.5em;
+	margin-right: -.5em;
+	text-indent: 0;
+	line-height: 1em;
+}
+
 /* 附注, 評注 */
 .annotation {
 	display: block;
@@ -1035,6 +1091,7 @@ span.reference {
 	vertical-align: .6em;
 	margin-left: .2em;
 }
+
 span.reference:before {
 	content: open-quote;
 }
@@ -1047,6 +1104,7 @@ span.reference:after {
 .bgn span.reference {
 	color: #48d;
 }
+
 .bgn span.reference:hover {
 	background-color: #fdd;
 }
