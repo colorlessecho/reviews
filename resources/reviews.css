@@ -2314,14 +2314,25 @@ table.record span.text {
 	top: 0em;
 }
 
+#function_section_panel {
+	position: sticky !important;
+	z-index: 3;
+	top: 0;
+	width: auto;
+	float: right;
+}
 
-.functionSection {
+.function_section {
 	float: right;
 	color: #FF0080;
 	background-color: #D7FFFF;
 	border: dashed 1px #FF8000;
+	border-radius: .2em;
 	cursor: pointer;
-	padding: 1pt;
+	padding: 2pt;
+	margin-left: .2em;
+	text-indent: 0;
+	line-height: normal;
 }
 
 /* 語助詞、顔文字 ╮(╯_╰)╭ */
