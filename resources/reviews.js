@@ -80,8 +80,8 @@ function show_panel_label(){if(!document.querySelectorAll){return}
 var node_list=document.querySelectorAll('div[class=summary]');node_list.forEach(function(node){CeL.new_node({div:CeL.gettext('summary'),'class':"panel_label"},[node,'first']);});}
 function expand_list(){var h=getLabel(),n;if(!dhLb&&!gACrun||h){switch(h){case'AllList':if((n=document.getElementById("ListC"))&&n.innerHTML.length<200)setTimeout('wList(0)',0);break;case'TimeList':wTimeList();break;case'analysis':wRelation();break;case'viewerCount':wViewList();break;case'surveyCount':wSurveyCount();break;default:}}}
 var function_nodes=[{div:'隱藏參考標記',C:'functionSection',onclick:function(){if(hide_all_references.index>=0){show_all_references();} else{hide_all_references();}this.innerHTML=hide_all_references.index>=0?'顯示參考標記':'隱藏參考標記';}}];
-function hide_all_references(){try{var stylesheet=document.styleSheets[0];stylesheet.insertRule('span.explanatory { display:none; }',show_all_references.index);hide_all_references.index= 1} catch(e){CeL.error(e);}}
-function show_all_references(){try{var stylesheet=document.styleSheets[0];hide_all_references.index=null;stylesheet.removeRule(1);} catch(e){CeL.error(e);}}
+function hide_all_references(){try{var stylesheet=document.styleSheets[0];var index= 1;stylesheet.insertRule('span.explanatory { display:none; }',index);hide_all_references.index=index} catch(e){CeL.error(e);}}
+function show_all_references(){try{var stylesheet=document.styleSheets[0];stylesheet.removeRule(hide_all_references.index);hide_all_references.index=null} catch(e){CeL.error(e);}}
 function addFunctionSection(){var i,o=document.getElementsByTagName('DIV');for(i= 0; i<o.length; i++)if(o[i].className&&(o[i].className=='c2'||o[i].className=='c3')){CeL.new_node(function_nodes,[o[i],1]);}}
 function hide_tags(tag,div){CeL.for_nodes(function(node){var alt=node.getAttribute('alt'),parent=node.parentElement;if(alt)parent.insertBefore(document.createTextNode(alt),node);parent.removeChild(node);},/^\w+$/.test(tag)?div.getElementsByTagName(tag):div.querySelectorAll(tag));}
 var reference_list=[],media_list=[],internal_link_list=[],external_link_list=[];
