@@ -830,6 +830,7 @@ C('776	Comer sin miedo	人造恐慌：擊破謠言和謬誤，告訴你真實的
 C('795	Human Errors	人類這個不良品：從沒用的骨頭到脆弱的基因	2020/1/4–2020/1/11	人類演化的缺陷');
 C('813	Hirnrissig	打破大腦偽科學	2020/6/13–2020/6/28	破除錯誤概念的大腦科普');
 C('820	A Brief History of Everyone Who Ever Lived	每個人的短歷史：人類基因的故事	2020/8/26–2020/9/9	DNA、基因組與你我的關係');
+C('852	Who We Are and How We Got Here	我們源自何方？	2025/1/21–2025/7/31	近年各大洲人類遷徙與血統源流');
 
 G('book:technology	科技+未來學書籍');
 C('525	Fremtiden	未來種子	2007/2/4–7	未來學書籍	{"original language":"nb-NO"}');//622
@@ -924,7 +925,7 @@ C('Political Animals');
 C('833	Winners Take All	贏家全拿	2021/11/23–2022/1/4	揭露慈善如何是為富人的緩兵之計');
 C('835	Explaining Humans	Explaining Humans: What Science Can Teach Us about Life, Love and Relationships	2022/1/7–2022/2/2	ASD 患者對人際相處之道的論述');
 C("836	The Tyranny of Merit	The Tyranny of Merit: What's Become of the Common Good?	2022/2/6–2022/6/13	才德至上思想如何使社會分化及損害民主");
-C('848	Discrimination and Disparities	偽歧視	2023/8/8–2024/5/11	提醒造成結果差異的因素不僅歧視');
+C('848	Discrimination and Disparities	偽歧視	2023/8/8–2024/5/11	造成結果差異的因素不僅歧視');
 C('849	Spite: The Upside of Your Dark Side	惡意如何帶來正義？	2024/6/9–2024/10/31	惡意可用以制裁不義之人');
 C('850	Culture as Weapon: The Art of Influence in Everyday Life	文化操控	2024/11/2–2025/1/11	輿論操控已成 SOP');
 
