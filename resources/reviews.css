@@ -148,7 +148,9 @@ border-radius: http://webdesign.html.it/articoli/leggi/528/more-nifty-corners/1/
 body {
 	/*color:indigo;background-color:linen;*/
 	/*	IE6 的背景閃爍 IE6 flicker http://old9.blogsome.com/2008/01/04/ie6-background-flicker-expression-override/
- zoom:expression(function(ele){document.execCommand('BackgroundImageCache',false,true);ele.style.zoom=1;}(this));*/
+	zoom:expression(function(ele){document.execCommand('BackgroundImageCache',false,true);ele.style.zoom=1;}(this));
+	*/
+	font-family: "微軟正黑體", "新細明體", sans-serif;
 }
 
 /*
@@ -568,6 +570,11 @@ q,
 	/* 直接引用、截選或摘要 */
 	quotes: "“" "”";
 	color: #935;
+}
+
+.co q,
+.co .quote {
+	color: #bbb;
 }
 
 q:lang(cmn-Hant),
