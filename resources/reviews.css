@@ -1168,6 +1168,7 @@ http://www.jx828.com/mb/divcssjiaocheng/16639.html
 */
 pre {
 	line-height: 1.2em;
+	text-indent: 0;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	/* 兼容IE */
