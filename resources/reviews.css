@@ -2026,6 +2026,13 @@ td.aTd {
 	content: "作品閱覽進度：";
 }
 
+/*
+<span class="game_status"></span>
+*/
+.game_status {
+	color: #2FA;
+}
+
 
 #valid {
 	border: none;
