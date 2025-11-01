@@ -532,7 +532,7 @@ hid p,
 hid dl {
 	color: #a22;
 	background-color: #0dd;
-	font-weight: 900;
+	/* font-weight: 900; */
 }
 
 /* 指定 !important 優先度會高於使用者自訂之style，但若使用者也用了!important，則使用者之優先度仍是較高 */
