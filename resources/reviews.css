@@ -612,10 +612,36 @@ input {
 	/*border:none;background-color:#d2ffff;*/
 }
 
+.bgb input {
+	color: #dcf;
+	background-color: #232;
+} 
+
 .bgn input {
-	color: #6200a4;
-	background-color: #e4caff;
+	color: #60a;
+	background-color: #ecf;
 }
+
+.bgb textarea {
+	color: #CFC;
+	background-color: #000;
+}
+
+.bgn textarea {
+	color: #000;
+	background-color: #CFC;
+}
+
+.bgb select {
+	color: #CFC;
+	background-color: #000;
+}
+
+.bgn select {
+	color: #000;
+	background-color: #CFC;
+}
+
 
 p,
 .co,
