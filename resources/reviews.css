@@ -1367,6 +1367,9 @@ span.proper_noun {
 	cite幾乎就是書名號
 
 	預設 :lang(cmn){font-style: normal;}
+
+	<span class="creation_title"></span>
+	TODO: <span class="creation_title original_title"></span>
 */
 /*
 	英文沒有書名號。書名直接以斜體字來表示，如 Harry Potter。而以引號表示篇名，如 “The Sentinel”。
