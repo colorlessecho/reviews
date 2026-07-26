@@ -930,6 +930,7 @@ C("836	The Tyranny of Merit	The Tyranny of Merit: What's Become of the Common Go
 C('848	Discrimination and Disparities	偽歧視	2023/8/8–2024/5/11	造成結果差異的因素不僅歧視');
 C('849	Spite: The Upside of Your Dark Side	惡意如何帶來正義？	2024/6/9–2024/10/31	惡意可用以制裁不義之人');
 C('850	Culture as Weapon: The Art of Influence in Everyday Life	文化操控	2024/11/2–2025/1/11	輿論操控已成 SOP');
+C('Nexus: A Brief History of Information Networks from the Stone Age to AI');
 
 G('book:parenting	育兒教養+學習法書籍');
 C('410	TheEssential55	The Essential 55	2005/2–3/16	教學法');//607
