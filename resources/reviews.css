@@ -1408,10 +1408,12 @@ span.creation_title,
 	quotes: "《" "》" "〈" "〉";
 }
 
+.chapter_title:before,
 .creation_title:before {
 	content: open-quote;
 }
 
+.chapter_title:after,
 .creation_title:after {
 	content: close-quote;
 }
@@ -1419,6 +1421,7 @@ span.creation_title,
 /*
 	真正有設定 lang 時之定義
 */
+.chapter_title[lang],
 .creation_title[lang] {
 	quotes: inherit;
 }
@@ -1443,6 +1446,15 @@ span.creation_title,
 .creation_title:lang(fr),
 .creation_title:lang(ru) {
 	quotes: "« " " »";
+}
+
+/*
+整本書籍通常更常用斜體。
+有獨立的文章／章節名，通常使用德文引號「„“」
+Kapitelüberschrift（章節標題）
+*/
+.chapter_title:lang(de) {
+	quotes: "„" "“";
 }
 
 .creation_title:lang(en),
