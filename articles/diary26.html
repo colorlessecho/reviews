@@ -179,7 +179,7 @@ Relationship Expert &amp; Author">Emiliana Silvestri</a> 新書因為缺乏<a re
 <div class="timeStamp">2011/11/26</div>
 搞了半天終於使 CeJS 基本架構相容於 node.js，在 Windows 與 FreeBSD 下測試過了。不過真要說起來，還有太多工作需要做。
 <div class="timeStamp">2011/11/27</div>
-不曉得怎麼回事，這兩天 PC 不太穩。剛剛掛掉甚至再起不能。安全模式無用，雖然硬碟燈沒有亮，鍵盤卻也沒回應。第一次碰到，不曉得是不是重要檔案損毀，或是系統碟死掉了。似乎不太好修。
+不曉得怎麼回事，這兩天 PC 不太穩。剛剛掛掉甚至<span lang="ja-JP" title="さいきふのう">再起不能</span>。安全模式無用，雖然硬碟燈沒有亮，鍵盤卻也沒回應。第一次碰到，不曉得是不是重要檔案損毀，或是系統碟死掉了。似乎不太好修。
 <div class="timeStamp">2011/11/27</div>
 怪事。因為 CDROM 外接盒已經掛掉，只好用 <a rel="nofollow" href="http://wintoflash.com/home/en/" accessdate="2011/11/27" title="WinToFlash - Install Windows from usb - Home page">WinToFlash</a> 0.7.0026 beta 做了個 Windows XP @ USB Flash 的安裝碟，看是不是真的因為系統檔案損毀。無論 GUI 或 text mode 都不能 setup，但這不打緊。測了一下，選擇原先的 partition 開機竟然成功了！顯然問題不再於需要修復還是啥的。但怪的是，重新復原，拔走 USB，竟然又 boot 失敗?!沒辦法，暫時看來只好每次都從這顆只剩下 loader 的 USB 開機吧，好歹能開起來。反正我現在主要工作都使用 laptop，對這臺 PC 的要求已經不高了。
 <div class="timeStamp">2011/11/27</div>
@@ -260,7 +260,7 @@ Visual Editing">視覺化編輯</a>。<a rel="nofollow" href="http://en.wikipedi
 <div class="timeStamp">2012/2/24</div>
 查了一下，幸好並非大問題。原來是 named 掛掉，<b>mkdir /var/named/var/log/named/</b> 之後就跑起來了。不過設定檔其實沿用恐怕是 7.0 或 8.0 那時的東西，到現在都沒多大改變。從使用那麼早的設定檔，還能幾近 <span title="無痛">painless</span> 升級這角度說來，FreeBSD 9 其實幹得不錯啊。說來應該把設定更新一下的，其實也不過就 mergemaster 加上重對照一下 kernel，再做 portupgrade -af 罷了，其他也不會多做什麼。但對於得過且過的我…現在的版本是 FreeBSD 9.0-STABLE。Apache httpd 2.4.1 看來還沒進 ports，只好等等了。
 <div class="timeStamp">2012/2/25</div>
-沒想到耗一早上 mergemaster 的結果，竟然是再起不能。猜測要不是 DNS 的問題，就是哪個設定檔沒過。但 reboot 前 rndc 都已經 "server reload successful" 了啊。看來又要被召回。真是太<span title="悲慘">悲劇</span>了。剛剛屏東屏東 10:35 規模6.1的地震嚇了一下，幸好無恙。
+沒想到耗一早上 mergemaster 的結果，竟然是<span lang="ja-JP" title="さいきふのう">再起不能</span>。猜測要不是 DNS 的問題，就是哪個設定檔沒過。但 reboot 前 rndc 都已經 "server reload successful" 了啊。看來又要被召回。真是太<span title="悲慘">悲劇</span>了。剛剛屏東屏東 10:35 規模6.1的地震嚇了一下，幸好無恙。
 <div class="timeStamp">2012/2/26</div>
 沒事先偵測準備好。到那邊才發現昨天已經好了。只好直接做 portupgrade -afv。查一下紀錄，看來昨天九點多上線的？這麼說該不會是 fsck 的問題？<div class="timeStamp">2012/2/27</div>
 電視新聞上看到有手機與遙控器合體的創意，感覺不錯啊。<div class="timeStamp">2012/2/27</div>
